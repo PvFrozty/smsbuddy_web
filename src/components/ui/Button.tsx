@@ -58,9 +58,16 @@ export function Button({
   );
 
   if ("href" in props && props.href) {
-    const { href, target, rel, ...rest } = props;
+    const { href, target, rel } = props;
+    // Links off-site (portal, WhatsApp, docs) open in a new tab by default so
+    // visitors keep the marketing page they were reading.
+    const isExternal = /^https?:\/\//.test(href);
+    const linkTarget = target ?? (isExternal ? "_blank" : undefined);
+    const linkRel =
+      rel ?? (linkTarget === "_blank" ? "noopener noreferrer" : undefined);
+
     return (
-      <Link href={href} target={target} rel={rel} className={classes}>
+      <Link href={href} target={linkTarget} rel={linkRel} className={classes}>
         {children}
       </Link>
     );

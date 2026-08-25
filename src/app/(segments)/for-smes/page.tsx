@@ -10,6 +10,7 @@ import { SetupAssistanceCTA } from "@/components/cta/SetupAssistanceCTA";
 import { SmsBubbleIcon } from "@/illustrations/SmsBubbleIcon";
 import { CreditCoinIcon } from "@/illustrations/CreditCoinIcon";
 import { PackageBoxIcon } from "@/illustrations/PackageBoxIcon";
+import { registerUrl } from "@/lib/constants";
 import {
   fadeInUp,
   fadeInLeft,
@@ -121,7 +122,7 @@ export default function ForSmes() {
 
             <AnimatedEntry variants={fadeInUp} delay={0.3}>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
-                <Button variant="primary" size="lg" href="/contact">
+                <Button variant="primary" size="lg" href={registerUrl}>
                   Send Your First Campaign
                 </Button>
                 <Button variant="ghost" size="lg" href="/pricing">
@@ -225,9 +226,9 @@ export default function ForSmes() {
           <div className="mt-16">
             <InlineCTA
               title="Send Your First Campaign"
-              subtitle="No technical knowledge required. Import your contacts and start sending today."
-              buttonText="Get Started"
-              buttonHref="/contact"
+              subtitle="No technical knowledge required. Create your account, import your contacts, and start sending today."
+              buttonText="Create Your Account"
+              buttonHref={registerUrl}
               variant="coral"
             />
           </div>

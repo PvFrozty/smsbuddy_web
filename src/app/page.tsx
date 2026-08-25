@@ -13,6 +13,7 @@ import { MaskShieldIcon } from "@/illustrations/MaskShieldIcon";
 import { QueuePipeIcon } from "@/illustrations/QueuePipeIcon";
 import { CreditCoinIcon } from "@/illustrations/CreditCoinIcon";
 import { SmsBubbleIcon } from "@/illustrations/SmsBubbleIcon";
+import { registerUrl } from "@/lib/constants";
 import { staggerContainer, fadeInUp } from "@/animations/variants";
 
 const pillars = [
@@ -128,9 +129,9 @@ export default function Home() {
           <div className="mt-16">
             <InlineCTA
               title="Ready to send your first SMS?"
-              subtitle="Get set up in minutes with our guided onboarding."
-              buttonText="Get Started"
-              buttonHref="/contact"
+              subtitle="Create your portal account and get set up in minutes with our guided onboarding."
+              buttonText="Create Your Account"
+              buttonHref={registerUrl}
               variant="coral"
             />
           </div>

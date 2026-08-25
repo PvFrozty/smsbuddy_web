@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { registerUrl } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "./MobileMenu";
 
@@ -68,7 +69,7 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:block">
-            <Button href="/get-started" size="sm">
+            <Button href={registerUrl} size="sm">
               Get Started
             </Button>
           </div>

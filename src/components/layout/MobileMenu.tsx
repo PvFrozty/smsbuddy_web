@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
+import { registerUrl } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 
 const navLinks = [
@@ -87,8 +88,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </nav>
 
             {/* Bottom CTA */}
-            <div className="px-6 pb-8">
-              <Button href="/get-started" size="lg" className="w-full">
+            <div className="px-6 pb-8" onClick={onClose}>
+              <Button href={registerUrl} size="lg" className="w-full">
                 Get Started
               </Button>
             </div>

@@ -1,12 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion } from "motion/react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { FloatingBubbles } from "@/components/ui/FloatingBubbles";
 import { PhoneFrame } from "@/illustrations/PhoneFrame";
+import { registerUrl } from "@/lib/constants";
 import { ChatBubble } from "./ChatBubble";
 import { TypingIndicator } from "./TypingIndicator";
 import { fadeInLeft, fadeInRight, staggerContainer } from "@/animations/variants";
@@ -115,13 +117,24 @@ export function SmsConversationHero() {
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-              <Button variant="primary" size="lg" href="/contact">
-                Get Started
+              <Button variant="primary" size="lg" href={registerUrl}>
+                Create Your Account
               </Button>
               <Button variant="ghost" size="lg" href="/features">
                 See How It Works
               </Button>
             </div>
+
+            <p className="mt-4 text-sm text-text-light">
+              Sign up on the portal in minutes —{" "}
+              <Link
+                href="/contact"
+                className="font-semibold text-primary hover:underline"
+              >
+                or talk to us first
+              </Link>
+              .
+            </p>
 
             {/* Trust indicators */}
             <div className="mt-10 flex flex-wrap items-center justify-center gap-6 lg:justify-start">

@@ -11,6 +11,7 @@ import { CodeSnippetShowcase } from "@/components/code/CodeSnippetShowcase";
 import { QueuePipeIcon } from "@/illustrations/QueuePipeIcon";
 import { SmsBubbleIcon } from "@/illustrations/SmsBubbleIcon";
 import { PackageBoxIcon } from "@/illustrations/PackageBoxIcon";
+import { registerUrl } from "@/lib/constants";
 import {
   fadeInUp,
   fadeInLeft,
@@ -102,7 +103,7 @@ export default function ForDevelopers() {
 
             <AnimatedEntry variants={fadeInUp} delay={0.3}>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
-                <Button variant="primary" size="lg" href="/contact">
+                <Button variant="primary" size="lg" href={registerUrl}>
                   Get Your API Key
                 </Button>
                 <Button variant="ghost" size="lg" href="#api-features">
@@ -215,9 +216,9 @@ export default function ForDevelopers() {
           <div className="mt-16">
             <InlineCTA
               title="Get Your API Key"
-              subtitle="Start integrating SMS into your product today. Free sandbox included."
-              buttonText="Contact Us"
-              buttonHref="/contact"
+              subtitle="Sign up on the portal and start integrating SMS into your product today. Free sandbox included."
+              buttonText="Create Your Account"
+              buttonHref={registerUrl}
               variant="navy"
             />
           </div>

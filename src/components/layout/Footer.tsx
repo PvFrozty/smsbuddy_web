@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { registerUrl, siteConfig } from "@/lib/constants";
 
 const productLinks = [
   { label: "Features", href: "/features" },
@@ -14,9 +15,10 @@ const solutionLinks = [
 ];
 
 const connectLinks = [
-  { label: "WhatsApp", href: "https://wa.me/94XXXXXXXXX", external: true },
+  { label: "Create Account", href: registerUrl, external: true },
+  { label: "Talk to Us", href: "/contact", external: false },
+  { label: "WhatsApp", href: siteConfig.whatsapp, external: true },
   { label: "Email", href: "mailto:hello@smsbuddy.lk", external: false },
-  { label: "Get Started", href: "/get-started", external: false },
 ];
 
 export function Footer() {

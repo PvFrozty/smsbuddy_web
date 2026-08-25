@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { registerUrl } from "@/lib/constants";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { AnimatedEntry } from "@/components/ui/AnimatedEntry";
@@ -102,12 +103,12 @@ export function PackCard({
             ))}
           </ul>
 
-          {/* CTA */}
+          {/* CTA — custom volumes go to sales, everything else is self-serve */}
           <div className="mt-8">
             <Button
               variant={popular ? "primary" : "ghost"}
               size="md"
-              href="/contact"
+              href={totalPrice === "Contact Us" ? "/contact" : registerUrl}
               className="w-full"
             >
               {totalPrice === "Contact Us" ? "Contact Us" : "Get Started"}

@@ -10,6 +10,7 @@ import { SetupAssistanceCTA } from "@/components/cta/SetupAssistanceCTA";
 import { MaskShieldIcon } from "@/illustrations/MaskShieldIcon";
 import { CreditCoinIcon } from "@/illustrations/CreditCoinIcon";
 import { SmsBubbleIcon } from "@/illustrations/SmsBubbleIcon";
+import { registerUrl } from "@/lib/constants";
 import {
   fadeInUp,
   fadeInLeft,
@@ -95,11 +96,11 @@ export default function ForAgencies() {
 
             <AnimatedEntry variants={fadeInUp} delay={0.3}>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
-                <Button variant="primary" size="lg" href="/pricing">
-                  View Pricing
+                <Button variant="primary" size="lg" href={registerUrl}>
+                  Create Your Account
                 </Button>
-                <Button variant="ghost" size="lg" href="/contact">
-                  Talk to Us
+                <Button variant="ghost" size="lg" href="/pricing">
+                  View Pricing
                 </Button>
               </div>
             </AnimatedEntry>
@@ -173,9 +174,9 @@ export default function ForAgencies() {
           <div className="mt-16">
             <InlineCTA
               title="Start Managing All Your Brands"
-              subtitle="One account, unlimited masks, shared credits. Get started in minutes."
-              buttonText="View Pricing"
-              buttonHref="/pricing"
+              subtitle="One account, unlimited masks, shared credits. Sign up on the portal in minutes."
+              buttonText="Create Your Account"
+              buttonHref={registerUrl}
               variant="coral"
             />
           </div>

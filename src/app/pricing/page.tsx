@@ -13,7 +13,7 @@ import { PackCard } from "@/components/pricing/PackCard";
 import { PricingCalculator } from "@/components/pricing/PricingCalculator";
 import { SetupAssistanceCTA } from "@/components/cta/SetupAssistanceCTA";
 import { fadeInUp, staggerContainer } from "@/animations/variants";
-import { smsPackages } from "@/lib/constants";
+import { registerUrl, smsPackages } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 // ──────────────────────────────────────────────
@@ -241,7 +241,7 @@ export default function PricingPage() {
                 volume.
               </p>
               <Button
-                href="/contact"
+                href={registerUrl}
                 variant="ghost"
                 size="sm"
                 className="mt-3"
@@ -346,7 +346,7 @@ export default function PricingPage() {
                           </td>
                           <td className="px-6 py-4 text-right">
                             <Button
-                              href="/contact"
+                              href={registerUrl}
                               variant={isHighlighted ? "primary" : "ghost"}
                               size="sm"
                             >

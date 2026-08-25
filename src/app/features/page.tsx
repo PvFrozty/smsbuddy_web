@@ -15,6 +15,7 @@ import { QueuePipeIcon } from "@/illustrations/QueuePipeIcon";
 import { CreditCoinIcon } from "@/illustrations/CreditCoinIcon";
 import { SmsBubbleIcon } from "@/illustrations/SmsBubbleIcon";
 import { PackageBoxIcon } from "@/illustrations/PackageBoxIcon";
+import { registerUrl } from "@/lib/constants";
 import {
   fadeInUp,
   fadeInLeft,
@@ -166,8 +167,8 @@ export default function FeaturesPage() {
 
             <AnimatedEntry variants={fadeInUp} delay={0.3}>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <Button variant="primary" size="lg" href="/contact">
-                  Get Started
+                <Button variant="primary" size="lg" href={registerUrl}>
+                  Create Your Account
                 </Button>
                 <Button variant="ghost" size="lg" href="/pricing">
                   View Pricing
@@ -575,9 +576,9 @@ export default function FeaturesPage() {
         <Container>
           <InlineCTA
             title="Ready to Get Started?"
-            subtitle="Get set up in minutes with our guided onboarding and hands-on support."
-            buttonText="Contact Us"
-            buttonHref="/contact"
+            subtitle="Create your account on the portal and get set up in minutes with our guided onboarding and hands-on support."
+            buttonText="Create Your Account"
+            buttonHref={registerUrl}
             variant="coral"
           />
         </Container>

@@ -61,4 +61,11 @@ export const siteConfig = {
     "SMS Buddy is a reliable, assisted SMS gateway for Sri Lankan businesses, agencies, and developers who need multi-brand, transactional and promotional messaging without long-term subscriptions.",
   url: "https://smsbuddy.lk",
   whatsapp: "https://wa.me/94XXXXXXXXX",
+  portal: "https://portal.smsbuddy.lk",
 } as const;
+
+/**
+ * Self-serve signup on the SMS Buddy customer portal.
+ * Every "Get Started" / "Create Account" CTA on the marketing site points here.
+ */
+export const registerUrl = `${siteConfig.portal}/register`;

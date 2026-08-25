@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
 import { WavyDivider } from "@/components/ui/WavyDivider";
 import { BuddyWaving } from "@/illustrations/BuddyWaving";
 import { SmsBubbleIcon } from "@/illustrations/SmsBubbleIcon";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { registerUrl } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Get Started",
@@ -52,6 +54,22 @@ export default function ContactPage() {
             just want to learn more — we&apos;re here for you. That&apos;s what
             buddies are for.
           </p>
+
+          {/* Self-serve signup — for people who already know what they need */}
+          <div className="mx-auto mt-10 max-w-2xl rounded-2xl border-2 border-primary/20 bg-surface p-6 text-center sm:p-8">
+            <h2 className="font-heading text-xl font-bold text-secondary sm:text-2xl">
+              Already know what you need?
+            </h2>
+            <p className="mt-2 text-text-light">
+              Create your SMS Buddy account on the portal and start sending
+              right away. No waiting, no subscription.
+            </p>
+            <div className="mt-6">
+              <Button variant="primary" size="lg" href={registerUrl}>
+                Create Your Account
+              </Button>
+            </div>
+          </div>
         </Container>
 
         {/* Decorative buddy */}
@@ -183,8 +201,16 @@ export default function ContactPage() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href="https://wa.me/94XXXXXXXXX"
+              href={registerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-2xl bg-accent px-8 py-4 font-heading text-lg font-semibold text-secondary transition-all hover:bg-accent-light"
+            >
+              Create Your Account
+            </a>
+            <a
+              href="https://wa.me/94XXXXXXXXX"
+              className="inline-flex items-center gap-2 rounded-2xl border-2 border-text-on-dark/30 px-8 py-4 font-heading text-lg font-semibold text-text-on-dark transition-all hover:bg-white/10"
             >
               Chat on WhatsApp
             </a>
