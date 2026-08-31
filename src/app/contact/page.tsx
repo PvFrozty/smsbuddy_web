@@ -7,7 +7,7 @@ import { WavyDivider } from "@/components/ui/WavyDivider";
 import { BuddyWaving } from "@/illustrations/BuddyWaving";
 import { SmsBubbleIcon } from "@/illustrations/SmsBubbleIcon";
 import { ContactForm } from "@/components/contact/ContactForm";
-import { registerUrl } from "@/lib/constants";
+import { registerUrl, siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Get Started",
@@ -20,7 +20,7 @@ const contactOptions = [
     icon: "💬",
     title: "Chat on WhatsApp",
     description: "Get instant help from our team",
-    action: "https://wa.me/94XXXXXXXXX",
+    action: siteConfig.whatsapp,
     actionLabel: "Open WhatsApp",
   },
   {
@@ -34,7 +34,7 @@ const contactOptions = [
     icon: "📞",
     title: "Call Us",
     description: "Speak directly with our team",
-    action: "tel:+94XXXXXXXXX",
+    action: `tel:${siteConfig.phone}`,
     actionLabel: "Call Now",
   },
 ];
@@ -209,7 +209,7 @@ export default function ContactPage() {
               Create Your Account
             </a>
             <a
-              href="https://wa.me/94XXXXXXXXX"
+              href={siteConfig.whatsapp}
               className="inline-flex items-center gap-2 rounded-2xl border-2 border-text-on-dark/30 px-8 py-4 font-heading text-lg font-semibold text-text-on-dark transition-all hover:bg-white/10"
             >
               Chat on WhatsApp
