@@ -1,0 +1,3 @@
+// Optical reconstruction of the approved Buddy B concept, shared by brand assets.
+export const BUDDY_B_PATH =
+  "M10 4H42C55 4 64 13 64 25C64 32 61 37 56 40C63 43 67 49 67 57C67 69 57 76 43 76H19L8 83C6 84 4 83 4 80V10C4 7 7 4 10 4ZM21 27C15 27 12 31 12 37V58C12 60 14 61 16 59L23 54H37C45 54 49 48 49 41C49 33 44 27 37 27Z";

@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { isSignupUrl } from "@/lib/conversion";
 
 type ButtonVariant = "primary" | "secondary" | "ghost" | "accent";
 type ButtonSize = "sm" | "md" | "lg";
@@ -9,6 +10,7 @@ interface ButtonBaseProps {
   size?: ButtonSize;
   className?: string;
   children: React.ReactNode;
+  "data-cta-location"?: string;
 }
 
 interface ButtonAsButton extends ButtonBaseProps {
@@ -58,16 +60,16 @@ export function Button({
   );
 
   if ("href" in props && props.href) {
-    const { href, target, rel } = props;
-    // Links off-site (portal, WhatsApp, docs) open in a new tab by default so
-    // visitors keep the marketing page they were reading.
+    const { href, target, rel, "data-cta-location": ctaLocation } = props;
+    // Account creation continues in the same tab. Other external destinations
+    // retain their existing behavior; modified-click still works on all links.
     const isExternal = /^https?:\/\//.test(href);
-    const linkTarget = target ?? (isExternal ? "_blank" : undefined);
+    const linkTarget = target ?? (isExternal && !isSignupUrl(href) ? "_blank" : undefined);
     const linkRel =
       rel ?? (linkTarget === "_blank" ? "noopener noreferrer" : undefined);
 
     return (
-      <Link href={href} target={linkTarget} rel={linkRel} className={classes}>
+      <Link href={href} target={linkTarget} rel={linkRel} className={classes} data-cta-location={ctaLocation}>
         {children}
       </Link>
     );

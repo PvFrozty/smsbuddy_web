@@ -1,97 +1,99 @@
 "use client";
-
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
-import { registerUrl } from "@/lib/constants";
-import { Button } from "@/components/ui/Button";
-import { MobileMenu } from "./MobileMenu";
-
-const navLinks = [
-  { label: "Features", href: "/features" },
+import { usePathname } from "next/navigation";
+import { BrandMark } from "@/components/ui/BrandMark";
+import { Icon } from "@/components/ui/Icon";
+import { registerUrl, siteConfig } from "@/lib/constants";
+const links = [
+  { label: "Product", href: "/features" },
   { label: "Pricing", href: "/pricing" },
-  { label: "For Agencies", href: "/for-agencies" },
-  { label: "For Developers", href: "/for-developers" },
-  { label: "For SMEs", href: "/for-smes" },
-] as const;
-
+  { label: "For agencies", href: "/for-agencies" },
+  { label: "For developers", href: "/for-developers" },
+];
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const [open, setOpen] = useState(false);
+  const toggle = useRef<HTMLButtonElement>(null);
+  const header = useRef<HTMLElement>(null);
+  const pathname = usePathname();
   useEffect(() => {
-    function handleScroll() {
-      setIsScrolled(window.scrollY > 10);
-    }
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-
-    return () => window.removeEventListener("scroll", handleScroll);
+    const close = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        toggle.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", close);
+    return () => document.removeEventListener("keydown", close);
   }, []);
-
   return (
-    <>
-      <header
-        className={cn(
-          "sticky top-0 z-40 w-full transition-all duration-300",
-          isScrolled
-            ? "backdrop-blur-md bg-background/80 shadow-sm"
-            : "bg-transparent"
-        )}
-      >
-        <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 sm:px-6 md:px-8 py-4">
-          {/* Logo */}
-          <Link href="/" className="group">
-            <Image
-              src="/smsbuddy-logo.png"
-              alt="SMSBuddy"
-              width={180}
-              height={48}
-              className="h-14 w-auto transition-transform duration-200 group-hover:scale-105"
-              priority
-            />
-          </Link>
-
-          {/* Desktop nav links */}
-          <div className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="bg-transparent hover:bg-background-alt px-4 py-2 rounded-full text-sm font-medium text-text transition-colors duration-200"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          {/* Desktop CTA */}
-          <div className="hidden lg:block">
-            <Button href={registerUrl} size="sm">
-              Get Started
-            </Button>
-          </div>
-
-          {/* Mobile hamburger */}
-          <button
-            type="button"
-            className="lg:hidden flex flex-col items-center justify-center w-10 h-10 rounded-full hover:bg-background-alt transition-colors duration-200"
-            onClick={() => setIsMobileMenuOpen(true)}
-            aria-label="Open navigation menu"
+    <header
+      className="sb-header"
+      ref={header}
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget)) setOpen(false);
+      }}
+    >
+      <nav className="sb-shell sb-nav" aria-label="Main navigation">
+        <Link href="/" aria-label="SMS Buddy home">
+          <BrandMark />
+        </Link>
+        <div className="sb-nav-links">
+          {links.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              aria-current={pathname === l.href ? "page" : undefined}
+            >
+              {l.label}
+            </Link>
+          ))}
+        </div>
+        <div className="sb-nav-actions">
+          <a className="sb-login" href={siteConfig.portal}>
+            Log in
+          </a>
+          <a
+            className="sb-primary sb-nav-cta"
+            href={registerUrl}
+            data-cta-location="header"
           >
-            <span className="block w-5 h-0.5 bg-secondary rounded-full" />
-            <span className="block w-5 h-0.5 bg-secondary rounded-full mt-1.5" />
-            <span className="block w-4 h-0.5 bg-secondary rounded-full mt-1.5" />
+            Get Started <Icon name="arrow" size={18} />
+          </a>
+          <button
+            className="sb-menu-toggle"
+            ref={toggle}
+            onClick={() => setOpen(!open)}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
+            aria-label={open ? "Close navigation" : "Open navigation"}
+          >
+            <Icon name={open ? "close" : "menu"} />
           </button>
+        </div>
+      </nav>
+      {open && (
+        <nav
+          className="sb-mobile-nav"
+          id="mobile-navigation"
+          aria-label="Mobile navigation"
+        >
+          {[
+            ...links,
+            { label: "For small businesses", href: "/for-smes" },
+            { label: "Contact", href: "/contact" },
+          ].map((l) => (
+            <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
+              {l.label}
+              <Icon name="arrow" size={18} />
+            </Link>
+          ))}
+          <a href={siteConfig.portal}>
+            Log in
+            <Icon name="arrow" size={18} />
+          </a>
         </nav>
-      </header>
-
-      <MobileMenu
-        isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
-      />
-    </>
+      )}
+    </header>
   );
 }

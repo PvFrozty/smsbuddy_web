@@ -1,183 +1,366 @@
-import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { WavyDivider } from "@/components/ui/WavyDivider";
-import { AnimatedEntry } from "@/components/ui/AnimatedEntry";
-import { SmsConversationHero } from "@/components/hero/SmsConversationHero";
-import { PillarCard } from "@/components/features/PillarCard";
-import { FeatureChatThread } from "@/components/features/FeatureChatThread";
-import { TestimonialCarousel } from "@/components/testimonials/TestimonialCarousel";
-import { InlineCTA } from "@/components/cta/InlineCTA";
-import { SetupAssistanceCTA } from "@/components/cta/SetupAssistanceCTA";
-import { NoSubscriptionStamp } from "@/components/pricing/NoSubscriptionStamp";
-import { MaskShieldIcon } from "@/illustrations/MaskShieldIcon";
-import { QueuePipeIcon } from "@/illustrations/QueuePipeIcon";
-import { CreditCoinIcon } from "@/illustrations/CreditCoinIcon";
-import { SmsBubbleIcon } from "@/illustrations/SmsBubbleIcon";
-import { registerUrl } from "@/lib/constants";
-import { staggerContainer, fadeInUp } from "@/animations/variants";
-
-const pillars = [
-  {
-    icon: <MaskShieldIcon className="h-10 w-10" />,
-    title: "Built for Multi-Brand Teams",
-    description:
-      "Create unlimited sender masks and manage them all from one account. Perfect for agencies juggling multiple client brands.",
-  },
-  {
-    icon: <QueuePipeIcon className="h-10 w-10" />,
-    title: "Engineered for Reliability",
-    description:
-      "Our queue manager handles retries, rate limits, and delivery confirmations so you never lose a message.",
-  },
-  {
-    icon: <CreditCoinIcon className="h-10 w-10" />,
-    title: "No Subscriptions, Just Smart Credits",
-    description:
-      "Buy credits once and use them for 3 months. No recurring fees, no surprises — just pay for what you send.",
-  },
-  {
-    icon: <SmsBubbleIcon className="h-10 w-10" />,
-    title: "Local Experts in SMS",
-    description:
-      "Based in Sri Lanka, we provide hands-on setup assistance, mask registration guidance, and dedicated support.",
-  },
+import Link from "next/link";
+import { MessageDemo } from "@/components/home/MessageDemo";
+import { Icon } from "@/components/ui/Icon";
+import { registerUrl, siteConfig } from "@/lib/constants";
+import { AgencyNetwork } from "@/components/home/AgencyNetwork";
+import { HomeMotion } from "@/components/home/HomeMotion";
+import { BrandVideo } from "@/components/home/BrandVideo";
+import { BUDDY_B_PATH } from "@/lib/brand";
+import "./home.css";
+const faqs = [
+  [
+    "What happens after I click Get Started?",
+    "You’ll open the SMS Buddy registration page. Enter your contact and business details, including your address, then verify your email. Our team can guide you through sender-name setup and your first messages.",
+  ],
+  [
+    "Do I need a monthly subscription?",
+    "SMS Buddy uses prepaid credits rather than a monthly subscription. Buy credits when you need them and use them within 3 months. Confirm the current package price and any applicable charges before you buy.",
+  ],
+  [
+    "Will messages show my business name?",
+    "You can apply for a branded sender name, also called a sender ID or mask. Sender names need approval before use. The team can help with the registration requirements.",
+  ],
+  [
+    "Can I use SMS Buddy without writing code?",
+    "Use the portal for business messaging. If you’re connecting an application, explore the API integration options with our team.",
+  ],
+  [
+    "Can I manage more than one brand?",
+    "SMS Buddy’s shared credit pool lets you use credits across your account’s approved sender names. It’s useful for teams and agencies working with multiple brands.",
+  ],
+  [
+    "Can you help me get set up?",
+    "Yes. Contact the local team for help with your account, sender-name registration and integration questions. You can get started with an account or speak to us first.",
+  ],
 ];
-
-const features = [
-  {
-    icon: <SmsBubbleIcon className="h-8 w-8" />,
-    title: "API-Ready OTP Delivery",
-    userProblem: "I need to send OTPs from my app",
-    buddySolution:
-      "Just plug in our API — queues and retries are handled automatically!",
-  },
-  {
-    icon: <MaskShieldIcon className="h-8 w-8" />,
-    title: "Multi-Brand Sender IDs",
-    userProblem: "I manage 5 brands and need separate sender IDs",
-    buddySolution:
-      "Create unlimited masks, share one credit pool across all of them.",
-  },
-  {
-    icon: <CreditCoinIcon className="h-8 w-8" />,
-    title: "Bulk Promotional Campaigns",
-    userProblem: "I want to blast a promotion to 10,000 contacts",
-    buddySolution:
-      "Import your list, pick a mask, and hit send. We handle the rest!",
-  },
-];
-
 export default function Home() {
   return (
-    <main>
-      {/* ============ Section 1: Hero ============ */}
-      <SmsConversationHero />
-
-      {/* ============ Divider ============ */}
-      <WavyDivider variant="cream-to-white" />
-
-      {/* ============ Section 2: Pillars ============ */}
-      <section className="bg-surface py-20 md:py-28 lg:py-32">
-        <Container>
-          <SectionHeading
-            badge="Why SMS Buddy"
-            title="Built for Businesses Like Yours"
-            subtitle="Four pillars that make SMS Buddy the go-to messaging platform for Sri Lankan businesses, agencies, and developers."
-          />
-
-          <AnimatedEntry
-            variants={staggerContainer}
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
-          >
-            {pillars.map((pillar) => (
-              <PillarCard
-                key={pillar.title}
-                icon={pillar.icon}
-                title={pillar.title}
-                description={pillar.description}
-              />
-            ))}
-          </AnimatedEntry>
-        </Container>
-      </section>
-
-      {/* ============ Divider ============ */}
-      <WavyDivider variant="white-to-cream" />
-
-      {/* ============ Section 3: Features as Chat Threads ============ */}
-      <section className="bg-background py-20 md:py-28 lg:py-32">
-        <Container>
-          <SectionHeading
-            badge="How It Works"
-            title="Problems We Solve"
-            subtitle="See how SMS Buddy handles real messaging challenges with simple, powerful solutions."
-          />
-
-          <div className="grid gap-8 lg:grid-cols-3">
-            {features.map((feature) => (
-              <FeatureChatThread
-                key={feature.title}
-                icon={feature.icon}
-                title={feature.title}
-                userProblem={feature.userProblem}
-                buddySolution={feature.buddySolution}
-              />
-            ))}
+    <main id="main-content" className="sb-home">
+      <HomeMotion />
+      <section className="sb-hero" aria-labelledby="hero-heading">
+        <div className="sb-shell sb-hero-grid">
+          <div className="sb-hero-copy">
+            <h1 id="hero-heading">
+              <span className="sb-headline-line">Your next customer</span>{" "}
+              <span className="sb-headline-line">connection starts with a <span className="sb-text-word">text.</span></span>
+            </h1>
+            <p className="sb-hero-description">
+              Send promotions, order updates and OTPs with your own brand name.
+              Built for businesses in Sri Lanka.
+            </p>
+            <div className="sb-hero-actions">
+              <a
+                href={registerUrl}
+                className="sb-primary"
+                data-cta-location="hero"
+              >
+                Get Started <Icon name="arrow" />
+              </a>
+              <a href="#message-demo" className="sb-text-link">
+                <span className="sb-play">
+                  <svg
+                    viewBox="0 0 16 16"
+                    width="13"
+                    height="13"
+                    aria-hidden="true"
+                  >
+                    <path d="m6 3 7 5-7 5Z" fill="currentColor" />
+                  </svg>
+                </span>
+                Try a message
+              </a>
+            </div>
+            <p className="sb-reassurance">
+              No monthly subscription <span>·</span> Local setup support
+            </p>
           </div>
-
-          {/* Inline CTA */}
-          <div className="mt-16">
-            <InlineCTA
-              title="Ready to send your first SMS?"
-              subtitle="Create your portal account and get set up in minutes with our guided onboarding."
-              buttonText="Create Your Account"
-              buttonHref={registerUrl}
-              variant="coral"
-            />
+          <MessageDemo />
+          <BrandVideo />
+        </div>
+      </section>
+      <div className="sb-shell sb-benefit-strip">
+        {[
+          {
+            icon: "message" as const,
+            title: "Bring customers back",
+            text: "Share offers and announcements",
+          },
+          {
+            icon: "box" as const,
+            title: "Keep people in the loop",
+            text: "Send order and service updates",
+          },
+          {
+            icon: "lock" as const,
+            title: "Connect your application",
+            text: "Deliver OTPs and notifications",
+          },
+        ].map((b) => (
+          <div key={b.title}>
+            <span className="sb-benefit-icon">
+              <Icon name={b.icon} size={28} />
+            </span>
+            <span>
+              <strong>{b.title}</strong>
+              <small>{b.text}</small>
+            </span>
           </div>
-        </Container>
-      </section>
-
-      {/* ============ Divider ============ */}
-      <WavyDivider variant="cream-to-white" />
-
-      {/* ============ Section 4: Testimonials ============ */}
-      <section className="bg-surface py-20 md:py-28 lg:py-32">
-        <Container>
-          <SectionHeading
-            badge="Trusted by Businesses"
-            title="What Our Customers Say"
-            subtitle="Businesses across Sri Lanka rely on SMS Buddy for their messaging needs."
-          />
-
-          <TestimonialCarousel />
-        </Container>
-      </section>
-
-      {/* ============ Divider ============ */}
-      <WavyDivider variant="white-to-cream" />
-
-      {/* ============ Section 5: No Subscription Stamp ============ */}
-      <section className="bg-background py-20 md:py-28">
-        <Container>
-          <div className="flex flex-col items-center gap-8 text-center">
-            <AnimatedEntry variants={fadeInUp}>
-              <h2 className="font-heading text-3xl font-bold text-secondary sm:text-4xl">
-                Pay Once. Send for 3 Months.
-              </h2>
-              <p className="mt-4 max-w-lg text-lg text-text-light">
-                No subscriptions, no auto-renewals, no hidden fees. Buy credits
-                when you need them and they stay valid for a full 3 months.
+        ))}
+      </div>
+      <section className="sb-section sb-sky" id="product">
+        <div className="sb-shell">
+          <div className="sb-section-intro" data-reveal>
+            <h2>
+              One platform.
+              <br />
+              <span>Every kind of message.</span>
+            </h2>
+            <p>
+              A promotion worth opening. An update someone’s waiting for. A code
+              that gets them in. Make every message useful.
+            </p>
+          </div>
+          <div className="sb-use-cases" data-reveal>
+            <article>
+              <div className="sb-use-visual sb-promo-visual">
+                <div className="sb-mini-message">
+                  <span>YOUR STORE</span>
+                  <p>
+                    Your weekend plans? A little something from us. Discover our
+                    new arrivals in store.
+                  </p>
+                  <small>Illustrative message</small>
+                </div>
+                <span className="sb-message-tag">A reason to come back</span>
+              </div>
+              <h3>Turn “maybe later” into a visit.</h3>
+              <p>
+                Put offers, launches and announcements in your customers’
+                inboxes. Start with people who have opted in to hear from you.
               </p>
-            </AnimatedEntry>
-
-            <NoSubscriptionStamp />
+              <Link href="/for-smes" className="sb-text-link">
+                SMS for your business <Icon name="arrow" size={18} />
+              </Link>
+            </article>
+            <article>
+              <div className="sb-use-visual sb-order-visual">
+                <div className="sb-order-ticket">
+                  <Icon name="box" size={30} />
+                  <strong>Ready for collection</strong>
+                  <p>
+                    One helpful update.
+                    <br />
+                    One less “where’s my order?”
+                  </p>
+                  <span>
+                    <Icon name="check" size={14} /> Example order notification
+                  </span>
+                </div>
+              </div>
+              <h3>Keep the next step clear.</h3>
+              <p>
+                Send useful order updates and service notifications, so
+                customers know what’s happening with your business.
+              </p>
+              <Link href="/features" className="sb-text-link">
+                Explore the platform <Icon name="arrow" size={18} />
+              </Link>
+            </article>
+            <article>
+              <div className="sb-use-visual sb-otp-visual">
+                <div className="sb-otp-title">
+                  <Icon name="lock" size={22} /> Verification code
+                </div>
+                <div className="sb-otp-digits" aria-label="Example code 482916">
+                  {"482916".split("").map((n, i) => (
+                    <span key={i}>{n}</span>
+                  ))}
+                </div>
+                <p>For the moments that need a code.</p>
+                <small>Illustrative OTP</small>
+              </div>
+              <h3>Make messaging part of your app.</h3>
+              <p>
+                Connect SMS to your product for verification codes and
+                transactional notifications through the API.
+              </p>
+              <Link href="/for-developers" className="sb-text-link">
+                For developers <Icon name="arrow" size={18} />
+              </Link>
+            </article>
           </div>
-        </Container>
+        </div>
       </section>
-
-      {/* ============ Section 6: Setup Assistance CTA ============ */}
-      <SetupAssistanceCTA />
+      <section className="sb-section" id="how-it-works">
+        <div className="sb-shell sb-steps-layout" data-reveal>
+          <div>
+            <h2>
+              From your business
+              <br />
+              to their inbox.
+            </h2>
+            <p className="sb-lead">
+              A clear way to get started.
+              <br />
+              And a local team when you need a hand.
+            </p>
+            <a
+              className="sb-primary"
+              href={registerUrl}
+              data-cta-location="how_it_works"
+            >
+              Get Started <Icon name="arrow" size={20} />
+            </a>
+          </div>
+          <ol className="sb-steps">
+            <li>
+              <span>1</span>
+              <div>
+                <h3>Create your account</h3>
+                <p>
+                  Add your business and contact details, then verify your email
+                  in the SMS Buddy portal.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>2</span>
+              <div>
+                <h3>Get your sender name ready</h3>
+                <p>
+                  Apply for your business’s sender name. We can guide you
+                  through the approval requirements.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>3</span>
+              <div>
+                <h3>Add credits. Start connecting.</h3>
+                <p>
+                  Choose credits for your needs, then send through the portal or
+                  connect your app with the API.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section className="sb-section sb-brand-section">
+        <div className="sb-shell sb-brand-layout" data-reveal>
+          <AgencyNetwork />
+          <div>
+            <h2>
+              More brands.
+              <br />
+              Less back and forth.
+            </h2>
+            <p className="sb-lead">
+              Running campaigns for several businesses? Keep your approved
+              sender names together and use one shared credit pool across your
+              brands.
+            </p>
+            <Link href="/for-agencies" className="sb-text-link">
+              Built for agencies, too <Icon name="arrow" />
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="sb-section">
+        <div className="sb-shell sb-credit-section">
+          <div>
+            <h2>
+              Buy credits.
+              <br />
+              Skip the subscription.
+            </h2>
+            <p className="sb-lead">
+              Choose a pack that fits the messages you plan to send. Your
+              credits stay valid for 3 months from purchase.
+            </p>
+            <Link href="/pricing" className="sb-text-link">
+              Explore credit packs <Icon name="arrow" />
+            </Link>
+          </div>
+          <div className="sb-credit-facts">
+            <div>
+              <Icon name="check" />
+              <span>
+                <strong>No monthly subscription</strong>
+                <p>Top up when your business needs to send.</p>
+              </span>
+            </div>
+            <div>
+              <Icon name="check" />
+              <span>
+                <strong>3-month credit validity</strong>
+                <p>Choose a pack you can use within that period.</p>
+              </span>
+            </div>
+            <div>
+              <Icon name="check" />
+              <span>
+                <strong>One pool for your sender names</strong>
+                <p>Share credits across your approved brands.</p>
+              </span>
+            </div>
+            <p className="sb-small-note">
+              Check current rates and applicable charges before purchasing.
+              Longer messages may use more than one credit.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="sb-section sb-faq-section">
+        <div className="sb-shell sb-faq-layout">
+          <div>
+            <h2>
+              A few things
+              <br />
+              you might be asking.
+            </h2>
+            <p className="sb-lead">Still have a question?</p>
+            <a className="sb-text-link" href={siteConfig.whatsapp}>
+              Talk to the local team <Icon name="arrow" size={18} />
+            </a>
+          </div>
+          <div className="sb-faq">
+            {faqs.map(([q, a]) => (
+              <details key={q}>
+                <summary>
+                  {q}
+                  <span>
+                    <Icon name="plus" size={18} />
+                  </span>
+                </summary>
+                <p>{a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="sb-final-section">
+        <svg className="sb-final-mark" viewBox="0 0 72 88" fill="none" aria-hidden="true"><path d={BUDDY_B_PATH} fill="currentColor" fillRule="evenodd" /></svg>
+        <div className="sb-shell sb-final">
+          <div>
+            <h2>
+              Your customers are
+              <br />a message away.
+            </h2>
+            <p>Make your next connection with SMS Buddy.</p>
+          </div>
+          <div>
+            <a
+              href={registerUrl}
+              className="sb-primary sb-white-button"
+              data-cta-location="final"
+            >
+              Get Started <Icon name="arrow" />
+            </a>
+            <span>Create your account in the SMS Buddy portal.</span>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

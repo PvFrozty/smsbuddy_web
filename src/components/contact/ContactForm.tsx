@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { Button } from "@/components/ui/Button";
+import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/constants";
 
@@ -19,11 +20,11 @@ interface FormData {
   message: string;
 }
 
-const businessTypes: { value: BusinessType; label: string; emoji: string }[] = [
-  { value: "agency", label: "Agency / Marketing Team", emoji: "🏢" },
-  { value: "developer", label: "Developer / Product Team", emoji: "💻" },
-  { value: "sme", label: "Small / Medium Business", emoji: "🏪" },
-  { value: "other", label: "Other", emoji: "✨" },
+const businessTypes: { value: BusinessType; label: string; icon: "people" | "code" | "box" | "message" }[] = [
+  { value: "agency", label: "Agency / Marketing Team", icon: "people" },
+  { value: "developer", label: "Developer / Product Team", icon: "code" },
+  { value: "sme", label: "Small / Medium Business", icon: "box" },
+  { value: "other", label: "Other", icon: "message" },
 ];
 
 const needOptions: { value: NeedType; label: string }[] = [
@@ -36,6 +37,7 @@ const needOptions: { value: NeedType; label: string }[] = [
 ];
 
 export function ContactForm() {
+  const reducedMotion = useReducedMotion();
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -45,7 +47,7 @@ export function ContactForm() {
     needs: [],
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [preparedUrl, setPreparedUrl] = useState<string | null>(null);
 
   const toggleNeed = (need: NeedType) => {
     setFormData((prev) => ({
@@ -58,7 +60,6 @@ export function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("sending");
 
     // Build a WhatsApp message from the form data
     const lines = [
@@ -79,24 +80,30 @@ export function ContactForm() {
 
     const waUrl = `${siteConfig.whatsapp}?text=${encodeURIComponent(lines)}`;
     window.open(waUrl, "_blank", "noopener,noreferrer");
-    setStatus("success");
+    setPreparedUrl(waUrl);
   };
 
-  if (status === "success") {
+  if (preparedUrl) {
     return (
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
+        initial={reducedMotion ? false : { opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         className="rounded-2xl bg-success/10 p-12 text-center"
       >
-        <span className="text-5xl">🎉</span>
+        <span className="inline-flex text-primary"><Icon name="message" size={40} /></span>
         <h3 className="mt-4 font-heading text-2xl font-bold text-secondary">
-          We Got Your Message!
+          Your message is ready
         </h3>
         <p className="mt-2 text-text-light">
-          Our team will review your needs and get back to you within a few hours.
-          Welcome to the SMS Buddy family!
+          Review and send your prepared message in WhatsApp to contact our team.
+          If WhatsApp did not open, use the button below.
         </p>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <Button href={preparedUrl}>Open WhatsApp</Button>
+          <Button type="button" variant="ghost" onClick={() => setPreparedUrl(null)}>
+            Edit details
+          </Button>
+        </div>
       </motion.div>
     );
   }
@@ -104,15 +111,16 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
       {/* Business Type Selection */}
-      <div>
-        <label className="mb-3 block font-heading text-sm font-semibold text-secondary">
+      <fieldset>
+        <legend className="mb-3 block font-heading text-sm font-semibold text-secondary">
           I am a...
-        </label>
+        </legend>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {businessTypes.map((type) => (
             <button
               key={type.value}
               type="button"
+              aria-pressed={formData.businessType === type.value}
               onClick={() =>
                 setFormData((prev) => ({ ...prev, businessType: type.value }))
               }
@@ -123,22 +131,27 @@ export function ContactForm() {
                   : "border-border bg-surface text-text-light hover:border-primary/30"
               )}
             >
-              <span className="text-2xl">{type.emoji}</span>
+              <Icon name={type.icon} size={25} />
               <span className="text-xs font-medium">{type.label}</span>
             </button>
           ))}
         </div>
-      </div>
+      </fieldset>
 
       {/* Contact Details */}
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="mb-1.5 block font-heading text-sm font-semibold text-secondary">
+          <label htmlFor="contact-name" className="mb-1.5 block font-heading text-sm font-semibold text-secondary">
             Your Name *
           </label>
           <input
             type="text"
             required
+            pattern=".*\S.*"
+            title="Enter your name"
+            id="contact-name"
+            name="name"
+            autoComplete="name"
             value={formData.name}
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, name: e.target.value }))
@@ -148,11 +161,14 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label className="mb-1.5 block font-heading text-sm font-semibold text-secondary">
+          <label htmlFor="contact-company" className="mb-1.5 block font-heading text-sm font-semibold text-secondary">
             Company
           </label>
           <input
             type="text"
+            id="contact-company"
+            name="company"
+            autoComplete="organization"
             value={formData.company}
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, company: e.target.value }))
@@ -162,12 +178,15 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label className="mb-1.5 block font-heading text-sm font-semibold text-secondary">
+          <label htmlFor="contact-email" className="mb-1.5 block font-heading text-sm font-semibold text-secondary">
             Email *
           </label>
           <input
             type="email"
             required
+            id="contact-email"
+            name="email"
+            autoComplete="email"
             value={formData.email}
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, email: e.target.value }))
@@ -177,11 +196,14 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label className="mb-1.5 block font-heading text-sm font-semibold text-secondary">
+          <label htmlFor="contact-phone" className="mb-1.5 block font-heading text-sm font-semibold text-secondary">
             Phone
           </label>
           <input
             type="tel"
+            id="contact-phone"
+            name="phone"
+            autoComplete="tel"
             value={formData.phone}
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, phone: e.target.value }))
@@ -193,15 +215,16 @@ export function ContactForm() {
       </div>
 
       {/* What Do You Need */}
-      <div>
-        <label className="mb-3 block font-heading text-sm font-semibold text-secondary">
+      <fieldset>
+        <legend className="mb-3 block font-heading text-sm font-semibold text-secondary">
           What do you need help with?
-        </label>
+        </legend>
         <div className="flex flex-wrap gap-2">
           {needOptions.map((need) => (
             <button
               key={need.value}
               type="button"
+              aria-pressed={formData.needs.includes(need.value)}
               onClick={() => toggleNeed(need.value)}
               className={cn(
                 "rounded-full border-2 px-4 py-2 text-sm font-medium transition-all",
@@ -214,14 +237,16 @@ export function ContactForm() {
             </button>
           ))}
         </div>
-      </div>
+      </fieldset>
 
       {/* Message */}
       <div>
-        <label className="mb-1.5 block font-heading text-sm font-semibold text-secondary">
+        <label htmlFor="contact-message" className="mb-1.5 block font-heading text-sm font-semibold text-secondary">
           Tell us more
         </label>
         <textarea
+          id="contact-message"
+          name="message"
           value={formData.message}
           onChange={(e) =>
             setFormData((prev) => ({ ...prev, message: e.target.value }))
@@ -233,27 +258,17 @@ export function ContactForm() {
       </div>
 
       {/* Submit */}
-      <AnimatePresence>
-        {status === "error" && (
-          <motion.p
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            className="text-sm text-error"
-          >
-            Something went wrong. Please try again or contact us on WhatsApp.
-          </motion.p>
-        )}
-      </AnimatePresence>
+      <p className="text-sm text-text-light">
+        Continue to WhatsApp with these details, then review and send your message.
+      </p>
 
       <Button
         type="submit"
         variant="primary"
         size="lg"
         className="w-full"
-        disabled={status === "sending"}
       >
-        {status === "sending" ? "Sending..." : "Send Message"}
+        Continue in WhatsApp
       </Button>
     </form>
   );

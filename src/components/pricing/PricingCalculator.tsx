@@ -1,250 +1,122 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { cn } from "@/lib/utils";
-import { AnimatedEntry } from "@/components/ui/AnimatedEntry";
-import { fadeInUp } from "@/animations/variants";
-import { CreditCoinIcon } from "@/illustrations/CreditCoinIcon";
+import { useId, useState } from "react";
+import Link from "next/link";
 import { smsPackages } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
-// Real pricing tiers from smsPackages
-const packTiers = smsPackages.filter((p) => p.code !== "SMPAYG");
-const paygRate = 0.60;
-
-function getRate(count: number): number {
-  // Find the best matching pack tier
-  for (let i = packTiers.length - 1; i >= 0; i--) {
-    if (count >= packTiers[i].smsCount) {
-      return packTiers[i].perSmsCost;
-    }
-  }
-  // Below smallest pack, use PAYG rate
-  if (count < packTiers[0].smsCount) {
-    return paygRate;
-  }
-  return packTiers[0].perSmsCost;
-}
-
-function getRecommendedPack(count: number): { name: string; savings: number } {
-  // Find the smallest pack that covers the count
-  for (const pack of packTiers) {
-    if (count <= pack.smsCount) {
-      const paygCost = count * paygRate;
-      const packCost = pack.price;
-      const savings = paygCost - packCost;
-      return { name: pack.name, savings: Math.max(0, savings) };
-    }
-  }
-  // Over the largest pack
-  const largest = packTiers[packTiers.length - 1];
-  const paygCost = count * paygRate;
-  const packCost = largest.price;
-  return { name: `${largest.name}+`, savings: Math.max(0, paygCost - packCost) };
-}
-
-function formatLKR(amount: number): string {
-  if (amount < 1) return `LKR ${amount.toFixed(2)}`;
-  return `LKR ${amount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-}
+const creditPacks = smsPackages
+  .filter((pack) => pack.code !== "SMPAYG")
+  .sort((a, b) => a.smsCount - b.smsCount);
+const formatNumber = (amount: number) => amount.toLocaleString("en-LK");
+const formatPrice = (amount: number) =>
+  `LKR ${amount.toLocaleString("en-LK", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
 export function PricingCalculator({ className }: { className?: string }) {
-  const [smsCount, setSmsCount] = useState(5000);
-
-  const calculation = useMemo(() => {
-    const rate = getRate(smsCount);
-    const total = smsCount * rate;
-    const recommended = getRecommendedPack(smsCount);
-    return { rate, total, recommended };
-  }, [smsCount]);
-
-  const min = 100;
-  const max = 150000;
-  const fillPercent = ((smsCount - min) / (max - min)) * 100;
+  const inputId = useId();
+  const [requestedCredits, setRequestedCredits] = useState("5000");
+  const count = Number(requestedCredits);
+  const isValid = requestedCredits.trim() !== "" && Number.isSafeInteger(count) && count > 0;
+  const selectedPack = isValid
+    ? creditPacks.find((pack) => pack.smsCount >= count)
+    : undefined;
 
   return (
-    <AnimatedEntry variants={fadeInUp} className={className}>
-      <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-surface p-6 md:p-10">
-        {/* Input section */}
-        <div className="mb-8">
-          <label
-            htmlFor="sms-count"
-            className="mb-3 block font-heading text-sm font-semibold text-secondary"
-          >
-            How many SMS do you need?
-          </label>
-
-          <div className="mb-4 flex items-center justify-center">
-            <input
-              id="sms-count"
-              type="number"
-              min={min}
-              max={max}
-              value={smsCount}
-              onChange={(e) => {
-                const val = Math.min(max, Math.max(min, Number(e.target.value) || min));
-                setSmsCount(val);
-              }}
-              className="w-44 rounded-xl border border-border bg-background px-4 py-3 text-center font-heading text-2xl font-bold text-secondary outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-            />
-          </div>
-
-          <div className="relative">
-            <input
-              type="range"
-              min={min}
-              max={max}
-              step={100}
-              value={smsCount}
-              onChange={(e) => setSmsCount(Number(e.target.value))}
-              className="pricing-slider w-full cursor-pointer"
-              style={
-                {
-                  "--fill-percent": `${fillPercent}%`,
-                } as React.CSSProperties
-              }
-            />
-            <div className="mt-2 flex justify-between text-xs text-text-light">
-              <span>100</span>
-              <span>30K</span>
-              <span>75K</span>
-              <span>150K</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Results */}
-        <div className="grid gap-4 sm:grid-cols-3">
-          <ResultCard
-            label="Cost per SMS"
-            value={formatLKR(calculation.rate)}
-            highlight
-          />
-          <ResultCard
-            label="Estimated Total"
-            value={formatLKR(calculation.total)}
-          />
-          <ResultCard
-            label="Recommended Pack"
-            value={calculation.recommended.name}
-            small
-          />
-        </div>
-
-        {/* Savings indicator */}
-        {calculation.recommended.savings > 0 && (
-          <div className="mt-4 rounded-xl bg-success/10 px-4 py-3 text-center text-sm">
-            <span className="font-semibold text-success">
-              Save {formatLKR(calculation.recommended.savings)}
-            </span>{" "}
-            <span className="text-text-light">
-              vs Pay As You Go (LKR 0.60/SMS)
-            </span>
-          </div>
+    <div className={cn("grid overflow-hidden rounded-3xl border border-slate-200 bg-white lg:grid-cols-2", className)}>
+      <div className="p-6 sm:p-9">
+        <label htmlFor={inputId} className="block text-lg font-semibold text-slate-950">
+          How many credits do you need?
+        </label>
+        <p id={`${inputId}-hint`} className="mt-2 text-sm leading-relaxed text-slate-600">
+          Enter the credits you expect to use within 3 months. We’ll show the
+          smallest listed pack that covers them.
+        </p>
+        <input
+          id={inputId}
+          type="number"
+          inputMode="numeric"
+          min={1}
+          step={1}
+          value={requestedCredits}
+          onChange={(event) => setRequestedCredits(event.target.value)}
+          aria-invalid={!isValid}
+          aria-describedby={`${inputId}-hint${!isValid ? ` ${inputId}-error` : ""}`}
+          className="mt-6 w-full rounded-xl border border-slate-300 bg-white px-4 py-4 text-3xl font-semibold tabular-nums text-slate-950 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20"
+        />
+        {!isValid && (
+          <p id={`${inputId}-error`} className="mt-2 text-sm text-red-700">
+            Enter a whole number of credits greater than zero.
+          </p>
         )}
-
-        {/* Pack tiers overview */}
-        <div className="mt-8 rounded-xl bg-background p-4">
-          <div className="mb-3 flex items-center gap-2">
-            <CreditCoinIcon className="h-5 w-5" />
-            <span className="font-heading text-sm font-semibold text-secondary">
-              Volume Pricing Tiers
-            </span>
-          </div>
-          <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
-            {[
-              { label: "1K", rate: 0.58, min: 1000, max: 4999 },
-              { label: "5K–10K", rate: 0.55, min: 5000, max: 29999 },
-              { label: "30K–50K", rate: 0.52, min: 30000, max: 74999 },
-              { label: "75K–100K", rate: 0.48, min: 75000, max: 129999 },
-              { label: "130K+", rate: 0.45, min: 130000, max: 150000 },
-            ].map((tier) => (
-              <div
-                key={tier.label}
-                className={cn(
-                  "rounded-lg border px-3 py-2 text-center text-xs transition-colors",
-                  smsCount >= tier.min && smsCount <= tier.max
-                    ? "border-primary/40 bg-primary/10 text-primary-dark"
-                    : "border-border bg-surface text-text-light"
-                )}
-              >
-                <div className="font-semibold">{tier.label}</div>
-                <div className="mt-0.5">LKR {tier.rate.toFixed(2)}/SMS</div>
-              </div>
-            ))}
-          </div>
+        <div className="mt-4 flex flex-wrap gap-2" aria-label="Example credit quantities">
+          {[1000, 5000, 30000].map((amount) => (
+            <button
+              key={amount}
+              type="button"
+              onClick={() => setRequestedCredits(String(amount))}
+              aria-pressed={isValid && count === amount}
+              className={cn(
+                "min-h-11 rounded-lg border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600",
+                isValid && count === amount
+                  ? "border-blue-600 bg-blue-50 text-blue-800"
+                  : "border-slate-200 text-slate-600 hover:border-blue-400 hover:text-blue-700"
+              )}
+            >
+              {formatNumber(amount)}
+            </button>
+          ))}
         </div>
+        <p className="mt-6 text-sm leading-relaxed text-slate-500">
+          A long message or one using Unicode characters may use multiple credits.
+          Check the credit count for your message before sending.
+        </p>
       </div>
-
-      {/* Custom slider styles */}
-      <style jsx>{`
-        .pricing-slider {
-          -webkit-appearance: none;
-          appearance: none;
-          height: 8px;
-          border-radius: 9999px;
-          background: linear-gradient(
-            to right,
-            #ff6b54 0%,
-            #ff6b54 var(--fill-percent),
-            #e8ddd3 var(--fill-percent),
-            #e8ddd3 100%
-          );
-          outline: none;
-        }
-        .pricing-slider::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          appearance: none;
-          width: 24px;
-          height: 24px;
-          border-radius: 50%;
-          background: #ff6b54;
-          cursor: pointer;
-          border: 3px solid white;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        }
-        .pricing-slider::-moz-range-thumb {
-          width: 24px;
-          height: 24px;
-          border-radius: 50%;
-          background: #ff6b54;
-          cursor: pointer;
-          border: 3px solid white;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        }
-      `}</style>
-    </AnimatedEntry>
-  );
-}
-
-function ResultCard({
-  label,
-  value,
-  highlight,
-  small,
-}: {
-  label: string;
-  value: string;
-  highlight?: boolean;
-  small?: boolean;
-}) {
-  return (
-    <div
-      className={cn(
-        "rounded-xl border p-4 text-center",
-        highlight
-          ? "border-primary/30 bg-primary/5"
-          : "border-border bg-background"
-      )}
-    >
-      <p className="text-xs font-medium text-text-light">{label}</p>
-      <p
-        className={cn(
-          "mt-1 font-heading font-bold text-secondary",
-          small ? "text-sm" : "text-lg"
+      <div aria-live="polite" aria-atomic="true" className="flex flex-col justify-center bg-slate-50 p-6 sm:p-9">
+        {selectedPack ? (
+          <>
+            <p className="text-sm font-medium text-blue-700">Smallest pack covering your credits</p>
+            <h3 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">
+              {formatNumber(selectedPack.smsCount)} credits
+            </h3>
+            <p className="mt-1 text-sm text-slate-500">{selectedPack.name} pack</p>
+            <p className="mt-6 text-3xl font-semibold tabular-nums text-slate-950">
+              {formatPrice(selectedPack.price)}
+            </p>
+            <p className="mt-1 text-sm text-slate-600">Indicative pack total</p>
+            <dl className="mt-6 space-y-3 border-t border-slate-200 pt-5 text-sm">
+              <div className="flex flex-wrap justify-between gap-2">
+                <dt className="text-slate-600">Effective price per credit</dt>
+                <dd className="font-semibold text-slate-900">{formatPrice(selectedPack.price / selectedPack.smsCount)}</dd>
+              </div>
+              <div className="flex flex-wrap justify-between gap-2">
+                <dt className="text-slate-600">Credits remaining after your estimate</dt>
+                <dd className="font-semibold text-slate-900">{formatNumber(selectedPack.smsCount - count)}</dd>
+              </div>
+              <div className="flex flex-wrap justify-between gap-2">
+                <dt className="text-slate-600">Validity from purchase</dt>
+                <dd className="font-semibold text-slate-900">3 months</dd>
+              </div>
+            </dl>
+          </>
+        ) : (
+          <>
+            <h3 className="text-2xl font-semibold text-slate-950">
+              {isValid ? "Let’s find the right credit option." : "Your pack estimate will appear here."}
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600">
+              {isValid
+                ? `Your estimate exceeds our largest listed pack of ${formatNumber(creditPacks[creditPacks.length - 1].smsCount)} credits. Contact the team to discuss your volume and current pricing.`
+                : "Enter a valid credit quantity to compare it with the available packs."}
+            </p>
+          </>
         )}
-      >
-        {value}
-      </p>
+        <p className="mt-6 text-xs leading-relaxed text-slate-500">
+          Prices are indicative. Confirm current rates, taxes, and sender-name setup costs before buying.
+        </p>
+        <Link href="/contact" className="mt-4 w-fit text-sm font-semibold text-blue-700 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">
+          Ask about pricing
+        </Link>
+      </div>
     </div>
   );
 }

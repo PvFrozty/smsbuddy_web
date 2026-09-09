@@ -1,126 +1,47 @@
 import Link from "next/link";
-import Image from "next/image";
-import { registerUrl, siteConfig } from "@/lib/constants";
-
-const productLinks = [
-  { label: "Features", href: "/features" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "API Docs", href: "/docs" },
-];
-
-const solutionLinks = [
-  { label: "For Agencies", href: "/for-agencies" },
-  { label: "For Developers", href: "/for-developers" },
-  { label: "For SMEs", href: "/for-smes" },
-];
-
-const connectLinks = [
-  { label: "Create Account", href: registerUrl, external: true },
-  { label: "Talk to Us", href: "/contact", external: false },
-  { label: "WhatsApp", href: siteConfig.whatsapp, external: true },
-  { label: "Email", href: "mailto:hello@smsbuddy.lk", external: false },
-];
-
+import { BrandMark } from "@/components/ui/BrandMark";
+import { siteConfig, registerUrl } from "@/lib/constants";
 export function Footer() {
   return (
-    <footer className="bg-background relative overflow-hidden">
-      <div className="mx-auto max-w-[1200px] px-4 sm:px-6 md:px-8 py-16 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8">
-          {/* Brand column */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-4">
-              <Image
-                src="/smsbuddy-logo.png"
-                alt="SMSBuddy"
-                width={180}
-                height={48}
-                className="h-14 w-auto"
-              />
+    <footer className="sb-footer">
+      <div className="sb-shell">
+        <div className="sb-footer-top">
+          <div>
+            <Link href="/" aria-label="SMS Buddy home">
+              <BrandMark />
             </Link>
-            <p className="text-text-light text-sm leading-relaxed">
-              Your friendly SMS gateway
+            <p>
+              Small messages.
+              <br />
+              Stronger connections.
             </p>
+            <span>Business SMS for Sri Lanka.</span>
           </div>
-
-          {/* Product column */}
           <div>
-            <h4 className="font-heading font-semibold text-secondary mb-4">
-              Product
-            </h4>
-            <ul className="space-y-3">
-              {productLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-text-light hover:text-primary text-sm transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <h2>Product</h2>
+            <Link href="/features">Features</Link>
+            <Link href="/pricing">Pricing</Link>
+            <a href={registerUrl} data-cta-location="footer">
+              Get Started
+            </a>
           </div>
-
-          {/* Solutions column */}
           <div>
-            <h4 className="font-heading font-semibold text-secondary mb-4">
-              Solutions
-            </h4>
-            <ul className="space-y-3">
-              {solutionLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-text-light hover:text-primary text-sm transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <h2>Made for you</h2>
+            <Link href="/for-smes">Small businesses</Link>
+            <Link href="/for-agencies">Agencies</Link>
+            <Link href="/for-developers">Developers</Link>
           </div>
-
-          {/* Connect column */}
           <div>
-            <h4 className="font-heading font-semibold text-secondary mb-4">
-              Connect
-            </h4>
-            <ul className="space-y-3">
-              {connectLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-text-light hover:text-primary text-sm transition-colors duration-200"
-                    {...(link.external
-                      ? { target: "_blank", rel: "noopener noreferrer" }
-                      : {})}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <h2>Let’s talk</h2>
+            <Link href="/contact">Contact the team</Link>
+            <a href={siteConfig.whatsapp}>Chat on WhatsApp</a>
+            <a href={siteConfig.portal}>Log in to your account</a>
           </div>
         </div>
-
-        {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-text-light text-sm">
-            &copy; 2025 SMS Buddy. All rights reserved.
-          </p>
+        <div className="sb-footer-bottom">
+          <span>© {new Date().getFullYear()} SMS Buddy</span>
+          <span>Made for the way your business connects.</span>
         </div>
-      </div>
-
-      {/* Buddy mascot — bottom right */}
-      <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 opacity-20 lg:opacity-40 pointer-events-none">
-        <Image
-          src="/smsbuddy-mascot.png"
-          alt=""
-          width={200}
-          height={200}
-          className="h-32 md:h-40 lg:h-48 w-auto"
-          aria-hidden="true"
-        />
       </div>
     </footer>
   );

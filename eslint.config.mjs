@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored GSAP runtime; video HTML is checked by HyperFrames.
+    "videos/**/gsap.min.js",
   ]),
 ]);
 

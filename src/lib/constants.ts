@@ -70,4 +70,4 @@ export const siteConfig = {
  * app. Every "Get Started" / "Create Account" CTA on the marketing site points
  * here.
  */
-export const registerUrl = siteConfig.portal;
+export const registerUrl = `${siteConfig.portal}/register`;

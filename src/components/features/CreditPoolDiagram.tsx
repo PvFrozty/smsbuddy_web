@@ -73,7 +73,6 @@ function CoinIcon({ size = 20, className }: { size?: number; className?: string 
 /* ------------------------------------------------------------------ */
 
 function FlowParticle({
-  color,
   delay,
   active,
 }: {

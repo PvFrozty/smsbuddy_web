@@ -1,0 +1,230 @@
+- generic [ref=f1e1]:
+  - link "Skip to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f1e3]:
+    - navigation "Main navigation" [ref=f1e4]:
+      - link "SMS Buddy home" [ref=f1e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f1e6]: SMS Buddy
+      - generic [ref=f1e15]:
+        - link "Get Started" [ref=f1e17] [cursor=pointer]:
+          - /url: https://portal.smsbuddy.lk/register
+        - button "Open navigation" [ref=f1e366] [cursor=pointer]
+  - main [ref=f1e21]:
+    - region [ref=f1e22]:
+      - generic [ref=f1e23]:
+        - generic [ref=f1e24]:
+          - heading "Your next customer connection starts with a text." [level=1] [ref=f1e25]:
+            - text: Your next customer
+            - generic [ref=f1e27]: connection starts with a text.
+          - paragraph [ref=f1e28]: Send promotions, order updates and OTPs with your own brand name. Built for businesses in Sri Lanka.
+          - generic [ref=f1e29]:
+            - link "Get Started" [ref=f1e30] [cursor=pointer]:
+              - /url: https://portal.smsbuddy.lk/register
+            - link [ref=f1e33] [cursor=pointer]:
+              - /url: "#message-demo"
+          - paragraph [ref=f1e37]: No monthly subscription · Local setup support
+        - generic [ref=f1e38]:
+          - generic [ref=f1e39]: Your brand. Their inbox.
+          - generic [ref=f1e42]:
+            - generic [ref=f1e43]: Interactive example
+            - group "Message type" [ref=f1e45]:
+              - button "Promotions" [ref=f1e46] [cursor=pointer]
+              - button "Order updates" [pressed] [ref=f1e50] [cursor=pointer]
+              - button "OTP" [ref=f1e54] [cursor=pointer]
+            - generic [ref=f1e58]:
+              - generic [ref=f1e59]: Sender name
+              - textbox "Sender name" [ref=f1e60]: YOUR BRAND
+              - generic [ref=f1e61]: Your message
+              - textbox "Your message" [ref=f1e62]: Your order is ready. Thank you for shopping with us! Visit our store to collect it today.
+              - generic [ref=f1e63]: 89 characters
+              - button "Preview message" [ref=f1e65] [cursor=pointer]
+          - generic [ref=f1e76]:
+            - generic [ref=f1e77]: 9:41
+            - generic [ref=f1e83]:
+              - strong [ref=f1e90]: YOUR BRAND
+              - generic [ref=f1e91]: Text message · SMS
+            - region "Message preview" [ref=f1e92]:
+              - generic [ref=f1e93]: Today, 9:41 AM
+              - generic [ref=f1e94]: Your order is ready. Thank you for shopping with us! Visit our store to collect it today.
+              - generic [ref=f1e95]: Example preview
+            - generic [ref=f1e96]: Text message
+          - paragraph [ref=f1e103]: A live preview, not an actual SMS. Nothing is sent.
+        - generic [ref=f1e104]:
+          - button "Watch SMS Buddy in 15 seconds" [ref=f1e105] [cursor=pointer]
+          - dialog [ref=f1e358]:
+            - generic [ref=f1e359]:
+              - generic [ref=f1e360]:
+                - heading "Small messages. Stronger connections." [level=2] [ref=f1e361]
+                - button "Close video" [active] [ref=f1e362] [cursor=pointer]
+              - generic "SMS Buddy promotional video, 15 seconds. All messaging appears on screen; audio is instrumental." [ref=f1e365]
+    - generic [ref=f1e109]:
+      - generic [ref=f1e115]:
+        - strong [ref=f1e116]: Bring customers back
+        - generic [ref=f1e117]: Share offers and announcements
+      - generic [ref=f1e123]:
+        - strong [ref=f1e124]: Keep people in the loop
+        - generic [ref=f1e125]: Send order and service updates
+      - generic [ref=f1e131]:
+        - strong [ref=f1e132]: Connect your application
+        - generic [ref=f1e133]: Deliver OTPs and notifications
+    - generic [ref=f1e135]:
+      - generic [ref=f1e136]:
+        - heading "One platform. Every kind of message." [level=2] [ref=f1e137]: One platform.Every kind of message.
+        - paragraph [ref=f1e138]: A promotion worth opening. An update someone’s waiting for. A code that gets them in. Make every message useful.
+      - generic [ref=f1e139]:
+        - article [ref=f1e140]:
+          - generic [ref=f1e141]:
+            - generic [ref=f1e142]:
+              - text: YOUR STORE
+              - paragraph [ref=f1e143]: Your weekend plans? A little something from us. Discover our new arrivals in store.
+              - text: Illustrative message
+            - generic [ref=f1e144]: A reason to come back
+          - heading "Turn “maybe later” into a visit." [level=3] [ref=f1e145]
+          - paragraph [ref=f1e146]: Put offers, launches and announcements in your customers’ inboxes. Start with people who have opted in to hear from you.
+          - link "SMS for your business" [ref=f1e147] [cursor=pointer]:
+            - /url: /for-smes
+        - article [ref=f1e150]:
+          - generic [ref=f1e152]:
+            - strong [ref=f1e156]: Ready for collection
+            - paragraph [ref=f1e157]: One helpful update.One less “where’s my order?”
+            - generic [ref=f1e158]: Example order notification
+          - heading "Keep the next step clear." [level=3] [ref=f1e161]
+          - paragraph [ref=f1e162]: Send useful order updates and service notifications, so customers know what’s happening with your business.
+          - link "Explore the platform" [ref=f1e163] [cursor=pointer]:
+            - /url: /features
+        - article [ref=f1e166]:
+          - generic [ref=f1e167]:
+            - generic [ref=f1e168]: Verification code
+            - generic "Example code 482916" [ref=f1e172]:
+              - generic [ref=f1e173]: "4"
+              - generic [ref=f1e174]: "8"
+              - generic [ref=f1e175]: "2"
+              - generic [ref=f1e176]: "9"
+              - generic [ref=f1e177]: "1"
+              - generic [ref=f1e178]: "6"
+            - paragraph [ref=f1e179]: For the moments that need a code.
+            - generic [ref=f1e180]: Illustrative OTP
+          - heading "Make messaging part of your app." [level=3] [ref=f1e181]
+          - paragraph [ref=f1e182]: Connect SMS to your product for verification codes and transactional notifications through the API.
+          - link "For developers" [ref=f1e183] [cursor=pointer]:
+            - /url: /for-developers
+    - generic [ref=f1e187]:
+      - generic [ref=f1e188]:
+        - heading "From your business to their inbox." [level=2] [ref=f1e189]: From your businessto their inbox.
+        - paragraph [ref=f1e190]: A clear way to get started.And a local team when you need a hand.
+        - link "Get Started" [ref=f1e191] [cursor=pointer]:
+          - /url: https://portal.smsbuddy.lk/register
+      - list [ref=f1e194]:
+        - listitem [ref=f1e195]:
+          - generic [ref=f1e196]: "1"
+          - generic [ref=f1e197]:
+            - heading "Create your account" [level=3] [ref=f1e198]
+            - paragraph [ref=f1e199]: Add your business and contact details, then verify your email in the SMS Buddy portal.
+        - listitem [ref=f1e200]:
+          - generic [ref=f1e201]: "2"
+          - generic [ref=f1e202]:
+            - heading "Get your sender name ready" [level=3] [ref=f1e203]
+            - paragraph [ref=f1e204]: Apply for your business’s sender name. We can guide you through the approval requirements.
+        - listitem [ref=f1e205]:
+          - generic [ref=f1e206]: "3"
+          - generic [ref=f1e207]:
+            - heading "Add credits. Start connecting." [level=3] [ref=f1e208]
+            - paragraph [ref=f1e209]: Choose credits for your needs, then send through the portal or connect your app with the API.
+    - generic [ref=f1e211]:
+      - 'img "Example: one SMS Buddy credit pool connects three approved brand sender names" [ref=f1e212]':
+        - img [aria-hidden] [ref=f1e213]:
+          - generic [ref=f1e226]:
+            - generic [ref=f1e228]: YOUR STORE
+            - generic [ref=f1e230]: YOUR STUDIO
+            - generic [ref=f1e232]: YOUR NEXT BRAND
+        - generic [ref=f1e233]:
+          - strong [ref=f1e234]: One account. One credit pool.
+          - generic [ref=f1e235]: Illustrative setup · Approved sender names
+      - generic [ref=f1e236]:
+        - heading "More brands. Less back and forth." [level=2] [ref=f1e237]: More brands.Less back and forth.
+        - paragraph [ref=f1e238]: Running campaigns for several businesses? Keep your approved sender names together and use one shared credit pool across your brands.
+        - link "Built for agencies, too" [ref=f1e239] [cursor=pointer]:
+          - /url: /for-agencies
+    - generic [ref=f1e243]:
+      - generic [ref=f1e244]:
+        - heading "Buy credits. Skip the subscription." [level=2] [ref=f1e245]: Buy credits.Skip the subscription.
+        - paragraph [ref=f1e246]: Choose a pack that fits the messages you plan to send. Your credits stay valid for 3 months from purchase.
+        - link "Explore credit packs" [ref=f1e247] [cursor=pointer]:
+          - /url: /pricing
+      - generic [ref=f1e250]:
+        - generic [ref=f1e254]:
+          - strong [ref=f1e255]: No monthly subscription
+          - paragraph [ref=f1e256]: Top up when your business needs to send.
+        - generic [ref=f1e260]:
+          - strong [ref=f1e261]: 3-month credit validity
+          - paragraph [ref=f1e262]: Choose a pack you can use within that period.
+        - generic [ref=f1e266]:
+          - strong [ref=f1e267]: One pool for your sender names
+          - paragraph [ref=f1e268]: Share credits across your approved brands.
+        - paragraph [ref=f1e269]: Check current rates and applicable charges before purchasing. Longer messages may use more than one credit.
+    - generic [ref=f1e271]:
+      - generic [ref=f1e272]:
+        - heading "A few things you might be asking." [level=2] [ref=f1e273]: A few thingsyou might be asking.
+        - paragraph [ref=f1e274]: Still have a question?
+        - link "Talk to the local team" [ref=f1e275] [cursor=pointer]:
+          - /url: https://wa.me/94771172031
+      - generic [ref=f1e278]:
+        - group [ref=f1e279]:
+          - generic [ref=f1e280] [cursor=pointer]
+        - group [ref=f1e284]:
+          - generic [ref=f1e285] [cursor=pointer]
+        - group [ref=f1e289]:
+          - generic [ref=f1e290] [cursor=pointer]
+        - group [ref=f1e294]:
+          - generic [ref=f1e295] [cursor=pointer]
+        - group [ref=f1e299]:
+          - generic [ref=f1e300] [cursor=pointer]
+        - group [ref=f1e304]:
+          - generic [ref=f1e305] [cursor=pointer]
+    - generic [ref=f1e310]:
+      - generic [ref=f1e311]:
+        - heading "Your customers are a message away." [level=2] [ref=f1e312]: Your customers area message away.
+        - paragraph [ref=f1e313]: Make your next connection with SMS Buddy.
+      - generic [ref=f1e314]:
+        - link "Get Started" [ref=f1e315] [cursor=pointer]:
+          - /url: https://portal.smsbuddy.lk/register
+        - generic [ref=f1e318]: Create your account in the SMS Buddy portal.
+  - contentinfo [ref=f1e319]:
+    - generic [ref=f1e320]:
+      - generic [ref=f1e321]:
+        - generic [ref=f1e322]:
+          - link "SMS Buddy home" [ref=f1e323] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f1e324]: SMS Buddy
+          - paragraph [ref=f1e328]: Small messages.Stronger connections.
+          - generic [ref=f1e329]: Business SMS for Sri Lanka.
+        - generic [ref=f1e330]:
+          - heading "Product" [level=2] [ref=f1e331]
+          - link "Features" [ref=f1e332] [cursor=pointer]:
+            - /url: /features
+          - link "Pricing" [ref=f1e333] [cursor=pointer]:
+            - /url: /pricing
+          - link "Get Started" [ref=f1e334] [cursor=pointer]:
+            - /url: https://portal.smsbuddy.lk/register
+        - generic [ref=f1e335]:
+          - heading "Made for you" [level=2] [ref=f1e336]
+          - link "Small businesses" [ref=f1e337] [cursor=pointer]:
+            - /url: /for-smes
+          - link "Agencies" [ref=f1e338] [cursor=pointer]:
+            - /url: /for-agencies
+          - link "Developers" [ref=f1e339] [cursor=pointer]:
+            - /url: /for-developers
+        - generic [ref=f1e340]:
+          - heading "Let’s talk" [level=2] [ref=f1e341]
+          - link "Contact the team" [ref=f1e342] [cursor=pointer]:
+            - /url: /contact
+          - link "Chat on WhatsApp" [ref=f1e343] [cursor=pointer]:
+            - /url: https://wa.me/94771172031
+          - link "Log in to your account" [ref=f1e344] [cursor=pointer]:
+            - /url: https://portal.smsbuddy.lk
+      - generic [ref=f1e345]:
+        - generic [ref=f1e346]: © 2026 SMS Buddy
+        - generic [ref=f1e347]: Made for the way your business connects.
+  - button "Open Next.js Dev Tools" [ref=f1e353] [cursor=pointer]
+  - alert [ref=f1e357]: Your next customer connection starts with a text.

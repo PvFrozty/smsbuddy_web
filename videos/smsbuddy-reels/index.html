@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>SMS Buddy — reels film</title><script src="gsap.min.js"></script><style>:root{--w:1080px;--h:1920px}
+@font-face{font-family:Manrope;src:url(manrope.woff2);font-weight:200 800;font-display:block}
+@font-face{font-family:Ubuntu;src:url(ubuntu-bold.ttf);font-weight:700;font-display:block}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:var(--w);height:var(--h);overflow:hidden;background:#edf3ff;font-family:Manrope,sans-serif;color:#12234b}
+#film{position:relative;width:var(--w);height:var(--h);overflow:hidden}
+.scene{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#edf3ff}
+#scene1{z-index:1}#scene2{z-index:2;opacity:0}#scene3{z-index:3;opacity:0;background:#244ceb;color:#fff}
+.scene-content{width:100%;height:100%;padding:76px 100px;display:flex;flex-direction:column;gap:42px;box-sizing:border-box}
+.brand{display:flex;align-items:center;gap:18px;font-family:Ubuntu,sans-serif;font-size:48px;font-weight:700;line-height:1.1;height:68px;flex-shrink:0}
+.brand svg{width:53px;height:65px;color:#244ceb;flex-shrink:0}
+.story-layout{display:grid;grid-template-columns: .95fr 1.05fr;gap:70px;align-items:center;flex:1;min-height:0}
+.copy{display:flex;flex-direction:column;gap:32px;min-width:0}
+h1,h2{font-size:118px;font-weight:800;letter-spacing:-.04em;line-height:1.06;max-width:740px}
+.support{font-size:36px;line-height:1.5;font-weight:400;max-width:680px}
+.intro-tag{font-size:28px;line-height:1.45;font-weight:600;color:#244ceb}
+.photo-wrap{height:100%;width:100%;min-height:0;overflow:hidden;border-radius:28px}
+.business-photo{width:100%;height:100%;object-fit:cover;object-position:62% center;display:block}
+.demo-layout{display:grid;grid-template-columns:1fr 390px;gap:120px;align-items:center;flex:1;min-height:0;padding-right:110px}
+.demo-layout h2{max-width:680px;font-size:124px}
+.categories{display:flex;flex-wrap:wrap;gap:15px;font-size:28px;line-height:1.4;color:#244ceb}
+.categories span{padding:10px 18px;border:1px solid #c6d6f5;border-radius:10px}
+.phone{position:relative;width:390px;aspect-ratio:320/660;filter:drop-shadow(12px 24px 22px #12234b25);flex-shrink:0}
+.sb-phone-frame{position:absolute;inset:0;width:100%;height:100%;z-index:2}
+.screen{position:absolute;inset:2.1% 5.9%;border-radius:13.8%/6.2%;overflow:hidden;background:#fff;color:#17191e;display:flex;flex-direction:column}
+.status{display:flex;justify-content:space-between;align-items:center;height:10%;padding:0 7%;font-size:16px;font-weight:800;flex-shrink:0}
+.status svg{width:44px;height:15px}
+.sender{background:#f6f6f8;display:flex;flex-direction:column;align-items:center;gap:9px;padding:10px 14px 20px;flex-shrink:0}
+.avatar{width:48px;height:48px;border-radius:50%;background:#9a9ea7;display:grid;place-items:center;color:#fff}
+.avatar svg{width:30px;height:30px}
+.sender strong{font-size:18px;letter-spacing:.02em}.sender small{font-size:15px;color:#636671}
+.conversation{padding:25px 18px;flex:1}.time{text-align:center;font-size:14px;color:#454954;margin-bottom:24px}
+.message{background:#e9e9ed;border-radius:22px 22px 22px 5px;font-size:25px;line-height:1.5;padding:21px;color:#1c1c20}
+.example{font-size:15px;text-align:right;color:#646874;margin-top:13px}
+.input-bar{margin:0 18px 37px;padding:10px 16px;border:1px solid #d9d9df;border-radius:20px;font-size:16px;color:#454954}
+.end-content{justify-content:center;align-items:flex-start;gap:34px;position:relative;z-index:2;padding-right:520px}
+.end-content .brand svg{color:#fff}.end-content .brand{margin-bottom:22px}
+.end-content h2{font-size:112px;max-width:1100px}.end-content .support{color:#edf3ff}
+.cta{display:inline-flex;align-items:center;justify-content:space-between;gap:75px;border-radius:14px;background:#fff;color:#244ceb;font-size:46px;font-weight:700;padding:27px 36px;width:max-content;line-height:1.1;margin-top:10px}
+.cta svg{width:45px;height:45px}.create{font-size:32px;line-height:1.3;color:#edf3ff}.site{font-size:29px;line-height:1.3;font-weight:500;color:#fff}
+.end-symbol{position:absolute;right:-50px;top:150px;width:650px;height:800px;color:#4a6bf1;transform:rotate(10deg);z-index:1}
+.format-reels .scene-content{padding:270px 80px 330px;gap:46px}
+.format-reels .brand{font-size:48px;height:64px}
+.format-reels .story-layout{display:flex;flex-direction:column;gap:44px;align-items:stretch;justify-content:flex-start}
+.format-reels .copy{gap:24px}.format-reels h1{font-size:118px;max-width:900px;line-height:1.04}
+.format-reels .support{font-size:38px;max-width:880px}.format-reels .intro-tag{font-size:29px}
+.format-reels .photo-wrap{height:500px;flex:0 0 500px}.format-reels .business-photo{object-position:center 58%}
+.format-reels .demo-layout{display:flex;flex-direction:column;gap:20px;padding:0;align-items:flex-start}
+.format-reels .demo-layout h2{font-size:98px;max-width:700px;line-height:1.07}
+.format-reels .categories{font-size:27px;gap:12px}.format-reels .categories span{padding:6px 12px}
+.format-reels .phone{width:410px;align-self:center}
+.format-reels .end-content{justify-content:flex-start;padding-top:285px;gap:32px}
+.format-reels .end-content .brand{margin-bottom:25px}.format-reels .end-content h2{font-size:94px;max-width:850px;line-height:1.1}
+.format-reels .cta{font-size:47px;margin-top:18px;padding:30px 38px;gap:80px}
+.format-reels .create{font-size:37px}.format-reels .site{font-size:30px}
+.format-reels .end-symbol{width:700px;height:850px;top:1150px;right:-180px}
+.format-feed .scene-content{padding:70px 75px;gap:35px}
+.format-feed .brand{font-size:42px;height:58px}.format-feed .brand svg{width:45px;height:56px}
+.format-feed .story-layout{display:flex;flex-direction:column;gap:32px;align-items:stretch;justify-content:flex-start}
+.format-feed .copy{gap:20px}.format-feed h1{font-size:100px;max-width:850px;line-height:1.04}
+.format-feed .support{font-size:33px;max-width:850px}.format-feed .intro-tag{font-size:26px}
+.format-feed .photo-wrap{height:510px;flex:0 0 510px}.format-feed .business-photo{object-position:center 58%}
+.format-feed .demo-layout{display:flex;flex-direction:column;gap:30px;padding:0;align-items:flex-start}
+.format-feed .demo-layout .copy{gap:22px}.format-feed .demo-layout h2{font-size:85px;max-width:650px;line-height:1.08}
+.format-feed .categories{font-size:25px;gap:12px}.format-feed .categories span{padding:6px 12px}
+.format-feed .phone{width:360px;align-self:center}
+.format-feed .end-content{justify-content:center;gap:30px;padding-right:85px}
+.format-feed .end-content h2{font-size:92px;max-width:850px;line-height:1.09}
+.format-feed .end-content .brand{margin-bottom:30px}.format-feed .cta{font-size:45px}
+.format-feed .create{font-size:34px}.format-feed .site{font-size:29px}
+.format-feed .end-symbol{width:440px;height:540px;top:790px;right:-100px}
+</style></head><body class="format-reels"><div id="film" data-composition-id="smsbuddy-film" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+<div id="scene1" class="scene" data-layout-allow-occlusion data-layout-allow-overlap><div class="scene-content"><div class="brand"><svg viewBox="0 0 72 88" aria-hidden="true"><path d="M10 4H42C55 4 64 13 64 25C64 32 61 37 56 40C63 43 67 49 67 57C67 69 57 76 43 76H19L8 83C6 84 4 83 4 80V10C4 7 7 4 10 4ZM21 27C15 27 12 31 12 37V58C12 60 14 61 16 59L23 54H37C45 54 49 48 49 41C49 33 44 27 37 27Z" fill="currentColor" fill-rule="evenodd"/></svg><span>SMS Buddy</span></div><div class="story-layout"><div class="copy"><h1>Bring customers back.</h1><p class="support">Business SMS for Sri Lanka.</p><p class="intro-tag">Small messages. Stronger connections.</p></div><div class="photo-wrap" data-layout-allow-overflow><img class="business-photo" src="boutique.png" alt="Illustrative small business packaging a purchase"></div></div></div></div>
+<div id="scene2" class="scene" data-layout-allow-occlusion data-layout-allow-overlap><div class="scene-content"><div class="brand"><svg viewBox="0 0 72 88" aria-hidden="true"><path d="M10 4H42C55 4 64 13 64 25C64 32 61 37 56 40C63 43 67 49 67 57C67 69 57 76 43 76H19L8 83C6 84 4 83 4 80V10C4 7 7 4 10 4ZM21 27C15 27 12 31 12 37V58C12 60 14 61 16 59L23 54H37C45 54 49 48 49 41C49 33 44 27 37 27Z" fill="currentColor" fill-rule="evenodd"/></svg><span>SMS Buddy</span></div><div class="demo-layout"><div class="copy"><h2>Your brand. Their inbox.</h2><div class="categories"><span>Promotions</span><span>Order updates</span><span>OTPs</span></div></div><div class="phone"><svg class="sb-phone-frame" viewBox="0 0 320 660" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="phone-rim" x1="8" y1="0" x2="312" y2="660" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#a6abb4" />
+          <stop offset=".16" stopColor="#353940" />
+          <stop offset=".48" stopColor="#747a84" />
+          <stop offset=".76" stopColor="#282b31" />
+          <stop offset="1" stopColor="#8b919b" />
+        </linearGradient>
+        <linearGradient id="phone-lens" x1="194" y1="24" x2="202" y2="34" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#25364c" />
+          <stop offset="1" stopColor="#080b12" />
+        </linearGradient>
+      </defs>
+      <g fill="#4b5059">
+        <rect x="3" y="112" width="6" height="25" rx="2" />
+        <rect x="2" y="156" width="7" height="49" rx="2" />
+        <rect x="2" y="218" width="7" height="49" rx="2" />
+        <rect x="311" y="178" width="7" height="77" rx="2" />
+      </g>
+      <path fill="url(#phone-rim)" fill-rule="evenodd" d="M57 1H263A49 49 0 0 1 312 50V610A49 49 0 0 1 263 659H57A49 49 0 0 1 8 610V50A49 49 0 0 1 57 1ZM58 14A39 39 0 0 0 19 53V607A39 39 0 0 0 58 646H262A39 39 0 0 0 301 607V53A39 39 0 0 0 262 14Z" />
+      <rect x="11" y="4" width="298" height="652" rx="46" stroke="#121418" stroke-width="5" />
+      <rect x="18" y="13" width="284" height="634" rx="40" stroke="#07080a" stroke-width="3" />
+      <path d="M15 76V51C15 26 32 8 58 8H99M306 583V609C306 634 289 652 263 652H227" stroke="#d9dce2" stroke-opacity=".55" stroke-width="1.2" stroke-linecap="round" />
+      <g stroke="#b0b5bf" stroke-width="2" opacity=".6">
+        <path d="M8 86H15M305 86H312M8 570H15M305 570H312" />
+      </g>
+      <rect x="113" y="24" width="94" height="26" rx="13" fill="#08090b" />
+      <circle cx="194" cy="37" r="6" fill="#131923" />
+      <circle cx="194" cy="37" r="3.7" fill="url(#phone-lens)" />
+      <circle cx="192.8" cy="35.7" r="1" fill="#596a93" opacity=".7" />
+      <rect x="115" y="632" width="90" height="4" rx="2" fill="#15171b" />
+    </svg><div class="screen"><div class="status"><span>9:41</span><svg viewBox="0 0 40 14" fill="currentColor"><path d="M0 10h3v3H0zm5-3h3v6H5zm5-3h3v9h-3zm5-3h3v12h-3z"/><rect x="24" y="3" width="12" height="8" rx="1"/></svg></div><div class="sender"><span class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v13H9l-5 4Z"/><path d="M8 8h8M8 12h5"/></svg></span><strong>YOUR STORE</strong><small>Text message · SMS</small></div><div class="conversation"><div class="time">Today, 9:41 AM</div><div class="message">New arrivals are here. Visit us this weekend.</div><div class="example">Example message</div></div><div class="input-bar">Text message</div></div></div></div></div></div>
+<div id="scene3" class="scene"><svg class="end-symbol" viewBox="0 0 72 88" aria-hidden="true" data-layout-ignore><path d="M10 4H42C55 4 64 13 64 25C64 32 61 37 56 40C63 43 67 49 67 57C67 69 57 76 43 76H19L8 83C6 84 4 83 4 80V10C4 7 7 4 10 4ZM21 27C15 27 12 31 12 37V58C12 60 14 61 16 59L23 54H37C45 54 49 48 49 41C49 33 44 27 37 27Z" fill="currentColor" fill-rule="evenodd"/></svg><div class="scene-content end-content"><div class="brand"><svg viewBox="0 0 72 88" aria-hidden="true"><path d="M10 4H42C55 4 64 13 64 25C64 32 61 37 56 40C63 43 67 49 67 57C67 69 57 76 43 76H19L8 83C6 84 4 83 4 80V10C4 7 7 4 10 4ZM21 27C15 27 12 31 12 37V58C12 60 14 61 16 59L23 54H37C45 54 49 48 49 41C49 33 44 27 37 27Z" fill="currentColor" fill-rule="evenodd"/></svg><span>SMS Buddy</span></div><h2>Your customers are a message away.</h2><div class="cta">Get Started<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></div><p class="create">Create your account</p><p class="site">smsbuddy.lk</p></div></div>
+<audio id="soundtrack" src="soundtrack.wav" data-start="0" data-duration="15" data-track-index="1" data-volume="1"></audio></div><script>
+window.__timelines=window.__timelines||{};
+const tl=gsap.timeline({paused:true});
+tl.from('#scene1 .brand',{opacity:0,scale:.94,duration:.45,ease:'back.out(1.2)'},.12);
+tl.from('#scene1 h1',{opacity:0,y:55,duration:.65,ease:'power4.out'},.18);
+tl.from('#scene1 .support',{opacity:0,x:-30,duration:.48,ease:'sine.out'},.36);
+tl.from('#scene1 .intro-tag',{opacity:0,y:20,duration:.4,ease:'power2.out'},.49);
+tl.from('#scene1 .photo-wrap',{opacity:0,scale:.96,duration:.8,ease:'expo.out'},.24);
+tl.fromTo('#scene1 .business-photo',{scale:1.05},{scale:1,duration:3.9,ease:'sine.inOut'},.15);
+// The scene crossfade is the exit; content stays present until transition time.
+tl.to('#scene1',{opacity:0,duration:.55,ease:'power2.inOut'},3.8);
+tl.to('#scene2',{opacity:1,duration:.55,ease:'power2.inOut'},3.8);
+tl.from('#scene2 .brand',{opacity:0,x:-20,duration:.4,ease:'power2.out'},4.35);
+tl.from('#scene2 h2',{opacity:0,y:45,duration:.6,ease:'power4.out'},4.35);
+tl.from('#scene2 .categories',{opacity:0,x:-25,duration:.45,ease:'sine.out'},4.48);
+tl.from('#scene2 .phone',{opacity:0,y:50,rotation:3,duration:.75,ease:'expo.out'},4.42);
+tl.from('#scene2 .message',{opacity:0,scale:.9,y:25,transformOrigin:'left bottom',duration:.5,ease:'back.out(1.3)'},5.35);
+tl.from('#scene2 .example',{opacity:0,duration:.4,ease:'sine.out'},5.65);
+tl.to('#scene2',{opacity:0,duration:.55,ease:'power2.inOut'},9.7);
+tl.to('#scene3',{opacity:1,duration:.55,ease:'power2.inOut'},9.7);
+tl.from('#scene3 .brand',{opacity:0,scale:.94,duration:.5,ease:'back.out(1.2)'},10.25);
+tl.from('#scene3 h2',{opacity:0,y:42,duration:.65,ease:'power4.out'},10.25);
+tl.from('#scene3 .cta',{opacity:0,x:-35,duration:.55,ease:'expo.out'},10.3);
+tl.from('#scene3 .create',{opacity:0,y:20,duration:.45,ease:'sine.out'},10.47);
+tl.from('#scene3 .site',{opacity:0,duration:.5,ease:'power2.out'},10.6);
+tl.from('#scene3 .end-symbol',{opacity:0,rotation:3,scale:.93,duration:1.2,ease:'sine.out'},9.9);
+window.__timelines['smsbuddy-film']=tl;
+</script></body></html>

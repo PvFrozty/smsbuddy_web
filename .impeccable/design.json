@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-08T20:37:04.415364+00:00",
+  "title": "Design System: SMS Buddy",
+  "extensions": {
+    "colorMeta": {
+      "cobalt": {
+        "role": "primary",
+        "displayName": "Cobalt",
+        "tonalRamp": [
+          "oklch(15% 0.24118 265.96)",
+          "oklch(26.43% 0.24118 265.96)",
+          "oklch(37.86% 0.24118 265.96)",
+          "oklch(49.29% 0.24118 265.96)",
+          "oklch(60.71% 0.24118 265.96)",
+          "oklch(72.14% 0.24118 265.96)",
+          "oklch(83.57% 0.24118 265.96)",
+          "oklch(95% 0.24118 265.96)"
+        ]
+      },
+      "cobalt-hover": {
+        "role": "primary",
+        "displayName": "Cobalt Hover",
+        "tonalRamp": [
+          "oklch(15% 0.21284 265.85)",
+          "oklch(26.43% 0.21284 265.85)",
+          "oklch(37.86% 0.21284 265.85)",
+          "oklch(49.29% 0.21284 265.85)",
+          "oklch(60.71% 0.21284 265.85)",
+          "oklch(72.14% 0.21284 265.85)",
+          "oklch(83.57% 0.21284 265.85)",
+          "oklch(95% 0.21284 265.85)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.07761 264.43)",
+          "oklch(26.43% 0.07761 264.43)",
+          "oklch(37.86% 0.07761 264.43)",
+          "oklch(49.29% 0.07761 264.43)",
+          "oklch(60.71% 0.07761 264.43)",
+          "oklch(72.14% 0.07761 264.43)",
+          "oklch(83.57% 0.07761 264.43)",
+          "oklch(95% 0.07761 264.43)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15% 0.06217 262.82)",
+          "oklch(26.43% 0.06217 262.82)",
+          "oklch(37.86% 0.06217 262.82)",
+          "oklch(49.29% 0.06217 262.82)",
+          "oklch(60.71% 0.06217 262.82)",
+          "oklch(72.14% 0.06217 262.82)",
+          "oklch(83.57% 0.06217 262.82)",
+          "oklch(95% 0.06217 262.82)"
+        ]
+      },
+      "sky": {
+        "role": "primary",
+        "displayName": "Sky",
+        "tonalRamp": [
+          "oklch(15% 0.01733 264.49)",
+          "oklch(26.43% 0.01733 264.49)",
+          "oklch(37.86% 0.01733 264.49)",
+          "oklch(49.29% 0.01733 264.49)",
+          "oklch(60.71% 0.01733 264.49)",
+          "oklch(72.14% 0.01733 264.49)",
+          "oklch(83.57% 0.01733 264.49)",
+          "oklch(95% 0.01733 264.49)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15% 0.02138 259.19)",
+          "oklch(26.43% 0.02138 259.19)",
+          "oklch(37.86% 0.02138 259.19)",
+          "oklch(49.29% 0.02138 259.19)",
+          "oklch(60.71% 0.02138 259.19)",
+          "oklch(72.14% 0.02138 259.19)",
+          "oklch(83.57% 0.02138 259.19)",
+          "oklch(95% 0.02138 259.19)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Retail-sign display",
+        "purpose": "Hero headline; responsive overrides documented in DESIGN.md."
+      },
+      "headline": {
+        "displayName": "Section headline",
+        "purpose": "Main section titles."
+      },
+      "title": {
+        "displayName": "Content title",
+        "purpose": "Supporting section headings."
+      },
+      "body": {
+        "displayName": "Section lead",
+        "purpose": "Readable supporting explanation."
+      },
+      "label": {
+        "displayName": "Navigation label",
+        "purpose": "Navigation and compact interface labels."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Technical code samples."
+      }
+    },
+    "shadows": [
+      {
+        "name": "workspace",
+        "value": "0 18px 50px #4368a51a",
+        "purpose": "Desktop composer."
+      },
+      {
+        "name": "recipient",
+        "value": "0 14px 35px #304b7a26",
+        "purpose": "Desktop recipient preview."
+      },
+      {
+        "name": "credit-pool",
+        "value": "0 8px 24px #12234b0b",
+        "purpose": "Shared-credit illustration."
+      },
+      {
+        "name": "primary-hover",
+        "value": "0 5px 15px #244ceb20",
+        "purpose": "Primary action hover."
+      },
+      {
+        "name": "workspace-mobile",
+        "value": "0 7px 20px #4368a50d",
+        "purpose": "Mobile composer."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-transition",
+        "value": "180ms",
+        "purpose": "Background/shadow change; arrow translation with no reduced-motion preference."
+      },
+      {
+        "name": "message-arrival",
+        "value": "400ms cubic-bezier(0.16,1,0.3,1)",
+        "purpose": "User-triggered preview; initial state removed for reduced motion."
+      },
+      {
+        "name": "focus",
+        "value": "3px solid #244ceb; outline-offset: 4px",
+        "purpose": "Interactive focus; white outline on inverse CTA."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop-max",
+        "value": "1199px"
+      },
+      {
+        "name": "stacked-hero-max",
+        "value": "980px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "640px"
+      },
+      {
+        "name": "wide-workspace-min",
+        "value": "1600px"
+      }
+    ],
+    "brandIdentity": {
+      "name": "Buddy B",
+      "fontFamily": "Ubuntu",
+      "fontWeight": 700,
+      "fontSize": "26px",
+      "letterSpacing": "-0.025em",
+      "symbol": "Cobalt B silhouette with speech-bubble negative space",
+      "wordmarkColor": "#12234b",
+      "symbolColor": "#244ceb",
+      "source": "src/lib/brand.ts"
+    },
+    "phonePreview": {
+      "frame": "src/components/home/PhoneFrame.tsx",
+      "aspectRatio": "320 / 660",
+      "screen": "Accessible HTML with scrollable long messages",
+      "layout": "Side by side above 640px, stacked at 640px and below",
+      "authority": "User requested realistic SVG hardware"
+    },
+    "homepageRefinement": {
+      "references": [
+        "https://motionsites.ai/?prompt=quantum-lucid",
+        "https://motionsites.ai/?prompt=growth-decisions"
+      ],
+      "styles": "src/app/home.css",
+      "display": {
+        "size": "clamp(44px, 4.7vw, 70px)",
+        "weight": 650,
+        "lineHeight": 1.12
+      },
+      "composition": "Centered original headline and signup above a full-width interactive message workspace",
+      "agency": "Navy section with approved-brand credit network",
+      "motion": "Bounded entrance, once-per-section reveal, reduced-motion-safe",
+      "preserved": "Buddy B, Ubuntu wordmark, realistic phone, all editing/type/preview behavior, signup destination"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Account or preview action.",
+      "html": "<div class=\"ds-sample\"><button class=\"ds-primary\">Get Started <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button></div>",
+      "css": ".ds-sample {font-family:var(--font-body, Inter),system-ui,-apple-system,sans-serif; color:var(--sb-ink,#12234b);}\n.ds-primary,\n.ds-secondary {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 13px;\n  min-height: 52px;\n  padding: 14px 25px;\n  border-radius: 9px;\n  font-weight: 700;\n  font-size: 15px;\n  text-decoration: none;\n  transition:\n    background 0.18s,\n    box-shadow 0.18s;\n  color: white;\n  background: var(--sb-blue);\n  border: 0;\n}\n.ds-primary:hover {\n  background: #193ac2;\n  box-shadow: 0 5px 15px #244ceb20;\n}\n.ds-hero-actions .ds-primary {\n  min-height: 58px;\n  padding: 16px 28px;\n  font-size: 17px;\n}\n.ds-composer .ds-primary {\n  font-size: 12px;\n  min-height: 43px;\n  padding: 12px 15px;\n  width: 100%;\n  gap: 8px;\n}\na:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible {outline:3px solid var(--sb-blue,#244ceb);outline-offset:4px;} button {cursor:pointer;} button:disabled {opacity:.5;cursor:not-allowed;}\n@media(prefers-reduced-motion:no-preference){.ds-primary>svg{transition:transform 180ms ease-out}.ds-primary:hover>svg{transform:translateX(3px)}.ds-primary:active{transform:scale(.985)}}\n@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Lower emphasis sky action.",
+      "html": "<div class=\"ds-sample\"><button class=\"ds-secondary\">Contact us</button></div>",
+      "css": ".ds-sample {font-family:var(--font-body, Inter),system-ui,-apple-system,sans-serif; color:var(--sb-ink,#12234b);}\n.ds-primary,\n.ds-secondary {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 13px;\n  min-height: 52px;\n  padding: 14px 25px;\n  border-radius: 9px;\n  font-weight: 700;\n  font-size: 15px;\n  text-decoration: none;\n  transition:\n    background 0.18s,\n    box-shadow 0.18s;\n  color: white;\n  background: var(--sb-blue);\n  border: 0;\n}\n.ds-secondary {\n  background: var(--sb-sky);\n  color: var(--sb-blue);\n}\na:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible {outline:3px solid var(--sb-blue,#244ceb);outline-offset:4px;} button {cursor:pointer;} button:disabled {opacity:.5;cursor:not-allowed;}\n\n@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}"
+    },
+    {
+      "name": "Inverse action",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "White action on the closing cobalt field.",
+      "html": "<div class=\"ds-sample\"><button class=\"ds-primary ds-white-button\">Get Started <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button></div>",
+      "css": ".ds-sample {font-family:var(--font-body, Inter),system-ui,-apple-system,sans-serif; color:var(--sb-ink,#12234b);}\n.ds-primary,\n.ds-secondary {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 13px;\n  min-height: 52px;\n  padding: 14px 25px;\n  border-radius: 9px;\n  font-weight: 700;\n  font-size: 15px;\n  text-decoration: none;\n  transition:\n    background 0.18s,\n    box-shadow 0.18s;\n  color: white;\n  background: var(--sb-blue);\n  border: 0;\n}\n.ds-primary:hover {\n  background: #193ac2;\n  box-shadow: 0 5px 15px #244ceb20;\n}\n.ds-hero-actions .ds-primary {\n  min-height: 58px;\n  padding: 16px 28px;\n  font-size: 17px;\n}\n.ds-composer .ds-primary {\n  font-size: 12px;\n  min-height: 43px;\n  padding: 12px 15px;\n  width: 100%;\n  gap: 8px;\n}\n.ds-white-button {\n  background: white;\n  color: var(--sb-blue);\n  min-width: 220px;\n  min-height: 58px;\n}\n.ds-white-button:hover {\n  background: #edf3ff;\n}\na:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible {outline:3px solid var(--sb-blue,#244ceb);outline-offset:4px;} button {cursor:pointer;} button:disabled {opacity:.5;cursor:not-allowed;}\n.ds-sample{background:var(--sb-blue,#244ceb);padding:24px}.ds-white-button:focus-visible{outline-color:white}@media(prefers-reduced-motion:no-preference){.ds-primary>svg{transition:transform 180ms ease-out}.ds-primary:hover>svg{transform:translateX(3px)}.ds-primary:active{transform:scale(.985)}}\n@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}"
+    },
+    {
+      "name": "Sender field",
+      "kind": "input",
+      "refersTo": "sender-input",
+      "description": "Labelled editable sender name.",
+      "html": "<div class=\"ds-sample\"><div class=\"ds-composer\"><label for=\"ds-sender\">Sender name</label><input id=\"ds-sender\" value=\"YOUR BRAND\" maxlength=\"11\" autocomplete=\"off\" spellcheck=\"false\"></div></div>",
+      "css": ".ds-sample {font-family:var(--font-body, Inter),system-ui,-apple-system,sans-serif; color:var(--sb-ink,#12234b);}\n.ds-composer {\n  position: relative;\n  width: 75%;\n  background: white;\n  border-radius: 16px;\n  box-shadow: 0 18px 50px #4368a51a;\n  padding: 24px;\n  z-index: 1;\n}\n.ds-composer form {\n  width: 73%;\n}\n.ds-composer label {\n  display: block;\n  font-size: 11px;\n  color: #34486e;\n  margin: 15px 0 7px;\n}\n.ds-composer input,\n.ds-composer textarea {\n  width: 100%;\n  border: 1px solid #ccd8ed;\n  border-radius: 7px;\n  background: white;\n  color: var(--sb-ink);\n  padding: 11px;\n  font-size: 12px;\n  line-height: 1.6;\n  resize: vertical;\n}\n.ds-composer input {\n  height: 40px;\n}\n.ds-composer textarea {\n  min-height: 112px;\n  max-height: 180px;\n}\n.ds-composer .ds-primary {\n  font-size: 12px;\n  min-height: 43px;\n  padding: 12px 15px;\n  width: 100%;\n  gap: 8px;\n}\na:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible {outline:3px solid var(--sb-blue,#244ceb);outline-offset:4px;} button {cursor:pointer;} button:disabled {opacity:.5;cursor:not-allowed;}\n.ds-composer{width:280px;max-width:100%;box-shadow:none;padding:0}.ds-composer input{width:240px;max-width:100%;font-family:inherit}\n@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Desktop route links and account action.",
+      "html": "<div class=\"ds-sample\"><nav class=\"ds-nav\" aria-label=\"Main navigation\"><div class=\"ds-nav-links\"><a href=\"/features\" aria-current=\"page\">Product</a><a href=\"/pricing\">Pricing</a></div><a class=\"ds-primary ds-nav-cta\" href=\"https://portal.smsbuddy.lk/register\">Get Started <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a></nav></div>",
+      "css": ".ds-sample {font-family:var(--font-body, Inter),system-ui,-apple-system,sans-serif; color:var(--sb-ink,#12234b);}\n.ds-primary,\n.ds-secondary {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 13px;\n  min-height: 52px;\n  padding: 14px 25px;\n  border-radius: 9px;\n  font-weight: 700;\n  font-size: 15px;\n  text-decoration: none;\n  transition:\n    background 0.18s,\n    box-shadow 0.18s;\n  color: white;\n  background: var(--sb-blue);\n  border: 0;\n}\n.ds-primary:hover {\n  background: #193ac2;\n  box-shadow: 0 5px 15px #244ceb20;\n}\n.ds-nav {\n  height: 88px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 24px;\n}\n.ds-nav-links,\n.ds-nav-actions {\n  display: flex;\n  align-items: center;\n  gap: 30px;\n}\n.ds-nav-links a,\n.ds-login {\n  font-size: 14px;\n  font-weight: 600;\n  color: var(--sb-ink);\n  text-decoration: none;\n}\n.ds-nav-links a:hover,\n.ds-nav-links a[aria-current],\n.ds-login:hover {\n  color: var(--sb-blue);\n}\n.ds-nav-cta {\n  min-height: 45px;\n  padding: 11px 19px;\n  font-size: 14px;\n}\n.ds-hero-actions .ds-primary {\n  min-height: 58px;\n  padding: 16px 28px;\n  font-size: 17px;\n}\n.ds-composer .ds-primary {\n  font-size: 12px;\n  min-height: 43px;\n  padding: 12px 15px;\n  width: 100%;\n  gap: 8px;\n}\na:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible {outline:3px solid var(--sb-blue,#244ceb);outline-offset:4px;} button {cursor:pointer;} button:disabled {opacity:.5;cursor:not-allowed;}\n.ds-nav{flex-wrap:wrap;height:auto;min-height:88px}@media(prefers-reduced-motion:no-preference){.ds-primary>svg{transition:transform 180ms ease-out}.ds-primary:hover>svg{transform:translateX(3px)}.ds-primary:active{transform:scale(.985)}}\n@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}"
+    },
+    {
+      "name": "Message type selection",
+      "kind": "chip",
+      "refersTo": "message-type",
+      "description": "Pressed-state examples from the message selector.",
+      "html": "<div class=\"ds-sample\"><div class=\"ds-demo-tabs\" role=\"group\" aria-label=\"Message type\"><button type=\"button\" aria-pressed=\"false\">Promotions</button><button type=\"button\" aria-pressed=\"true\">Order updates</button><button type=\"button\" aria-pressed=\"false\">OTP</button></div></div>",
+      "css": ".ds-sample {font-family:var(--font-body, Inter),system-ui,-apple-system,sans-serif; color:var(--sb-ink,#12234b);}\n.ds-demo-tabs {\n  display: flex;\n  padding: 4px;\n  gap: 3px;\n  background: #f2f5fb;\n  border-radius: 8px;\n  margin-bottom: 21px;\n}\n.ds-demo-tabs button {\n  font-size: 10px;\n  white-space: nowrap;\n  min-height: 34px;\n  flex: 1;\n  padding: 5px 3px;\n  border: 0;\n  background: transparent;\n  border-radius: 6px;\n  color: #445579;\n  font-weight: 600;\n}\n.ds-demo-tabs button[aria-pressed=\"true\"] {\n  background: white;\n  color: var(--sb-blue);\n  box-shadow: 0 2px 5px #12234b0a;\n}\na:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible {outline:3px solid var(--sb-blue,#244ceb);outline-offset:4px;} button {cursor:pointer;} button:disabled {opacity:.5;cursor:not-allowed;}\n.ds-demo-tabs{max-width:320px}.ds-demo-tabs button{font-family:inherit}\n@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}"
+    },
+    {
+      "name": "Workspace card",
+      "kind": "card",
+      "refersTo": "workspace-card",
+      "description": "White surface containing the message composition example.",
+      "html": "<div class=\"ds-sample\"><div class=\"ds-composer\"><div class=\"ds-composer-top\"><span class=\"ds-example-dot\"></span>Interactive example</div><div class=\"ds-demo-tabs\" role=\"group\" aria-label=\"Message type\"><button type=\"button\" aria-pressed=\"true\">Order updates</button><button type=\"button\" aria-pressed=\"false\">OTP</button></div><label for=\"ds-card-message\">Your message</label><textarea id=\"ds-card-message\" maxlength=\"400\" rows=\"4\">Your order is ready. Thank you for shopping with us!</textarea></div></div>",
+      "css": ".ds-sample {font-family:var(--font-body, Inter),system-ui,-apple-system,sans-serif; color:var(--sb-ink,#12234b);}\n.ds-composer {\n  position: relative;\n  width: 75%;\n  background: white;\n  border-radius: 16px;\n  box-shadow: 0 18px 50px #4368a51a;\n  padding: 24px;\n  z-index: 1;\n}\n.ds-composer-top {\n  display: flex;\n  align-items: center;\n  gap: 7px;\n  font-size: 14px;\n  font-weight: 700;\n  margin-bottom: 17px;\n}\n.ds-example-dot {\n  height: 7px;\n  width: 7px;\n  border-radius: 50%;\n  background: var(--sb-blue);\n}\n.ds-demo-tabs {\n  display: flex;\n  padding: 4px;\n  gap: 3px;\n  background: #f2f5fb;\n  border-radius: 8px;\n  margin-bottom: 21px;\n}\n.ds-demo-tabs button {\n  font-size: 10px;\n  white-space: nowrap;\n  min-height: 34px;\n  flex: 1;\n  padding: 5px 3px;\n  border: 0;\n  background: transparent;\n  border-radius: 6px;\n  color: #445579;\n  font-weight: 600;\n}\n.ds-demo-tabs button[aria-pressed=\"true\"] {\n  background: white;\n  color: var(--sb-blue);\n  box-shadow: 0 2px 5px #12234b0a;\n}\n.ds-composer form {\n  width: 73%;\n}\n.ds-composer label {\n  display: block;\n  font-size: 11px;\n  color: #34486e;\n  margin: 15px 0 7px;\n}\n.ds-composer input,\n.ds-composer textarea {\n  width: 100%;\n  border: 1px solid #ccd8ed;\n  border-radius: 7px;\n  background: white;\n  color: var(--sb-ink);\n  padding: 11px;\n  font-size: 12px;\n  line-height: 1.6;\n  resize: vertical;\n}\n.ds-composer input {\n  height: 40px;\n}\n.ds-composer textarea {\n  min-height: 112px;\n  max-height: 180px;\n}\n.ds-composer .ds-primary {\n  font-size: 12px;\n  min-height: 43px;\n  padding: 12px 15px;\n  width: 100%;\n  gap: 8px;\n}\na:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible {outline:3px solid var(--sb-blue,#244ceb);outline-offset:4px;} button {cursor:pointer;} button:disabled {opacity:.5;cursor:not-allowed;}\n.ds-sample{background:var(--sb-sky,#edf3ff);padding:24px}.ds-composer{width:280px;max-width:100%}.ds-composer textarea{width:calc(100% - 24px);font-family:inherit}.ds-demo-tabs button{font-family:inherit}\n@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}"
+    },
+    {
+      "name": "Message preview",
+      "kind": "custom",
+      "refersTo": "message-preview",
+      "description": "Clearly illustrative recipient message bubble.",
+      "html": "<div class=\"ds-sample\"><div class=\"ds-sms\">Your order is ready. Thank you for shopping with us!</div><span class=\"ds-delivery\">Example preview</span></div>",
+      "css": ".ds-sample {font-family:var(--font-body, Inter),system-ui,-apple-system,sans-serif; color:var(--sb-ink,#12234b);}\n.ds-sms {\n  font-size: 12px;\n  line-height: 1.65;\n  padding: 14px;\n  background: #e4eeff;\n  color: #122b59;\n  border-radius: 12px 12px 2px 12px;\n  overflow-wrap: anywhere;\n}\n.ds-delivery {\n  display: flex;\n  justify-content: flex-end;\n  gap: 4px;\n  align-items: center;\n  font-size: 8px;\n  color: #4f668d;\n  padding: 9px 0 0;\n}\n.ds-delivery svg {\n  color: #20734e;\n}\na:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible {outline:3px solid var(--sb-blue,#244ceb);outline-offset:4px;} button {cursor:pointer;} button:disabled {opacity:.5;cursor:not-allowed;}\n.ds-sample{max-width:290px}\n@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}"
+    },
+    {
+      "name": "FAQ disclosure",
+      "kind": "custom",
+      "description": "Native expandable answer.",
+      "html": "<div class=\"ds-sample\"><div class=\"ds-faq\"><details><summary>What happens after I sign up?<span aria-hidden=\"true\">+</span></summary><p>Complete your business details and verify your email to continue.</p></details></div></div>",
+      "css": ".ds-sample {font-family:var(--font-body, Inter),system-ui,-apple-system,sans-serif; color:var(--sb-ink,#12234b);}\n.ds-faq details {\n  border-bottom: 1px solid var(--sb-line);\n}\n.ds-faq details:first-child {\n  border-top: 1px solid var(--sb-line);\n}\n.ds-faq summary {\n  list-style: none;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 20px;\n  font-size: 15px;\n  font-weight: 600;\n  padding: 22px 0;\n  cursor: pointer;\n  line-height: 1.5;\n}\n.ds-faq summary::-webkit-details-marker {\n  display: none;\n}\n.ds-faq summary > span {\n  flex-shrink: 0;\n  color: var(--sb-blue);\n  transition: transform 0.2s;\n}\n.ds-faq details[open] summary > span {\n  transform: rotate(45deg);\n}\n.ds-faq details p {\n  color: var(--sb-muted);\n  font-size: 14px;\n  line-height: 1.8;\n  padding: 0 28px 24px 0;\n  margin: 0;\n}\na:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible {outline:3px solid var(--sb-blue,#244ceb);outline-offset:4px;} button {cursor:pointer;} button:disabled {opacity:.5;cursor:not-allowed;}\n.ds-sample{max-width:500px}\n@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Retail window signage",
+    "overview": "Retail window signage translated into a messaging workspace. Large geometric lettering, saturated cobalt and generous white space make SMS Buddy direct and approachable. Pale blue surfaces hold tangible message examples; flat SVG geometry supplies the identity and illustrations.\n\nThis records the implemented system after the approved home-a direction and finish review. Semantic HTML carries the content and controls. The approved composition is evidence of the world, while src/app/globals.css and the live components own exact implementation values.",
+    "keyCharacteristics": [
+      "Cobalt actions and dark navy lettering on white.",
+      "Locally served Manrope headings and Inter interface text.",
+      "Flat message geometry with selective, quiet elevation.",
+      "Responsive examples and restrained, user-triggered motion."
+    ],
+    "rules": [],
+    "dos": [
+      "Do preserve the SMS Buddy name and geometric speech-bubble wordmark.",
+      "Do use real text, labelled controls and visible keyboard focus.",
+      "Do label message demonstrations as examples and preserve the statement that nothing is sent.",
+      "Do stack the mobile composer before its recipient result and retain the primary account action.",
+      "Do use the implementation values below when a provisional brief differs."
+    ],
+    "donts": [
+      "Don't reintroduce deleted logo, mascot or video assets without owner instruction.",
+      "Don't turn illustrative message status into a real delivery claim.",
+      "Don't add stock business photography, ornamental 3D or material textures to this established world.",
+      "Don't make motion necessary to understand a message or control."
+    ]
+  }
+}

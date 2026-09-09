@@ -1,22 +1,30 @@
-import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 
-export const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
+export const ubuntu = localFont({
+  src: "./font-files/ubuntu-bold.ttf",
+  display: "swap",
+  variable: "--font-brand",
+  weight: "700",
+});
+
+export const plusJakartaSans = localFont({
+  src: "./font-files/manrope.woff2",
   display: "swap",
   variable: "--font-heading",
-  weight: ["500", "600", "700", "800"],
+  weight: "200 800",
 });
 
-export const inter = Inter({
-  subsets: ["latin"],
+export const inter = localFont({
+  src: "./font-files/inter.woff2",
   display: "swap",
   variable: "--font-body",
-  weight: ["400", "500", "600"],
+  weight: "100 900",
 });
 
-export const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
+export const jetbrainsMono = localFont({
+  src: "./font-files/jetbrains-mono.woff2",
   display: "swap",
   variable: "--font-code",
-  weight: ["400", "500"],
+  weight: "100 800",
+  preload: false,
 });

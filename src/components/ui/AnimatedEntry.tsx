@@ -3,6 +3,14 @@
 import { motion, type Variants } from "motion/react";
 import { fadeInUp } from "@/animations/variants";
 import { cn } from "@/lib/utils";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
+
+const entryComponents = {
+  div: motion.div,
+  section: motion.section,
+  article: motion.article,
+  li: motion.li,
+};
 
 interface AnimatedEntryProps {
   children: React.ReactNode;
@@ -19,7 +27,13 @@ export function AnimatedEntry({
   delay = 0,
   as = "div",
 }: AnimatedEntryProps) {
-  const Component = motion.create(as);
+  const reduceMotion = useReducedMotion();
+  const Component = entryComponents[as];
+
+  if (reduceMotion) {
+    const Tag = as;
+    return <Tag className={cn(className)}>{children}</Tag>;
+  }
 
   return (
     <Component
