@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "indexable_pages": 8,
+  "checks": [
+    "unique metadata",
+    "canonicals",
+    "social images",
+    "identity JSON-LD",
+    "internal links and fragments",
+    "signup destinations",
+    "sitemap",
+    "noindex handoff and error",
+    "main landmarks"
+  ]
+}

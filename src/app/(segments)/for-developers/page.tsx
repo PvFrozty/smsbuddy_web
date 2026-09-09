@@ -1,16 +1,13 @@
-import type { Metadata } from "next";
+import { createMetadata } from "@/lib/metadata";
 import { SegmentPage } from "@/components/segments/SegmentPage";
 
-export const metadata: Metadata = {
-  title: "SMS for Developers",
-  description: "Connect SMS Buddy to your application for customer notifications and transactional messaging in Sri Lanka, with API integration assistance.",
-};
+export const metadata = createMetadata("/for-developers");
 
 export default function ForDevelopersPage() {
   return (
     <SegmentPage
       page="developers"
-      headline="Connect your product to your customers’ phones."
+      headline="An SMS API for your Sri Lankan application."
       introduction="Add SMS to the moments that matter in your application: a verification code, an order update, or an account alert. SMS Buddy combines API access with help planning your integration."
       preview={{ sender: "YOURAPP", message: "Your verification code is 482916. If you didn’t request this code, ignore this message. Never share your code with anyone.", context: "An example of a transactional message triggered by an action in your application." }}
       useCaseHeading="Build messaging into the right moments."

@@ -1,7 +1,7 @@
 # SMS Buddy: next steps to grow signups
 
 ## Current deliverable
-The marketing site now leads to the verified registration page, demonstrates useful SMS scenarios, explains onboarding, and presents consistent indicative pack arithmetic. Signup click hooks are installed. Actual account creation happens in the separate portal, so conversion lift has not yet been measured.
+The marketing site now leads to the verified registration page, demonstrates useful SMS scenarios, explains onboarding, and presents owner-confirmed package prices and separate extra-SMS rates. Signup click hooks are installed. Actual account creation happens in the separate portal, so conversion lift has not yet been measured.
 
 ## Do these next, in order
 

@@ -1,0 +1,21 @@
+HTTP/2 200 
+date: Wed, 09 Sep 2026 10:44:22 GMT
+content-type: text/plain; charset=utf-8
+content-length: 1836
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
+x-nextjs-cache: HIT
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-powered-by: Next.js
+server: cloudflare
+platform: hostinger
+panel: hpanel
+content-security-policy: upgrade-insecure-requests
+alt-svc: h3=":443"; ma=86400
+x-turbo-charged-by: LiteSpeed
+cf-cache-status: BYPASS
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=2%2FPvxeoX9X%2BZgmuNtgyoVF62ayDvEnddU4C%2FEy%2FxhYA1wAIQg6sjPECY4kHH7L0am7UpGMZSYUQTvPGkI2Hd61jsmF3ZE4ZXVJsN4fzh0g7%2FKgmBh2FhK2zEQG97yw%3D%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-ray: a38598ea1e96f886-SIN
+

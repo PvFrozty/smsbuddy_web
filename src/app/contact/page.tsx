@@ -1,14 +1,11 @@
-import type { Metadata } from "next";
+import { createMetadata } from "@/lib/metadata";
 import { Icon } from "@/components/ui/Icon";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { registerUrl, siteConfig } from "@/lib/constants";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Talk to SMS Buddy about business messaging, sender names, credit packages and API integration in Sri Lanka.",
-};
+export const metadata = createMetadata("/contact");
 
 const contactOptions = [
   { title: "WhatsApp", description: "Start a conversation with our team.", action: siteConfig.whatsapp, label: "Open WhatsApp" },

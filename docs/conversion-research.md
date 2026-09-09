@@ -1,5 +1,6 @@
 # SMS Buddy conversion research
 
+Update — 9 September 2026: the owner supplied the authoritative price sheet. The pricing discrepancy recorded below is resolved: descending rates are for extra SMS, while package totals and included SMS counts remain as listed. The live pricing page and calculator now label these separately. Earlier findings below are historical.
 ## Decision
 
 Build the homepage around a concrete job: **send branded business SMS in Sri Lanka, with a portal or an API and help getting set up**. Use account creation as the primary conversion. Explain what happens after account creation before the visitor clicks. A visually polished site is a testable intervention; it is not evidence that conversion or revenue has increased.

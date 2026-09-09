@@ -1,0 +1,66 @@
+{
+  "issues": [
+    [
+      "/404",
+      "#main-content",
+      "missing fragment"
+    ],
+    [
+      "/_not-found",
+      "#main-content",
+      "missing fragment"
+    ]
+  ],
+  "landmarks": [
+    [
+      "/",
+      1,
+      1
+    ],
+    [
+      "/contact",
+      1,
+      1
+    ],
+    [
+      "/pricing",
+      1,
+      1
+    ],
+    [
+      "/get-started",
+      1,
+      1
+    ],
+    [
+      "/for-agencies",
+      1,
+      1
+    ],
+    [
+      "/404",
+      1,
+      0
+    ],
+    [
+      "/_not-found",
+      1,
+      0
+    ],
+    [
+      "/for-developers",
+      1,
+      1
+    ],
+    [
+      "/for-smes",
+      1,
+      1
+    ],
+    [
+      "/features",
+      1,
+      1
+    ]
+  ]
+}

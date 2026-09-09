@@ -5,7 +5,8 @@ import { registerUrl } from "@/lib/constants";
 import { RedirectToRegister } from "./RedirectToRegister";
 
 export const metadata: Metadata = {
-  title: "Get Started",
+  title: { absolute: "Get Started | SMS Buddy" },
+  alternates: { canonical: "https://smsbuddy.lk/get-started" },
   description:
     "Create your SMS Buddy account and start sending branded SMS across Sri Lanka.",
   robots: { index: false, follow: true },

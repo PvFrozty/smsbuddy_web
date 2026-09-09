@@ -1,0 +1,37 @@
+HTTP/1.1 301 Moved Permanently
+Date: Wed, 09 Sep 2026 10:44:24 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=BJBYHfW6ypOOLEdAUt958Vdhe422SN0bCFAhccwEVKcNJMnvHbOfCfymVTOO54Ojz78tgKg2oxuO3G9obPgY%2FO9%2F6egsX7f5ce5hfki80zOfaWGQqsA8CZdWoobVQw%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Server: cloudflare
+Location: https://smsbuddy.lk/
+platform: hostinger
+panel: hpanel
+Content-Security-Policy: upgrade-insecure-requests
+X-turbo-charged-by: LiteSpeed
+cf-cache-status: DYNAMIC
+CF-RAY: a38598f28f9d9c21-SIN
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Wed, 09 Sep 2026 10:44:24 GMT
+content-type: text/html; charset=utf-8
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
+x-nextjs-cache: HIT
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-powered-by: Next.js
+cache-control: s-maxage=31536000
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=nKaH3WCDekIqNilvEk0uWxPNe%2BQcyspecSQjnr%2FGWXqWjBJO2VEKbHGgo6nT6R8QA9nyk%2FNS2JagsDo%2BCg62jvhzF3I9puiFq3K7Ch1tGl6DqFsmzF5pdrC8AH%2BQFQ%3D%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+platform: hostinger
+panel: hpanel
+content-security-policy: upgrade-insecure-requests
+alt-svc: h3=":443"; ma=86400
+x-turbo-charged-by: LiteSpeed
+cf-cache-status: DYNAMIC
+cf-ray: a38598f4cbf87235-SIN
+

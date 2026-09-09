@@ -21,6 +21,7 @@ export function Footer() {
             <h2>Product</h2>
             <Link href="/features">Features</Link>
             <Link href="/pricing">Pricing</Link>
+            <Link href="/guides/bulk-sms-sri-lanka">Bulk SMS guide</Link>
             <a href={registerUrl} data-cta-location="footer">
               Get Started
             </a>

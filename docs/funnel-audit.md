@@ -1,5 +1,6 @@
 # SMS Buddy conversion funnel audit
 
+Update — 9 September 2026: the owner supplied the authoritative price sheet. The pricing discrepancy recorded below is resolved: descending rates are for extra SMS, while package totals and included SMS counts remain as listed. The live pricing page and calculator now label these separately. Earlier findings below are historical.
 Audit date: 9 September 2026. This records the initial site before the conversion redesign; findings may be resolved by subsequent changes in this work session.
 
 ## Critical conversion fix: go directly to registration

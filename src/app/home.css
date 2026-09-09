@@ -137,6 +137,7 @@
 .sb-network-caption strong { display: block; color: #fff; font-size: 14px; font-weight: 500; }
 .sb-network-caption span { display: block; color: #b5c6e6; font-size: 10px; margin-top: 9px; }
 .sb-home .sb-credit-section { align-items: center; gap: 100px; }
+.sb-home .sb-rate-offer .sb-rate-heading { font-size: 23px; line-height: 1.3; letter-spacing: -.025em; font-weight: 600; }
 .sb-home .sb-credit-facts { padding: 36px; border-radius: 16px; background: var(--sb-sky); }
 .sb-home .sb-credit-facts > div { padding-bottom: 25px; }
 .sb-home .sb-credit-facts strong { font-weight: 600; }

@@ -1,10 +1,17 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { BuddyWaving } from "@/illustrations/BuddyWaving";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: { absolute: "Page Not Found | SMS Buddy" },
+  robots: { index: false, follow: true },
+  alternates: { canonical: null },
+};
 
 export default function NotFound() {
   return (
-    <section className="flex min-h-[80vh] items-center">
+    <main id="main-content" className="flex min-h-[80vh] items-center">
       <Container className="text-center">
         <BuddyWaving className="mx-auto mb-8 h-32 w-32 opacity-60" />
 
@@ -30,6 +37,6 @@ export default function NotFound() {
           </Button>
         </div>
       </Container>
-    </section>
+    </main>
   );
 }

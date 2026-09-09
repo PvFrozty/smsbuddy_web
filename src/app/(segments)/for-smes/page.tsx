@@ -1,16 +1,13 @@
-import type { Metadata } from "next";
+import { createMetadata } from "@/lib/metadata";
 import { SegmentPage } from "@/components/segments/SegmentPage";
 
-export const metadata: Metadata = {
-  title: "SMS for Small Businesses",
-  description: "Send branded campaigns, appointment reminders, and customer updates with SMS Buddy’s web portal for Sri Lankan businesses.",
-};
+export const metadata = createMetadata("/for-smes");
 
 export default function ForSmesPage() {
   return (
     <SegmentPage
       page="businesses"
-      headline="Keep your customers in the loop."
+      headline="SMS marketing for your growing business."
       introduction="A new offer. An appointment reminder. An order ready to collect. Send the message your customers need from your business name, using a web portal that doesn’t require code."
       preview={{ sender: "YOURSTORE", message: "Hi Nimal, your order is ready to collect. Visit us before 6 pm today. Thank you for choosing our store!", context: "A recognizable sender name helps a customer understand who their update is from." }}
       useCaseHeading="One useful message can make a difference."

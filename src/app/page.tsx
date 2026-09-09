@@ -6,6 +6,7 @@ import { AgencyNetwork } from "@/components/home/AgencyNetwork";
 import { HomeMotion } from "@/components/home/HomeMotion";
 import { BrandVideo } from "@/components/home/BrandVideo";
 import { BUDDY_B_PATH } from "@/lib/brand";
+import { RateHighlight } from "@/components/pricing/RateHighlight";
 import "./home.css";
 const faqs = [
   [
@@ -14,7 +15,7 @@ const faqs = [
   ],
   [
     "Do I need a monthly subscription?",
-    "SMS Buddy uses prepaid credits rather than a monthly subscription. Buy credits when you need them and use them within 3 months. Confirm the current package price and any applicable charges before you buy.",
+    "SMS Buddy uses prepaid credits rather than a monthly subscription. Buy credits when you need them and use them within 3 months. Each package lists its price, included SMS count and separate extra-SMS rate.",
   ],
   [
     "Will messages show my business name?",
@@ -45,8 +46,8 @@ export default function Home() {
               <span className="sb-headline-line">connection starts with a <span className="sb-text-word">text.</span></span>
             </h1>
             <p className="sb-hero-description">
-              Send promotions, order updates and OTPs with your own brand name.
-              Built for businesses in Sri Lanka.
+              Your SMS gateway in Sri Lanka for bulk promotions, order updates and OTPs.
+              Send from your own approved brand name.
             </p>
             <div className="sb-hero-actions">
               <a
@@ -282,44 +283,18 @@ export default function Home() {
               Explore credit packs <Icon name="arrow" />
             </Link>
           </div>
-          <div className="sb-credit-facts">
-            <div>
-              <Icon name="check" />
-              <span>
-                <strong>No monthly subscription</strong>
-                <p>Top up when your business needs to send.</p>
-              </span>
-            </div>
-            <div>
-              <Icon name="check" />
-              <span>
-                <strong>3-month credit validity</strong>
-                <p>Choose a pack you can use within that period.</p>
-              </span>
-            </div>
-            <div>
-              <Icon name="check" />
-              <span>
-                <strong>One pool for your sender names</strong>
-                <p>Share credits across your approved brands.</p>
-              </span>
-            </div>
-            <p className="sb-small-note">
-              Check current rates and applicable charges before purchasing.
-              Longer messages may use more than one credit.
-            </p>
-          </div>
+          <RateHighlight location="home" />
         </div>
       </section>
       <section className="sb-section sb-faq-section">
         <div className="sb-shell sb-faq-layout">
           <div>
             <h2>
-              A few things
+              Your business SMS
               <br />
-              you might be asking.
+              questions, answered.
             </h2>
-            <p className="sb-lead">Still have a question?</p>
+            <p className="sb-lead">New to bulk SMS? <Link href="/guides/bulk-sms-sri-lanka" className="underline underline-offset-4">Read the getting-started guide.</Link></p>
             <a className="sb-text-link" href={siteConfig.whatsapp}>
               Talk to the local team <Icon name="arrow" size={18} />
             </a>

@@ -1,3 +1,5 @@
+import type { SmsPackage } from "@/types";
+
 // SMS Buddy Brand Design Tokens
 
 export const colors = {
@@ -37,19 +39,24 @@ export const navLinks = [
   { label: "For SMEs", href: "/for-smes" },
 ] as const;
 
-// SMS Buddy Package Pricing
+// Owner-confirmed price sheet, 9 September 2026.
+// extraSmsCost applies to extra SMS, not the SMS included in the package.
 export const smsPackages = [
-  { code: "SMPAYG", name: "Pay As You Go",  price: 0.60,     smsCount: 1,       perSmsCost: 0.60 },
-  { code: "SB1X",   name: "SB1X",           price: 580,      smsCount: 1_000,   perSmsCost: 0.58 },
-  { code: "SB5X",   name: "SB5X",           price: 2_900,    smsCount: 5_000,   perSmsCost: 0.56 },
-  { code: "SB10X",  name: "SB10X",          price: 5_800,    smsCount: 10_000,  perSmsCost: 0.55 },
-  { code: "SB30X",  name: "SB30X",          price: 17_400,   smsCount: 30_000,  perSmsCost: 0.53 },
-  { code: "SB50X",  name: "SB50X",          price: 29_000,   smsCount: 50_000,  perSmsCost: 0.52 },
-  { code: "SB75X",  name: "SB75X",          price: 43_500,   smsCount: 75_000,  perSmsCost: 0.50 },
-  { code: "SB100X", name: "SB100X",         price: 58_000,   smsCount: 100_000, perSmsCost: 0.48 },
-  { code: "SB130X", name: "SB130X",         price: 75_400,   smsCount: 130_000, perSmsCost: 0.46 },
-  { code: "SB150X", name: "SB150X",         price: 87_000,   smsCount: 150_000, perSmsCost: 0.45 },
-] as const;
+  { code: "SMPAYG", name: "Pay As You Go",  price: 0.60,     smsCount: 1,       extraSmsCost: 0.60 },
+  { code: "SB1X",   name: "SB1X",           price: 580,      smsCount: 1_000,   extraSmsCost: 0.58 },
+  { code: "SB5X",   name: "SB5X",           price: 2_900,    smsCount: 5_000,   extraSmsCost: 0.56 },
+  { code: "SB10X",  name: "SB10X",          price: 5_800,    smsCount: 10_000,  extraSmsCost: 0.55 },
+  { code: "SB30X",  name: "SB30X",          price: 17_400,   smsCount: 30_000,  extraSmsCost: 0.53 },
+  { code: "SB50X",  name: "SB50X",          price: 29_000,   smsCount: 50_000,  extraSmsCost: 0.52 },
+  { code: "SB75X",  name: "SB75X",          price: 43_500,   smsCount: 75_000,  extraSmsCost: 0.50 },
+  { code: "SB100X", name: "SB100X",         price: 58_000,   smsCount: 100_000, extraSmsCost: 0.48 },
+  { code: "SB130X", name: "SB130X",         price: 75_400,   smsCount: 130_000, extraSmsCost: 0.46 },
+  { code: "SB150X", name: "SB150X",         price: 87_000,   smsCount: 150_000, extraSmsCost: 0.45 },
+] as const satisfies readonly SmsPackage[];
+
+export const lowestExtraSmsPackage = smsPackages.reduce((lowest, pack) =>
+  pack.extraSmsCost < lowest.extraSmsCost ? pack : lowest
+);
 
 // 3 highlighted packages for the pricing page hero cards
 export const highlightedPackages = ["SB5X", "SB30X", "SB100X"] as const;

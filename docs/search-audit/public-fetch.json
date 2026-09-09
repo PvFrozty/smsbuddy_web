@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://smsbuddy.lk/",
+    "result": "200 https://smsbuddy.lk/ text/html; charset=utf-8",
+    "error": "",
+    "exit": 0
+  },
+  {
+    "url": "https://smsbuddy.lk/pricing",
+    "result": "200 https://smsbuddy.lk/pricing text/html; charset=utf-8",
+    "error": "",
+    "exit": 0
+  },
+  {
+    "url": "https://smsbuddy.lk/robots.txt",
+    "result": "200 https://smsbuddy.lk/robots.txt text/plain; charset=utf-8",
+    "error": "",
+    "exit": 0
+  },
+  {
+    "url": "https://smsbuddy.lk/sitemap.xml",
+    "result": "404 https://smsbuddy.lk/sitemap.xml text/html; charset=utf-8",
+    "error": "",
+    "exit": 0
+  },
+  {
+    "url": "http://smsbuddy.lk/",
+    "result": "200 https://smsbuddy.lk/ text/html; charset=utf-8",
+    "error": "",
+    "exit": 0
+  },
+  {
+    "url": "https://www.smsbuddy.lk/",
+    "result": "200 https://www.smsbuddy.lk/ text/html; charset=utf-8",
+    "error": "",
+    "exit": 0
+  }
+]

@@ -1,10 +1,8 @@
-import type { Metadata } from "next";
+import { lowestExtraSmsPackage as volumePack } from "@/lib/constants";
+import { createMetadata } from "@/lib/metadata";
 import { SegmentPage } from "@/components/segments/SegmentPage";
 
-export const metadata: Metadata = {
-  title: "SMS for Agencies",
-  description: "Manage branded SMS for your clients with SMS Buddy. Explore sender names, shared credits, campaigns, and setup assistance for Sri Lankan agencies.",
-};
+export const metadata = createMetadata("/for-agencies");
 
 export default function ForAgenciesPage() {
   return (
@@ -23,6 +21,7 @@ export default function ForAgenciesPage() {
       capabilities={[
         { icon: "message", title: "Sender names for each brand", description: "Keep messages recognizable with the right sender name for each client. Sender-name requests are subject to approval." },
         { icon: "box", title: "Credits across your brands", description: "Use a shared credit pool across sender names on your account. Plan purchases around the campaigns you expect to run within the validity period." },
+        { icon: "message", title: "Our lowest extra-SMS rate", description: `Sending at volume? ${volumePack.code} includes ${volumePack.smsCount.toLocaleString("en-LK")} SMS for LKR ${volumePack.price.toLocaleString("en-LK")}, with extra SMS at LKR ${volumePack.extraSmsCost.toFixed(2)} each. Credits are valid for 3 months.` },
         { icon: "people", title: "Help with the setup", description: "Talk through your client brands, sending workflow, and integration needs with the team before launching." },
       ]}
       setupDescription="Opening an account is the first step. Plan sender-name approval and credit purchases before committing to a client’s launch date."

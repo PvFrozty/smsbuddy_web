@@ -46,7 +46,19 @@ Make the story fully understandable with sound off. Music or sound design can su
 
 - **Bring customers back** expresses the intended use case, not an achieved or guaranteed retention result. Do not add revenue, conversion or customer-count evidence that does not exist.
 - Branded sender IDs are an incumbent capability claim; do not imply instant approval or that creating an account immediately enables a chosen sender name.
-- Omit all prices, discounts, free-account/free-SMS promises and no-expiry language. Published package totals and unit rates conflict; credit validity is stated as three months.
+- Omit all prices, discounts, free-account/free-SMS promises and no-expiry language. The owner has confirmed package prices and separate extra-SMS rates; this creative contains no prices. Credit validity is stated as three months.
 - Avoid guaranteed delivery, superiority to competitors, unlimited usage, 24/7 support, certifications, customer logos and testimonials without substantiation.
 - The recipient UI is an illustrative message, not a verified live portal demonstration. Generated people/business scenes are original creative, not actual customers.
 
+
+## Price-led copy for a future high-volume variant
+
+Use for agencies and businesses considering large-volume sending, with the package commitment beside the rate. This is copy for a separate creative test; the existing videos remain unchanged.
+
+**Headline:** Extra SMS at LKR 0.45 with SB150X
+
+**Primary text:** Sending at volume? SB150X includes 150,000 SMS for LKR 87,000, with extra SMS at LKR 0.45 each. Credits valid for 3 months. Create your SMS Buddy account.
+
+**Retargeting headline:** Our lowest extra-SMS rate.
+
+Keep “per extra SMS with SB150X” next to every large 0.45 figure and show the package price and included count in the same frame. Do not shorten it to “SMS from 0.45” or claim the lowest rate across Sri Lanka. Compare completed account acquisition before adopting the price-led creative broadly.

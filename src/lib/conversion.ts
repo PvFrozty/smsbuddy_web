@@ -12,6 +12,7 @@ export interface GetStartedEvent {
 const marketingRoutes = new Set([
   "/", "/features", "/pricing", "/for-agencies", "/for-developers",
   "/for-smes", "/contact", "/get-started",
+  "/guides/bulk-sms-sri-lanka",
 ]);
 
 export function isSignupUrl(href: string): boolean {

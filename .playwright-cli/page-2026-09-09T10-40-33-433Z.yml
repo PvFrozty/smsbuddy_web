@@ -1,0 +1,207 @@
+- generic [ref=f24e1]:
+  - link "Skip to content" [ref=f24e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f24e3]:
+    - navigation "Main navigation" [ref=f24e4]:
+      - link "SMS Buddy home" [ref=f24e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f24e6]: SMS Buddy
+      - generic [ref=f24e10]:
+        - link "Product" [ref=f24e11] [cursor=pointer]:
+          - /url: /features
+        - link "Pricing" [ref=f24e12] [cursor=pointer]:
+          - /url: /pricing
+        - link "For agencies" [ref=f24e13] [cursor=pointer]:
+          - /url: /for-agencies
+        - link "For developers" [ref=f24e14] [cursor=pointer]:
+          - /url: /for-developers
+      - generic [ref=f24e15]:
+        - link "Log in" [ref=f24e16] [cursor=pointer]:
+          - /url: https://portal.smsbuddy.lk
+        - link "Get Started" [ref=f24e17] [cursor=pointer]:
+          - /url: https://portal.smsbuddy.lk/register
+  - main [ref=f24e21]:
+    - generic [ref=f24e23]:
+      - generic [ref=f24e24]:
+        - heading "A credit pack that fits your next move." [level=1] [ref=f24e25]
+        - paragraph [ref=f24e26]: Plan your campaigns and customer updates with pay-as-you-go credits. Choose what you expect to use, with no monthly subscription.
+        - generic [ref=f24e27]:
+          - link "Get Started" [ref=f24e28] [cursor=pointer]:
+            - /url: https://portal.smsbuddy.lk/register
+          - link "Talk to the team" [ref=f24e29] [cursor=pointer]:
+            - /url: /contact
+        - paragraph [ref=f24e30]: Opens the account portal. Credits are valid for 3 months.
+      - complementary "SB150X extra-SMS rate" [ref=f24e31]:
+        - heading "Our lowest extra-SMS rate." [level=2] [ref=f24e32]
+        - paragraph [ref=f24e33]: LKR 0.45
+        - paragraph [ref=f24e34]: per extra SMS with SB150X
+        - paragraph [ref=f24e35]:
+          - strong [ref=f24e36]: LKR 87,000
+          - text: for
+          - strong [ref=f24e37]: 150,000 included SMS
+        - paragraph [ref=f24e38]: Credits valid for 3 months. The extra-SMS rate applies separately from the package price.
+        - link "Get Started" [ref=f24e39] [cursor=pointer]:
+          - /url: https://portal.smsbuddy.lk/register
+    - region [ref=f24e42]:
+      - generic [ref=f24e43]:
+        - generic [ref=f24e44]:
+          - heading "Find your pack." [level=2] [ref=f24e45]
+          - paragraph [ref=f24e46]: Start with your expected credit usage. This chooser compares pack sizes and totals so you can plan your spend.
+        - generic [ref=f24e47]:
+          - generic [ref=f24e48]:
+            - generic [ref=f24e49]: How many credits do you need?
+            - paragraph [ref=f24e50]: Enter the credits you expect to use within 3 months. We’ll show the smallest listed pack that covers them.
+            - spinbutton "How many credits do you need?" [ref=f24e51]: "150000"
+            - generic "Example credit quantities" [ref=f24e52]:
+              - button "1,000" [ref=f24e53] [cursor=pointer]
+              - button "5,000" [ref=f24e54] [cursor=pointer]
+              - button "30,000" [ref=f24e55] [cursor=pointer]
+              - button "150,000" [active] [pressed] [ref=f24e56] [cursor=pointer]
+            - paragraph [ref=f24e57]: A long message or one using Unicode characters may use multiple credits. Check the credit count for your message before sending.
+          - generic [ref=f24e58]:
+            - paragraph [ref=f24e59]: Smallest pack covering your credits
+            - heading "150,000 credits" [level=3] [ref=f24e205]
+            - paragraph [ref=f24e61]: SB150X pack
+            - paragraph [ref=f24e206]: Our lowest extra-SMS rate
+            - paragraph [ref=f24e62]: LKR 87,000.00
+            - paragraph [ref=f24e63]: Package price
+            - generic [ref=f24e64]:
+              - generic [ref=f24e65]:
+                - term [ref=f24e66]: Extra SMS cost (per SMS)
+                - definition [ref=f24e67]: LKR 0.45
+              - generic [ref=f24e68]:
+                - term [ref=f24e69]: Credits remaining after your estimate
+                - definition [ref=f24e70]: "0"
+              - generic [ref=f24e71]:
+                - term [ref=f24e72]: Validity from purchase
+                - definition [ref=f24e73]: 3 months
+            - paragraph [ref=f24e74]: The package price covers the included credits. Extra SMS are charged at the package’s separate extra-SMS rate.
+            - link "Ask about pricing" [ref=f24e75] [cursor=pointer]:
+              - /url: /contact
+    - region [ref=f24e76]:
+      - generic [ref=f24e77]:
+        - generic [ref=f24e78]:
+          - heading "Every option, clearly listed." [level=2] [ref=f24e79]
+          - paragraph [ref=f24e80]: Package prices and extra-SMS rates are listed separately below. All credits have a 3-month validity.
+        - table [ref=f24e82]:
+          - caption [ref=f24e83]: SMS Buddy package pricing in LKR, with included SMS counts and separate rates for extra SMS.
+          - rowgroup [ref=f24e84]:
+            - row [ref=f24e85]:
+              - columnheader "Package" [ref=f24e86]
+              - columnheader "SMS count" [ref=f24e87]
+              - columnheader "Package price" [ref=f24e88]
+              - columnheader "Extra SMS cost (per SMS)" [ref=f24e89]
+          - rowgroup [ref=f24e90]:
+            - row [ref=f24e91]:
+              - rowheader "SMPAYG Pay As You Go" [ref=f24e92]:
+                - text: SMPAYG
+                - generic [ref=f24e93]: Pay As You Go
+              - cell "1" [ref=f24e94]
+              - cell "LKR 0.60" [ref=f24e95]
+              - cell "LKR 0.60" [ref=f24e96]
+            - row [ref=f24e97]:
+              - rowheader "SB1X" [ref=f24e98]
+              - cell "1,000" [ref=f24e99]
+              - cell "LKR 580.00" [ref=f24e100]
+              - cell "LKR 0.58" [ref=f24e101]
+            - row [ref=f24e102]:
+              - rowheader "SB5X" [ref=f24e103]
+              - cell "5,000" [ref=f24e104]
+              - cell "LKR 2,900.00" [ref=f24e105]
+              - cell "LKR 0.56" [ref=f24e106]
+            - row [ref=f24e107]:
+              - rowheader "SB10X" [ref=f24e108]
+              - cell "10,000" [ref=f24e109]
+              - cell "LKR 5,800.00" [ref=f24e110]
+              - cell "LKR 0.55" [ref=f24e111]
+            - row [ref=f24e112]:
+              - rowheader "SB30X" [ref=f24e113]
+              - cell "30,000" [ref=f24e114]
+              - cell "LKR 17,400.00" [ref=f24e115]
+              - cell "LKR 0.53" [ref=f24e116]
+            - row [ref=f24e117]:
+              - rowheader "SB50X" [ref=f24e118]
+              - cell "50,000" [ref=f24e119]
+              - cell "LKR 29,000.00" [ref=f24e120]
+              - cell "LKR 0.52" [ref=f24e121]
+            - row [ref=f24e122]:
+              - rowheader "SB75X" [ref=f24e123]
+              - cell "75,000" [ref=f24e124]
+              - cell "LKR 43,500.00" [ref=f24e125]
+              - cell "LKR 0.50" [ref=f24e126]
+            - row [ref=f24e127]:
+              - rowheader "SB100X" [ref=f24e128]
+              - cell "100,000" [ref=f24e129]
+              - cell "LKR 58,000.00" [ref=f24e130]
+              - cell "LKR 0.48" [ref=f24e131]
+            - row [ref=f24e132]:
+              - rowheader "SB130X" [ref=f24e133]
+              - cell "130,000" [ref=f24e134]
+              - cell "LKR 75,400.00" [ref=f24e135]
+              - cell "LKR 0.46" [ref=f24e136]
+            - row [ref=f24e137]:
+              - rowheader "SB150X Our lowest extra-SMS rate" [ref=f24e138]:
+                - text: SB150X
+                - generic [ref=f24e139]: Our lowest extra-SMS rate
+              - cell "150,000" [ref=f24e140]
+              - cell "LKR 87,000.00" [ref=f24e141]
+              - cell "LKR 0.45" [ref=f24e142]
+        - paragraph [ref=f24e143]: Extra-SMS rates apply separately from the package price. Long or Unicode messages may use more than one credit.
+    - region [ref=f24e144]:
+      - generic [ref=f24e145]:
+        - generic [ref=f24e146]:
+          - heading "Before you buy." [level=2] [ref=f24e147]
+          - paragraph [ref=f24e148]: A few details to help you choose with confidence.
+        - generic [ref=f24e149]:
+          - group [ref=f24e150]:
+            - generic "How long do my credits last?" [ref=f24e151] [cursor=pointer]
+          - group [ref=f24e152]:
+            - generic "Does one message always use one credit?" [ref=f24e153] [cursor=pointer]
+          - group [ref=f24e154]:
+            - generic "How are extra SMS priced?" [ref=f24e155] [cursor=pointer]
+          - group [ref=f24e156]:
+            - generic "What happens after I get started?" [ref=f24e157] [cursor=pointer]
+  - contentinfo [ref=f24e158]:
+    - generic [ref=f24e159]:
+      - generic [ref=f24e160]:
+        - generic [ref=f24e161]:
+          - link "SMS Buddy home" [ref=f24e162] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f24e163]: SMS Buddy
+          - paragraph [ref=f24e167]: Small messages.Stronger connections.
+          - generic [ref=f24e168]: Business SMS for Sri Lanka.
+        - generic [ref=f24e169]:
+          - heading "Product" [level=2] [ref=f24e170]
+          - link "Features" [ref=f24e171] [cursor=pointer]:
+            - /url: /features
+          - link "Pricing" [ref=f24e172] [cursor=pointer]:
+            - /url: /pricing
+          - link "Get Started" [ref=f24e173] [cursor=pointer]:
+            - /url: https://portal.smsbuddy.lk/register
+        - generic [ref=f24e174]:
+          - heading "Made for you" [level=2] [ref=f24e175]
+          - link "Small businesses" [ref=f24e176] [cursor=pointer]:
+            - /url: /for-smes
+          - link "Agencies" [ref=f24e177] [cursor=pointer]:
+            - /url: /for-agencies
+          - link "Developers" [ref=f24e178] [cursor=pointer]:
+            - /url: /for-developers
+        - generic [ref=f24e179]:
+          - heading "Let’s talk" [level=2] [ref=f24e180]
+          - link "Contact the team" [ref=f24e181] [cursor=pointer]:
+            - /url: /contact
+          - link "Chat on WhatsApp" [ref=f24e182] [cursor=pointer]:
+            - /url: https://wa.me/94771172031
+          - link "Log in to your account" [ref=f24e183] [cursor=pointer]:
+            - /url: https://portal.smsbuddy.lk
+      - generic [ref=f24e184]:
+        - generic [ref=f24e185]: © 2026 SMS Buddy
+        - generic [ref=f24e186]: Made for the way your business connects.
+  - button "Open Next.js Dev Tools" [ref=f24e207] [cursor=pointer]:
+    - generic [ref=f24e210]:
+      - text: Compiling
+      - generic [ref=f24e211]:
+        - generic [ref=f24e212]: .
+        - generic [ref=f24e213]: .
+        - generic [ref=f24e214]: .
+  - alert [ref=f24e204]

@@ -1,10 +1,7 @@
-import type { Metadata } from "next";
+import { createMetadata } from "@/lib/metadata";
 import { SegmentPage } from "@/components/segments/SegmentPage";
 
-export const metadata: Metadata = {
-  title: "Features",
-  description: "Explore SMS Buddy’s web portal, API access, sender names, shared credits, and delivery tools for business SMS in Sri Lanka.",
-};
+export const metadata = createMetadata("/features");
 
 export default function FeaturesPage() {
   return (

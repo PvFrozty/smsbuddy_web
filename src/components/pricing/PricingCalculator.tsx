@@ -2,7 +2,7 @@
 
 import { useId, useState } from "react";
 import Link from "next/link";
-import { smsPackages } from "@/lib/constants";
+import { smsPackages, lowestExtraSmsPackage } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 const creditPacks = smsPackages
@@ -49,7 +49,7 @@ export function PricingCalculator({ className }: { className?: string }) {
           </p>
         )}
         <div className="mt-4 flex flex-wrap gap-2" aria-label="Example credit quantities">
-          {[1000, 5000, 30000].map((amount) => (
+          {[1000, 5000, 30000, lowestExtraSmsPackage.smsCount].map((amount) => (
             <button
               key={amount}
               type="button"
@@ -79,14 +79,15 @@ export function PricingCalculator({ className }: { className?: string }) {
               {formatNumber(selectedPack.smsCount)} credits
             </h3>
             <p className="mt-1 text-sm text-slate-500">{selectedPack.name} pack</p>
+            {selectedPack.code === lowestExtraSmsPackage.code && <p className="mt-3 text-sm font-semibold text-blue-700">Our lowest extra-SMS rate</p>}
             <p className="mt-6 text-3xl font-semibold tabular-nums text-slate-950">
               {formatPrice(selectedPack.price)}
             </p>
-            <p className="mt-1 text-sm text-slate-600">Indicative pack total</p>
+            <p className="mt-1 text-sm text-slate-600">Package price</p>
             <dl className="mt-6 space-y-3 border-t border-slate-200 pt-5 text-sm">
               <div className="flex flex-wrap justify-between gap-2">
-                <dt className="text-slate-600">Effective price per credit</dt>
-                <dd className="font-semibold text-slate-900">{formatPrice(selectedPack.price / selectedPack.smsCount)}</dd>
+                <dt className="text-slate-600">Extra SMS cost (per SMS)</dt>
+                <dd className="font-semibold text-slate-900">{formatPrice(selectedPack.extraSmsCost)}</dd>
               </div>
               <div className="flex flex-wrap justify-between gap-2">
                 <dt className="text-slate-600">Credits remaining after your estimate</dt>
@@ -111,7 +112,7 @@ export function PricingCalculator({ className }: { className?: string }) {
           </>
         )}
         <p className="mt-6 text-xs leading-relaxed text-slate-500">
-          Prices are indicative. Confirm current rates, taxes, and sender-name setup costs before buying.
+          The package price covers the included credits. Extra SMS are charged at the package’s separate extra-SMS rate.
         </p>
         <Link href="/contact" className="mt-4 w-fit text-sm font-semibold text-blue-700 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">
           Ask about pricing
