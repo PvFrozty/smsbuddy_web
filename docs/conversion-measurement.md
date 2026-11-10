@@ -25,7 +25,7 @@ Verified with the dev server on 10 November: all five reach `gtag`/`fbq`, and `P
 
 **GA4 to do once data arrives (up to 24 h after deploy):** Admin > Data display > Events > Recent events, star `get_started_click` and `contact_click` as key events. Register `cta_location`, `cta_page`, `method`, `faq_question` and `package_mix` as event-scoped custom dimensions to see them in reports.
 
-**Microsoft Clarity** (heatmaps, session recordings): set `analyticsIds.clarity` to the project ID from clarity.microsoft.com (Settings > Setup). While it is empty, Clarity is not loaded.
+**Microsoft Clarity** (heatmaps, session recordings): project "SMS Buddy" (`zbdahgff4o`, https://clarity.microsoft.com/projects/view/zbdahgff4o), created 10 November 2026. The ID is `analyticsIds.clarity`; verified loading and sending data from the dev server. Clarity masks typed text by default.
 
 **Verified locally** on 10 November with the dev server:
 - GA4 `page_view` and `get_started_click` (`cta_location=pricing-hero`, `cta_page=/pricing`) reach `google-analytics.com/g/collect`.
