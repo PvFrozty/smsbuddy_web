@@ -76,6 +76,8 @@ export const transactionalPricing = {
 export const analyticsIds = {
   ga4: "G-F3RXZWWZQ0",
   metaPixel: "1654565889543577",
+  /** Microsoft Clarity project ID (heatmaps and session recordings). Empty = Clarity is not loaded. */
+  clarity: "" as string,
   /** Domains that share one GA4 session when people move from the site to the portal. */
   linkedDomains: ["smsbuddy.lk", "portal.smsbuddy.lk"],
 } as const;

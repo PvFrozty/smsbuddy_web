@@ -1,8 +1,9 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { registerUrl, smsPackages } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 import type { SmsPackage } from "@/types";
 
@@ -61,16 +62,30 @@ export function PricingCalculator({ className }: { className?: string }) {
   const isValid = requestedCredits.trim() !== "" && Number.isSafeInteger(count) && count > 0;
   const plan = isValid ? cheapestPlan(count) : null;
   const spare = plan ? plan.credits - count : 0;
+  const packageMix = plan ? plan.lines.map((line) => `${line.quantity}x${line.pack.code}`).join("+") : "";
+  const total = plan?.total ?? 0;
+
+  // Report the estimate once the visitor stops changing it (not the default, not every keystroke).
+  const touched = useRef(false);
+  useEffect(() => {
+    if (!touched.current || !isValid) return;
+    const timer = window.setTimeout(() => trackEvent("pricing_estimate", { sms_requested: count, package_mix: packageMix, estimate_value: total, currency: "LKR" }), 1500);
+    return () => window.clearTimeout(timer);
+  }, [count, isValid, packageMix, total]);
+  const choose = (value: string) => {
+    touched.current = true;
+    setRequestedCredits(value);
+  };
 
   return (
     <div className={cn("grid overflow-hidden rounded-3xl border border-slate-200 bg-white lg:grid-cols-2", className)}>
       <div className="p-6 sm:p-9">
         <label htmlFor={inputId} className="block text-lg font-semibold text-slate-950">How many SMS credits do you expect to use?</label>
         <p id={`${inputId}-hint`} className="mt-2 text-sm leading-relaxed text-slate-600">We’ll find the cheapest mix of packages that covers them.</p>
-        <input id={inputId} type="number" inputMode="numeric" min={1} step={1} value={requestedCredits} onChange={(event) => setRequestedCredits(event.target.value)} aria-invalid={!isValid} aria-describedby={`${inputId}-hint${!isValid ? ` ${inputId}-error` : ""}`} className="mt-6 w-full rounded-xl border border-slate-500 bg-white h-13 px-4 py-1.5 text-3xl font-semibold tabular-nums text-slate-950 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20" />
+        <input id={inputId} type="number" inputMode="numeric" min={1} step={1} value={requestedCredits} onChange={(event) => choose(event.target.value)} aria-invalid={!isValid} aria-describedby={`${inputId}-hint${!isValid ? ` ${inputId}-error` : ""}`} className="mt-6 w-full rounded-xl border border-slate-500 bg-white h-13 px-4 py-1.5 text-3xl font-semibold tabular-nums text-slate-950 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20" />
         {!isValid && <p id={`${inputId}-error`} className="mt-2 text-sm text-red-700">Enter a whole number of credits greater than zero.</p>}
         <div className="mt-4 flex flex-wrap gap-2" aria-label="Example credit quantities">
-          {[1000, 5000, 30000, 100000].map((amount) => <button key={amount} type="button" onClick={() => setRequestedCredits(String(amount))} aria-pressed={isValid && count === amount} className={cn("min-h-11 rounded-lg border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600", isValid && count === amount ? "border-blue-600 bg-blue-50 text-blue-800" : "border-slate-200 text-slate-600 hover:border-blue-400 hover:text-blue-700 active:bg-blue-50")}>{formatCount(amount)}</button>)}
+          {[1000, 5000, 30000, 100000].map((amount) => <button key={amount} type="button" onClick={() => choose(String(amount))} aria-pressed={isValid && count === amount} className={cn("min-h-11 rounded-lg border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600", isValid && count === amount ? "border-blue-600 bg-blue-50 text-blue-800" : "border-slate-200 text-slate-600 hover:border-blue-400 hover:text-blue-700 active:bg-blue-50")}>{formatCount(amount)}</button>)}
         </div>
         <p className="mt-6 text-sm leading-relaxed text-slate-500">Long or Unicode messages may use multiple credits. Check the credit count for your final message before sending.</p>
       </div>

@@ -9,6 +9,24 @@
 | Google Analytics 4 | `G-F3RXZWWZQ0` | Property "SMS Buddy (smsbuddy.lk)", web stream "SMS Buddy website" (stream 16307839408), Analytics account PvFrozty. Sri Lanka time, LKR. | Page views and enhanced measurement (scrolls, outbound clicks and so on). `get_started_click` with `cta_location` and `cta_page`. The cross-domain linker covers `smsbuddy.lk` and `portal.smsbuddy.lk`. |
 | Meta Pixel | `1654565889543577` | Dataset "SMS Buddy website" in the **Nanobotz It Solutions** business portfolio (connected to ad account Prahas Nanobotz, 513640306738372). Created 10 November 2026 for SMS Buddy only. | `PageView` (including client-side navigation) and the custom event `GetStartedClick` with `cta_location` and `cta_page` |
 
+### Interaction events (added 10 November 2026)
+
+Sent through `trackEvent` in `src/lib/analytics.ts`. Every event also carries `cta_page` (the known marketing route).
+
+| GA4 event | Meta event | When | Parameters |
+|---|---|---|---|
+| `contact_click` | `Contact` (standard) | A WhatsApp, email or phone link is clicked | `method` (whatsapp, email, phone), `cta_location` |
+| `contact_form_submit` | `Contact` (standard) | The contact form prepares a WhatsApp message | `method` |
+| `login_click` | `LoginClick` (custom) | A portal link that is not the signup page (Sign in) | `cta_location` |
+| `faq_open` | none | An FAQ question is opened | `faq_question` (our own question text) |
+| `pricing_estimate` | `PricingEstimate` (custom) | 1.5 s after a visitor changes the pricing calculator (not the default value) | `sms_requested`, `package_mix` (e.g. `1xSB30X+1xSB10X`), `estimate_value`, `currency` |
+
+Verified with the dev server on 10 November: all five reach `gtag`/`fbq`, and `PricingEstimate` and `Contact` reach `facebook.com/tr`.
+
+**GA4 to do once data arrives (up to 24 h after deploy):** Admin > Data display > Events > Recent events, star `get_started_click` and `contact_click` as key events. Register `cta_location`, `cta_page`, `method`, `faq_question` and `package_mix` as event-scoped custom dimensions to see them in reports.
+
+**Microsoft Clarity** (heatmaps, session recordings): set `analyticsIds.clarity` to the project ID from clarity.microsoft.com (Settings > Setup). While it is empty, Clarity is not loaded.
+
 **Verified locally** on 10 November with the dev server:
 - GA4 `page_view` and `get_started_click` (`cta_location=pricing-hero`, `cta_page=/pricing`) reach `google-analytics.com/g/collect`.
 - The Meta Pixel results are below.

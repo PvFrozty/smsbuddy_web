@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 
 type BusinessType = "agency" | "developer" | "sme" | "other";
 type NeedType = "masks" | "api" | "portal" | "credits" | "compliance" | "other";
@@ -79,6 +80,7 @@ export function ContactForm() {
       .join("\n");
 
     const waUrl = `${siteConfig.whatsapp}?text=${encodeURIComponent(lines)}`;
+    trackEvent("contact_form_submit", { method: "whatsapp" });
     window.open(waUrl, "_blank", "noopener,noreferrer");
     setPreparedUrl(waUrl);
   };
