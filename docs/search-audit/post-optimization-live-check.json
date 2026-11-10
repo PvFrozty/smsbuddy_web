@@ -1,0 +1,58 @@
+[
+  {
+    "url": "https://smsbuddy.lk/",
+    "status": 200,
+    "final_url": "https://smsbuddy.lk/",
+    "title": "SMS Buddy \u2014 Business SMS for Sri Lanka",
+    "canonical": [],
+    "jsonld": 0,
+    "og_image": null,
+    "robots": null,
+    "extra_sms_copy": false,
+    "body": null
+  },
+  {
+    "url": "https://smsbuddy.lk/pricing",
+    "status": 200,
+    "final_url": "https://smsbuddy.lk/pricing",
+    "title": "Pricing | SMS Buddy",
+    "canonical": [],
+    "jsonld": 0,
+    "og_image": null,
+    "robots": null,
+    "extra_sms_copy": false,
+    "body": null
+  },
+  {
+    "url": "https://smsbuddy.lk/guides/bulk-sms-sri-lanka",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://smsbuddy.lk/sitemap.xml",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://smsbuddy.lk/robots.txt",
+    "status": 200,
+    "final_url": "https://smsbuddy.lk/robots.txt",
+    "title": "",
+    "canonical": [],
+    "jsonld": 0,
+    "og_image": null,
+    "robots": null,
+    "extra_sms_copy": false,
+    "body": "# As a condition of accessing this website, you agree to abide by the following\n# content signals:\n\n# (a)  If a Content-Signal = yes, you may collect content for the corresponding\n#      use.\n# (b)  If a Content-Signal = no, you may not collect content for the\n#      corresponding use.\n# (c)  If the website operator does not include a Content-Signal for a\n#      corresponding use, the website operator neither grants nor restricts\n#      permission via Content-Signal with respect to the corresponding use.\n\n# The content signals and their meanings are:\n\n# search:   building a search index and providing search results (e.g., returning\n#           hyperlinks and short excerpts from your website's contents). Search does not\n#           include providing AI-generated search summaries.\n# ai-input: inputting content into one or more AI models (e.g., retrieval\n#           augmented generation, grounding, or other real-time taking of content for\n#           generative AI search answers).\n# ai-train: training or fine-tuning AI models.\n# use:      how AI systems may consume the content (immediate, reference, or full).\n\n# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF\n# RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT\n# AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.\n\n# BEGIN Cloudflare Managed content\n\nUser-agent: *\nContent-Signal: search=yes,ai-train=no,use=reference\nAllow: /\n\nUser-agent: Amazonbot\nDisallow: /\n\nUser-agent: Applebot-Extended\nDisallow: /\n\nUser-agent: Bytespider\nDisallow: /\n\nUser-agent: CCBot\nDisallow: /\n\nUser-agent: ClaudeBot\nDisallow: /\n\nUser-agent: CloudflareBrowserRenderingCrawler\nDisallow: /\n\nUser-agent: Google-Extended\nDisallow: /\n\nUser-agent: GPTBot\nDisallow: /\n\nUser-agent: meta-externalagent\nDisallow: /\n\n# END Cloudflare Managed Content\n\n"
+  },
+  {
+    "url": "https://www.smsbuddy.lk/",
+    "status": 200,
+    "final_url": "https://www.smsbuddy.lk/",
+    "title": "SMS Buddy \u2014 Business SMS for Sri Lanka",
+    "canonical": [],
+    "jsonld": 0,
+    "og_image": null,
+    "robots": null,
+    "extra_sms_copy": false,
+    "body": null
+  }
+]

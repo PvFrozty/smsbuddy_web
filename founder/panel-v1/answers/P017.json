@@ -1,0 +1,13 @@
+{
+  "id": "P017",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "My buyers already see my WhatsApp broadcasts and my weekend Facebook lives for free, so paying per SMS is a cost I've never needed. Before 11.11 I'm busy with stock and lives, not learning a new portal and fighting with uploading contact lists.",
+  "objection": "I don't know how to upload my contact list or get the sender name approved, and I don't want to find out the week before a sale that it doesn't work or that my Sinhala messages cost two or three credits each.",
+  "would_change_my_mind": "Someone setting it up for me: importing my WhatsApp contacts and sending a few free test messages under my name, so I can see if SMS actually brings orders that WhatsApp misses.",
+  "price_too_cheap": 0.2,
+  "price_cheap": 0.4,
+  "price_expensive": 0.75,
+  "price_too_expensive": 1.2
+}

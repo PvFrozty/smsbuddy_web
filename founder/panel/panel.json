@@ -1,0 +1,103 @@
+{
+ "n": 20,
+ "seed": 330632,
+ "customer": {
+  "business": "SMS Buddy (smsbuddy.lk): prepaid business SMS for Sri Lanka, sent under your own business name",
+  "target": "Owners and marketers of Sri Lankan small and medium businesses that run seasonal sales and already have a customer phone list",
+  "where": "Sri Lanka, mostly Colombo, Gampaha, Kandy and Galle; selling in store, on Facebook/Instagram/WhatsApp, or a small online shop",
+  "age": [
+   24,
+   52
+  ],
+  "segments": [
+   {
+    "name": "Social-commerce seller (fashion, beauty, gadgets on Facebook/Instagram/WhatsApp)",
+    "share": 0.35,
+    "income": [
+     150000,
+     900000
+    ]
+   },
+   {
+    "name": "Physical shop or restaurant with a customer list (retail, grocery, salon, cafe)",
+    "share": 0.3,
+    "income": [
+     400000,
+     3000000
+    ]
+   },
+   {
+    "name": "Established online store or chain (own website, several branches)",
+    "share": 0.2,
+    "income": [
+     3000000,
+     25000000
+    ]
+   },
+   {
+    "name": "Marketing agency or freelancer running campaigns for clients",
+    "share": 0.15,
+    "income": [
+     300000,
+     4000000
+    ]
+   }
+  ],
+  "behaviours": [
+   {
+    "name": "Already uses another SMS provider",
+    "share": 0.18,
+    "how": "Has an account with Dialog, Notify.lk, Text.lk or similar and only switches for a clear reason."
+   },
+   {
+    "name": "WhatsApp-first",
+    "share": 0.2,
+    "how": "Sends offers through WhatsApp broadcasts and groups, has never paid for SMS."
+   },
+   {
+    "name": "Price comparer",
+    "share": 0.15,
+    "how": "Lines up per-SMS rates from three providers before paying anything."
+   },
+   {
+    "name": "Last-minute planner",
+    "share": 0.15,
+    "how": "Decides the sale promotion a day or two before it starts."
+   },
+   {
+    "name": "Cautious first-timer",
+    "share": 0.12,
+    "how": "Wants to send a small test and see it arrive before committing money."
+   },
+   {
+    "name": "Hands it to someone else",
+    "share": 0.1,
+    "how": "A staff member, nephew or agency handles the marketing; the owner approves the spend."
+   },
+   {
+    "name": "Wants it plugged into the shop system",
+    "share": 0.1,
+    "how": "Expects order confirmations to send automatically from the website, POS or WooCommerce."
+   }
+  ],
+  "objections": [
+   "WhatsApp is free and my customers already read it there",
+   "Will my business name be approved in time for 11.11?",
+   "Do people even read SMS offers, or do they treat them as spam?",
+   "Credits that expire in 3 months: I don't send that often",
+   "I already have an SMS provider; why switch?",
+   "Will Sinhala and Tamil messages cost more credits?",
+   "I don't know how to upload my contact list or set it up",
+   "Is it legal to send promotions to people who bought from me?"
+  ],
+  "habits": [
+   "you go live on Facebook to sell new stock on weekends",
+   "you keep customer numbers in a notebook and an Excel sheet",
+   "Daraz and the big brands are all shouting about 11.11 this week",
+   "you already paid for boosted Facebook posts this month",
+   "your accountant asks you to cut costs every quarter",
+   "you reply to customer messages late at night on your phone"
+  ]
+ },
+ "pitch": "SMS Buddy Sale-Ready Pack, for your next sale (smsbuddy.lk).\n\nYour sale announced to your whole customer list by SMS, under your shop's name, in Sinhala, Tamil or English. LKR 560, tax included: 1,000 SMS credits, valid for 6 months.\n\n- Try it first: create a free account and send 10 test SMS to your own phone before you pay anything.\n- We set it up for you: WhatsApp us your customer list as an Excel or CSV file. We load it and help you write your first message the same working day.\n- Clear Sinhala pricing: a Sinhala or Tamil message up to 70 characters uses 1 credit (English up to 160). The credit count shows before you send.\n- Customers can reply: every message can end with your WhatsApp number, and an opt-out line is added to promotions.\n- Guarantee: your business name approved within 1 working day, or we add 500 free SMS. Any message the delivery report shows as failed is credited back.\n\nSet up by 10 December to be sending for 12.12. Bigger packages bring the rate down to LKR 0.45 per SMS."
+}

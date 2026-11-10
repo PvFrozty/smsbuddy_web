@@ -1,0 +1,13 @@
+{
+  "id": "P001",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "price",
+  "reason": "LKR 0.56 a message isn't obviously cheaper than what I'd get elsewhere, and I never pay before lining up rates from three providers. I might make the free account and send the 10 test messages, but I wouldn't pay until I've compared, and most of my clients would ask why we don't just use WhatsApp.",
+  "objection": "I run campaigns for several clients, and a 1,000-credit pack under one shop name doesn't fit how I work. The 0.45 rate is only for 'bigger packages' and you don't say how big, so I can't compare it properly.",
+  "would_change_my_mind": "A clear agency rate card showing the per-SMS price at 10k and 50k volumes, lower than the other two quotes I have, plus separate approved sender names for each client on one account.",
+  "price_too_cheap": 250,
+  "price_cheap": 400,
+  "price_expensive": 650,
+  "price_too_expensive": 850
+}

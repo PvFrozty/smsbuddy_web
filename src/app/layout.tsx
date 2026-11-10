@@ -5,6 +5,7 @@ import { SiteStructuredData } from "@/components/seo/SiteStructuredData";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ConversionTracking } from "@/components/analytics/ConversionTracking";
+import { AnalyticsTags } from "@/components/analytics/AnalyticsTags";
 import "./globals.css";
 
 export const metadata: Metadata = createMetadata("/");
@@ -24,6 +25,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <ConversionTracking />
+        <AnalyticsTags />
         <Navbar />
         <div className="min-h-screen">{children}</div>
         <Footer />

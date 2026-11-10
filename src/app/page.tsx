@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { MessageDemo } from "@/components/home/MessageDemo";
 import { Icon } from "@/components/ui/Icon";
-import { registerUrl, siteConfig } from "@/lib/constants";
+import { freeTrialSms, registerUrl, siteConfig, smsPackages, transactionalPricing } from "@/lib/constants";
 import { AgencyNetwork } from "@/components/home/AgencyNetwork";
 import { HomeMotion } from "@/components/home/HomeMotion";
 import { BrandVideo } from "@/components/home/BrandVideo";
@@ -14,8 +14,12 @@ const faqs = [
     "You’ll open the SMS Buddy registration page. Enter your contact and business details, including your address, then verify your email. Our team can guide you through sender-name setup and your first messages.",
   ],
   [
+    "Can I try it before I buy?",
+    `Yes. Every new account gets ${freeTrialSms} free SMS to try the service before you buy a package.`,
+  ],
+  [
     "Do I need a monthly subscription?",
-    "SMS Buddy uses prepaid credits rather than a monthly subscription. Buy credits when you need them and use them within 3 months. Each package lists its price, included SMS count and separate extra-SMS rate.",
+    `SMS Buddy uses prepaid credits rather than a monthly subscription. Packages start at ${smsPackages[0].smsCount.toLocaleString("en-LK")} SMS for LKR ${smsPackages[0].price.toLocaleString("en-LK")} and bring the rate down to LKR ${transactionalPricing.volumeRate.toFixed(2)} with ${transactionalPricing.volumePackage.name}. Credits don’t expire once you buy them.`,
   ],
   [
     "Will messages show my business name?",
@@ -72,7 +76,7 @@ export default function Home() {
               </a>
             </div>
             <p className="sb-reassurance">
-              No monthly subscription <span>·</span> Local setup support
+              {freeTrialSms} free SMS to try it <span>·</span> No monthly subscription
             </p>
           </div>
           <MessageDemo />
@@ -277,7 +281,7 @@ export default function Home() {
             </h2>
             <p className="sb-lead">
               Choose a pack that fits the messages you plan to send. Your
-              credits stay valid for 3 months from purchase.
+              credits don’t expire, so nothing goes to waste between sales.
             </p>
             <Link href="/pricing" className="sb-text-link">
               Explore credit packs <Icon name="arrow" />
@@ -332,7 +336,7 @@ export default function Home() {
             >
               Get Started <Icon name="arrow" />
             </a>
-            <span>Create your account in the SMS Buddy portal.</span>
+            <span>Create your account and try it with {freeTrialSms} free SMS.</span>
           </div>
         </div>
       </section>

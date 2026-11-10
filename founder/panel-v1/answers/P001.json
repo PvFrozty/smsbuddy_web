@@ -1,0 +1,13 @@
+{
+  "id": "P001",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "trust",
+  "reason": "The rate looks decent on paper, but I won't put a client's sale on a provider I haven't tested, and I'd still line it up against my other two quotes first. Most of my clients' customers answer on WhatsApp anyway, which costs nothing.",
+  "objection": "The sender name only gets approved after signup with no timeline, and Sinhala messages can eat two or three credits, so the real per-message cost for my clients could be well above 0.58 and might not be live in time for the sale.",
+  "would_change_my_mind": "A guaranteed sender-name approval time (like within 24 hours) plus a few hundred free test credits so I can check delivery to Dialog, Mobitel and Hutch numbers before I bill a client for it.",
+  "price_too_cheap": 0.2,
+  "price_cheap": 0.4,
+  "price_expensive": 0.7,
+  "price_too_expensive": 0.95
+}

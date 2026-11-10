@@ -1,0 +1,13 @@
+{
+  "id": "P004",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "price",
+  "reason": "I don't pay anyone before I line up per-SMS rates from three providers, and 0.58 pay-as-you-go isn't obviously the cheapest, especially when Sinhala messages eat two credits. My customers already reach me on WhatsApp and Instagram for free, so I'd need proof SMS actually earns its cost before my accountant sees another line item.",
+  "objection": "Do my buyers even read SMS offers, or do they swipe them away as spam? And if a Sinhala message costs double, the real rate is more like LKR 1.10, not 0.58.",
+  "would_change_my_mind": "A free trial batch of a few hundred SMS under my own business name, with delivery and click stats, plus a clear rate that beats the other two providers I compare.",
+  "price_too_cheap": 0.2,
+  "price_cheap": 0.4,
+  "price_expensive": 0.6,
+  "price_too_expensive": 0.8
+}

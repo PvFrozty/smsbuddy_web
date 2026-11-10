@@ -1,0 +1,13 @@
+{
+  "id": "P006",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "I already have an SMS account that works and my list is set up there. A few cents less per SMS isn't enough to make me sign up again and wait for my business name to be approved, especially right before 11.11.",
+  "objection": "It says Sinhala and Tamil messages can use more than one credit, so the 0.58 isn't my real price. Most of my customers get Sinhala messages, and I can't tell how much it will actually cost me compared to what I pay now.",
+  "would_change_my_mind": "A clear table showing how many credits one normal Sinhala sale message uses, with the real cost per message, that comes out clearly cheaper than my current provider, and my sender name approved within a day.",
+  "price_too_cheap": 0.25,
+  "price_cheap": 0.45,
+  "price_expensive": 0.75,
+  "price_too_expensive": 1.0
+}

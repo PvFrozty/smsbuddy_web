@@ -26,7 +26,7 @@ export interface SmsPackage {
   name: string;
   price: number;
   smsCount: number;
-  extraSmsCost: number;
+  unitPrice: number;
   description?: string;
   highlighted?: boolean;
   color?: "coral" | "navy" | "yellow";

@@ -1,0 +1,69 @@
+<template>
+  <style>
+@font-face{font-family:Manrope;src:url('assets/fonts/manrope.woff2') format('woff2');font-weight:200 800;font-display:block}
+@font-face{font-family:'SB Ubuntu';src:url('assets/fonts/ubuntu-bold.woff2') format('woff2');font-weight:700;font-display:block}
+@font-face{font-family:'Noto Sans Sinhala';src:url('assets/fonts/noto-sans-sinhala.ttf') format('truetype');font-weight:100 900;font-display:block}
+@font-face{font-family:'Noto Sans Tamil';src:url('assets/fonts/noto-sans-tamil.woff2') format('woff2');font-weight:600;font-display:block}
+
+#root{position:absolute;inset:0;overflow:hidden;font-family:Manrope,sans-serif;
+  --cobalt:#244ceb;--cobalt-deep:#1a37b8;--ink:#12234b;--muted:#526589;--sky:#edf3ff;--line:#dce5f3;--amber:#ffb547;--amber-ink:#5a3300}
+#root .bg{position:absolute;inset:0}
+#root .bg.cobalt{background:radial-gradient(120% 80% at 50% 20%,#2f58f5 0%,#244ceb 45%,#1a37b8 100%)}
+#root .bg.sky{background:linear-gradient(180deg,#f6f9ff 0%,#edf3ff 100%)}
+#root .stage{position:absolute;inset:0;padding:80px 72px;display:flex;
+  flex-direction:row;align-items:center;justify-content:space-between;gap:40px}
+#root .copy{width:46%;text-align:left}
+#root h2{font-size:76px;line-height:1.06;letter-spacing:-.04em;font-weight:800;margin:0;text-wrap:balance}
+#root .on-cobalt h2{color:#fff}
+#root .on-sky h2{color:var(--ink)}
+#root h2 em{font-style:normal;color:var(--amber)}
+#root .on-sky h2 em{color:var(--cobalt)}
+#root .vis-wrap{flex:1;height:100%;display:flex;align-items:center;justify-content:center;min-height:0}
+#root .vis{zoom:0.8}
+/* phone */
+#root .phone-col{display:flex;flex-direction:column;align-items:center;gap:22px}
+#root .example{font-size:30px;font-weight:700;letter-spacing:.01em;padding:8px 22px;border-radius:999px}
+#root .on-cobalt .example{background:#ffffff26;color:#fff}
+#root .on-sky .example{background:#dfe8fb;color:var(--muted)}
+#root .phone{width:520px;height:1000px;border-radius:72px;background:#0e1730;padding:16px;box-shadow:0 40px 80px #0b1a5a40,inset 0 0 0 2px #2b3a63}
+#root .screen{position:relative;width:100%;height:100%;border-radius:58px;background:#f4f6fb;overflow:hidden;display:flex;flex-direction:column}
+#root .notch{position:absolute;top:18px;left:50%;width:150px;height:40px;margin-left:-75px;border-radius:24px;background:#0e1730;z-index:3}
+#root .appbar{padding:86px 30px 22px;display:flex;flex-direction:column;align-items:center;gap:10px;background:#fff;border-bottom:2px solid var(--line)}
+#root .avatar{width:92px;height:92px;border-radius:50%;background:var(--cobalt);color:#fff;font-size:34px;font-weight:800;display:flex;align-items:center;justify-content:center}
+#root .sender{position:relative;font-size:34px;font-weight:800;color:var(--ink);letter-spacing:.02em;padding:4px 16px;border-radius:12px}
+#root .thread{flex:1;padding:30px 26px;display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+#root .bubble{max-width:410px;background:#e6ebf5;color:var(--ink);font-size:36px;line-height:1.3;font-weight:600;padding:22px 28px;border-radius:34px 34px 34px 10px}
+#root .stamp{font-size:36px;color:var(--muted);font-weight:600;align-self:center}
+
+#root .lock{position:absolute;inset:0;background:linear-gradient(180deg,#1f3fc7 0%,#12234b 100%);display:flex;flex-direction:column;align-items:center;padding-top:110px;color:#fff;z-index:2}
+#root .lock .date{font-size:30px;font-weight:700;opacity:.85}
+#root .lock .time{font-size:150px;font-weight:700;letter-spacing:-.05em;line-height:1.05;font-variant-numeric:tabular-nums}
+#root .note{margin-top:60px;width:460px;background:#ffffffee;color:var(--ink);border-radius:34px;padding:22px 24px;display:flex;gap:16px}
+#root .note .av{flex:none;width:58px;height:58px;border-radius:14px;background:var(--cobalt);color:#fff;font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center}
+#root .note b{display:block;font-size:30px;letter-spacing:.03em}
+#root .note p{margin:4px 0 0;font-size:36px;line-height:1.25;font-weight:600}
+</style>
+  <div id="root" data-composition-id="remind" data-width="1080" data-height="1080">
+  <div class="bg cobalt"></div>
+  <div class="stage on-cobalt">
+    <div class="copy"><h2 id="remind-head">Remind them <em>on the day.</em></h2></div>
+    <div class="vis-wrap"><div class="vis"><div class="phone-col"><div id="remind-label" class="example">Example message</div>
+      <div id="remind-phone" class="phone"><div class="screen"><div class="notch"></div>
+        <div class="lock"><div class="date">Tuesday, 11 November</div>
+      <div class="time"><span id="remind-time">6:00</span></div>
+      <div id="remind-note" class="note"><div class="av">YS</div><div><b>YOUR STORE</b><p>Only a few hours left of our 11.11 sale!</p></div></div></div>
+      </div></div></div></div></div>
+  </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+tl.fromTo("#remind-head",{opacity:0,y:40},{opacity:1,y:0,duration:.4,ease:"power3.out"},0);
+tl.fromTo("#remind-phone",{y:100,opacity:0},{y:0,opacity:1,duration:.5,ease:"power3.out"},0.05);
+tl.fromTo("#remind-note",{opacity:0,y:-60,scale:.9},{opacity:1,y:0,scale:1,duration:.45,ease:"back.out(1.6)"},0.75);
+tl.fromTo("#remind-phone",{rotation:0},{rotation:1.5,duration:2.4,ease:"sine.inOut"},0.9);
+
+    tl.set({}, {}, 3.4);
+    window.__timelines["remind"] = tl;
+  </script>
+</template>

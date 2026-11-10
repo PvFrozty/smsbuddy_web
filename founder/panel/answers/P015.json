@@ -1,0 +1,13 @@
+{
+  "id": "P015",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "My customers already see my offers on WhatsApp broadcasts and groups for free, and this month's money already went on boosted Facebook posts. LKR 560 is small, but I don't see why I'd pay to send a text when WhatsApp already reaches them and they reply to me there.",
+  "objection": "Why pay per SMS when my WhatsApp broadcast is free and my buyers already chat with me there? An SMS saying 'reply on WhatsApp' just sends them back to where I already am.",
+  "would_change_my_mind": "Proof that SMS gets people to open and buy who ignore my WhatsApp broadcasts, like a seller like me getting more 12.12 orders from SMS than from WhatsApp.",
+  "price_too_cheap": 150,
+  "price_cheap": 300,
+  "price_expensive": 900,
+  "price_too_expensive": 1500
+}

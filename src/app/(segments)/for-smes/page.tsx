@@ -20,7 +20,7 @@ export default function ForSmesPage() {
       capabilities={[
         { icon: "message", title: "Compose in the portal", description: "Write and review your campaign from the web portal. Choose the sender name that represents your business." },
         { icon: "people", title: "Bring your contacts", description: "Import your contact list from Excel or CSV and organize recipients for the message you’re sending." },
-        { icon: "box", title: "Plan with credits", description: "Buy credits for your expected usage without a monthly subscription. Credits remain valid for 3 months from purchase." },
+        { icon: "box", title: "Plan with credits", description: "Buy credits for your expected usage without a monthly subscription. Credits don’t expire once you buy them." },
       ]}
       setupDescription="You can start with the portal and get help with the setup. Have your business details and a small, agreed test audience ready before your first campaign."
       steps={[

@@ -1,0 +1,13 @@
+{
+  "id": "P020",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "My customers already talk to me on WhatsApp and Instagram, and a broadcast there costs me nothing. With 11.11 a couple of days away I'm not signing up for something new and waiting for my business name to get approved, when an SMS from an unknown number just looks like the spam everyone else is sending this week.",
+  "objection": "Do people even open SMS offers during 11.11 when Daraz and every big brand are flooding their inbox? If my message lands in that pile, it's wasted money and it might make me look like spam.",
+  "would_change_my_mind": "Proof from a seller like me that an SMS blast actually brought orders, plus the business name approved the same day so I can send before the sale starts.",
+  "price_too_cheap": 0.2,
+  "price_cheap": 0.4,
+  "price_expensive": 0.75,
+  "price_too_expensive": 1.0
+}

@@ -1,0 +1,67 @@
+<template>
+  <style>
+@font-face{font-family:Manrope;src:url('assets/fonts/manrope.woff2') format('woff2');font-weight:200 800;font-display:block}
+@font-face{font-family:'SB Ubuntu';src:url('assets/fonts/ubuntu-bold.woff2') format('woff2');font-weight:700;font-display:block}
+@font-face{font-family:'Noto Sans Sinhala';src:url('assets/fonts/noto-sans-sinhala.ttf') format('truetype');font-weight:100 900;font-display:block}
+@font-face{font-family:'Noto Sans Tamil';src:url('assets/fonts/noto-sans-tamil.woff2') format('woff2');font-weight:600;font-display:block}
+
+#root{position:absolute;inset:0;overflow:hidden;font-family:Manrope,sans-serif;
+  --cobalt:#244ceb;--cobalt-deep:#1a37b8;--ink:#12234b;--muted:#526589;--sky:#edf3ff;--line:#dce5f3;--amber:#ffb547;--amber-ink:#5a3300}
+#root .bg{position:absolute;inset:0}
+#root .bg.cobalt{background:radial-gradient(120% 80% at 50% 20%,#2f58f5 0%,#244ceb 45%,#1a37b8 100%)}
+#root .bg.sky{background:linear-gradient(180deg,#f6f9ff 0%,#edf3ff 100%)}
+#root .stage{position:absolute;inset:0;padding:96px 80px 96px;display:flex;
+  flex-direction:column;align-items:center;justify-content:flex-start;gap:40px}
+#root .copy{width:100%;text-align:center}
+#root h2{font-size:84px;line-height:1.06;letter-spacing:-.04em;font-weight:800;margin:0;text-wrap:balance}
+#root .on-cobalt h2{color:#fff}
+#root .on-sky h2{color:var(--ink)}
+#root h2 em{font-style:normal;color:var(--amber)}
+#root .on-sky h2 em{color:var(--cobalt)}
+#root .vis-wrap{flex:1;width:100%;display:flex;align-items:flex-start;justify-content:center;min-height:0}
+#root .vis{zoom:0.74}
+/* phone */
+#root .phone-col{display:flex;flex-direction:column;align-items:center;gap:22px}
+#root .example{font-size:30px;font-weight:700;letter-spacing:.01em;padding:8px 22px;border-radius:999px}
+#root .on-cobalt .example{background:#ffffff26;color:#fff}
+#root .on-sky .example{background:#dfe8fb;color:var(--muted)}
+#root .phone{width:520px;height:1000px;border-radius:72px;background:#0e1730;padding:16px;box-shadow:0 40px 80px #0b1a5a40,inset 0 0 0 2px #2b3a63}
+#root .screen{position:relative;width:100%;height:100%;border-radius:58px;background:#f4f6fb;overflow:hidden;display:flex;flex-direction:column}
+#root .notch{position:absolute;top:18px;left:50%;width:150px;height:40px;margin-left:-75px;border-radius:24px;background:#0e1730;z-index:3}
+#root .appbar{padding:86px 30px 22px;display:flex;flex-direction:column;align-items:center;gap:10px;background:#fff;border-bottom:2px solid var(--line)}
+#root .avatar{width:92px;height:92px;border-radius:50%;background:var(--cobalt);color:#fff;font-size:34px;font-weight:800;display:flex;align-items:center;justify-content:center}
+#root .sender{position:relative;font-size:34px;font-weight:800;color:var(--ink);letter-spacing:.02em;padding:4px 16px;border-radius:12px}
+#root .thread{flex:1;padding:30px 26px;display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+#root .bubble{max-width:410px;background:#e6ebf5;color:var(--ink);font-size:36px;line-height:1.3;font-weight:600;padding:22px 28px;border-radius:34px 34px 34px 10px}
+#root .stamp{font-size:36px;color:var(--muted);font-weight:600;align-self:center}
+
+#root .grid{display:grid;grid-template-columns:repeat(3,300px);gap:22px}
+#root .card{background:#fff;border-radius:24px;padding:20px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 18px 30px #0b1a5a33;height:180px}
+#root .card.src{outline:5px solid var(--amber)}
+#root .av{flex:none;width:52px;height:52px;border-radius:50%;background:var(--cobalt);color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center}
+#root .txt{display:flex;flex-direction:column;gap:6px;color:var(--ink);font-size:30px;line-height:1.2}
+#root .txt b{font-size:26px;letter-spacing:.03em}
+#root .txt span{font-weight:600;color:#33456f}
+#root .count{margin-top:34px;text-align:center;color:#fff;font-size:40px;font-weight:800}
+#root .count span{color:var(--amber)}
+</style>
+  <div id="root" data-composition-id="reach" data-width="1080" data-height="1350">
+  <div class="bg cobalt"></div>
+  <div class="stage on-cobalt">
+    <div class="copy"><h2 id="reach-head">Reach your <em>whole list</em> at once.</h2></div>
+    <div class="vis-wrap"><div class="vis"><div class="grid"><div id="reach-c0" class="card"><div class="av">YS</div><div class="txt"><b>YOUR STORE</b><span>11.11 sale starts at midnight!</span></div></div><div id="reach-c1" class="card"><div class="av">YS</div><div class="txt"><b>YOUR STORE</b><span>11.11 sale starts at midnight!</span></div></div><div id="reach-c2" class="card"><div class="av">YS</div><div class="txt"><b>YOUR STORE</b><span>11.11 sale starts at midnight!</span></div></div><div id="reach-c3" class="card"><div class="av">YS</div><div class="txt"><b>YOUR STORE</b><span>11.11 sale starts at midnight!</span></div></div><div id="reach-c4" class="card src"><div class="av">YS</div><div class="txt"><b>YOUR STORE</b><span>11.11 sale starts at midnight!</span></div></div><div id="reach-c5" class="card"><div class="av">YS</div><div class="txt"><b>YOUR STORE</b><span>11.11 sale starts at midnight!</span></div></div><div id="reach-c6" class="card"><div class="av">YS</div><div class="txt"><b>YOUR STORE</b><span>11.11 sale starts at midnight!</span></div></div><div id="reach-c7" class="card"><div class="av">YS</div><div class="txt"><b>YOUR STORE</b><span>11.11 sale starts at midnight!</span></div></div><div id="reach-c8" class="card"><div class="av">YS</div><div class="txt"><b>YOUR STORE</b><span>11.11 sale starts at midnight!</span></div></div></div>
+      <div id="reach-count" class="count">One message. <span>Every customer.</span></div></div></div>
+  </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+tl.fromTo("#reach-head",{opacity:0,y:40},{opacity:1,y:0,duration:.4,ease:"power3.out"},0);
+tl.fromTo("#reach-c4",{opacity:0,scale:.5},{opacity:1,scale:1,duration:.4,ease:"back.out(1.8)"},0.25);
+tl.fromTo(["#reach-c1", "#reach-c3", "#reach-c5", "#reach-c7", "#reach-c0", "#reach-c2", "#reach-c6", "#reach-c8"],{opacity:0,scale:.4},{opacity:1,scale:1,duration:.35,ease:"back.out(1.8)",stagger:.07},0.8);
+tl.fromTo("#reach-count",{opacity:0,y:20},{opacity:1,y:0,duration:.35,ease:"power3.out"},1.65);
+
+    tl.set({}, {}, 2.8);
+    window.__timelines["reach"] = tl;
+  </script>
+</template>

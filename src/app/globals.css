@@ -9,7 +9,7 @@
 .sb-rate-package { border-top: 1px solid #ffffff55; padding-top: 23px; font-size: 16px; line-height: 1.7; margin-bottom: 10px; }
 .sb-rate-package strong { font-weight: 600; }
 .sb-rate-terms { color: #edf3ff; font-size: 13px; line-height: 1.7; margin-bottom: 25px; }
-.sb-rate-link { display: inline-flex; align-items: center; gap: 24px; padding: 13px 20px; background: #fff; color: #244ceb; border-radius: 10px; font-size: 15px; font-weight: 600; min-height: 48px; }
+.sb-rate-link { display: inline-flex; align-items: center; gap: clamp(10px, 3vw, 24px); padding: 13px 20px; background: #fff; color: #244ceb; border-radius: 10px; font-size: 15px; font-weight: 600; min-height: 48px; }
 .sb-rate-link:hover { background: #edf3ff; }
 .sb-rate-link:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
 
@@ -357,6 +357,7 @@ a {
   gap: 24px;
 }
 .sb-nav-cta {
+  white-space: nowrap;
   min-height: 45px;
   padding: 11px 19px;
   font-size: 14px;
@@ -1084,6 +1085,7 @@ a {
   font-size: 11px;
 }
 .sb-page-heading {
+  text-wrap: balance;
   font-size: clamp(38px, 4.6vw, 64px);
   line-height: 1.12;
   letter-spacing: -0.035em;
@@ -1768,3 +1770,8 @@ a {
   .sb-composer { padding: 17px; }
   .sb-inbox { width: min(250px, 100%); margin: 0 auto; }
 }
+
+/* Pressed states (after :hover so they win while the pointer is down). */
+.sb-rate-link:active { background: #dbe7ff; }
+.sb-primary:active { background: #1530a3; }
+.sb-secondary:active { background: #d6e4ff; }

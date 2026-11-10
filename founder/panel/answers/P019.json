@@ -1,0 +1,13 @@
+{
+  "id": "P019",
+  "buys": true,
+  "purchases_first_month": 1,
+  "reason_code": "price",
+  "reason": "My accountant keeps telling me to cut costs, and 560 rupees for 1,000 credits with a free test first is small enough to try for the 12.12 sale next to my current provider. I would not move my whole list over yet, only one campaign to compare.",
+  "objection": "A proper Sinhala sale message is more than 70 characters, so each one will eat 2 or 3 credits. That means 1,000 credits is really about 400 messages, and I am not sure that is any cheaper than what I pay now. Getting a new sender name approved is also a hassle when the old one already works.",
+  "would_change_my_mind": "If my first campaign shows the per-customer cost is clearly lower than my current provider for the same Sinhala message, with similar delivery, I would move my whole list and buy the bigger package.",
+  "price_too_cheap": 200,
+  "price_cheap": 400,
+  "price_expensive": 900,
+  "price_too_expensive": 1300
+}

@@ -1,0 +1,13 @@
+{
+  "id": "P016",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "convenience",
+  "reason": "Nothing here tells me it plugs into my website, POS or WooCommerce, and I'm not going to have staff copy-paste order confirmations into a portal in the middle of 11.11. For the sale blast itself, my customers already read WhatsApp, which costs me nothing.",
+  "objection": "No mention of an API or WooCommerce/POS plugin, so for a multi-branch store it looks like manual work, and I'm not convinced SMS beats WhatsApp for my customers.",
+  "would_change_my_mind": "A ready WooCommerce/POS integration or documented API that sends order and delivery confirmations automatically under my sender name, set up in a day.",
+  "price_too_cheap": 0.2,
+  "price_cheap": 0.4,
+  "price_expensive": 0.75,
+  "price_too_expensive": 1.2
+}

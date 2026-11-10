@@ -1,0 +1,13 @@
+{
+  "id": "P009",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "I already send through my current provider, my sender name is approved there and my list is already loaded. Fifty-odd cents an SMS is about what I pay now, so there is no reason to re-upload everything and wait for a new name approval right before 11.11.",
+  "objection": "Moving my contact list and getting my business name approved all over again is a hassle, and if the name is not approved in time my sale messages go out wrong or late. I don't know this company and I can't risk a big send failing on sale day.",
+  "would_change_my_mind": "A clearly lower rate at my volume, say under 0.40 per SMS, plus them importing my list and getting my sender name live for me within a day, with a small test send first.",
+  "price_too_cheap": 0.2,
+  "price_cheap": 0.4,
+  "price_expensive": 0.65,
+  "price_too_expensive": 0.85
+}

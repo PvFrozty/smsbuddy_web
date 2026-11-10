@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { lowestExtraSmsPackage, siteConfig } from "./constants";
+import { smsPackages, transactionalPricing, siteConfig } from "./constants";
 
 // One registry keeps canonical URLs, social previews and the sitemap aligned.
 export const searchPages = {
@@ -9,7 +9,7 @@ export const searchPages = {
   },
   "/pricing": {
     title: "Bulk SMS Pricing Sri Lanka | Credit Packages",
-    description: `Compare SMS packages in LKR. ${lowestExtraSmsPackage.code}: LKR ${lowestExtraSmsPackage.price.toLocaleString("en-LK")} for ${lowestExtraSmsPackage.smsCount.toLocaleString("en-LK")} included SMS; extra SMS at LKR ${lowestExtraSmsPackage.extraSmsCost.toFixed(2)} each. Credits valid for 3 months.`,
+    description: `SMS packages from 1,000 to 100,000 credits, starting at LKR ${smsPackages[0].price.toLocaleString("en-LK")} and going as low as LKR ${transactionalPricing.volumeRate.toFixed(2)} per SMS. No monthly subscription.`,
   },
   "/features": {
     title: "Bulk SMS Features | Sender IDs, Portal & API",
@@ -49,6 +49,17 @@ export function createMetadata(path: SearchPath): Metadata {
     description,
     metadataBase: new URL(siteConfig.url),
     alternates: { canonical: url },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+      },
+    },
     openGraph: { title: fullTitle, description, url, siteName: siteConfig.name, type: "website", locale: "en_LK", images },
     twitter: { card: "summary_large_image", title: fullTitle, description, images },
   };

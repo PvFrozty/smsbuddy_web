@@ -1,0 +1,13 @@
+{
+  "id": "P016",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "convenience",
+  "reason": "The price is nothing for a business my size, but this is built for someone WhatsApping an Excel file. I need order confirmations firing automatically from my website, POS and WooCommerce, and nothing here says it connects to any of that.",
+  "objection": "No mention of an API or WooCommerce/POS plugin, so it becomes another manual tool my staff have to remember to use, and for sale blasts my customers already read WhatsApp for free.",
+  "would_change_my_mind": "A working WooCommerce plugin or API that sends order confirmations from my site and POS automatically, which I can test with the 10 free SMS.",
+  "price_too_cheap": 200,
+  "price_cheap": 450,
+  "price_expensive": 1500,
+  "price_too_expensive": 3000
+}

@@ -1,0 +1,13 @@
+{
+  "id": "P007",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "I already send my sale news on WhatsApp for free and I've paid for Facebook boosts this month, so I don't see why I'd pay for SMS on top. I might send the 10 free test messages to my own phone out of curiosity, but that doesn't mean I'd pay.",
+  "objection": "My customers already read WhatsApp. I'm not sure an SMS from a shop name brings more people through the door than a free WhatsApp message does.",
+  "would_change_my_mind": "If the free test arrived properly in Sinhala and a shop like mine nearby showed me it brought in real customers during a sale, I'd try the LKR 560 pack for 12.12.",
+  "price_too_cheap": 200,
+  "price_cheap": 400,
+  "price_expensive": 1000,
+  "price_too_expensive": 2000
+}

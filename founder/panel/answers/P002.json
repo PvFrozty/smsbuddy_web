@@ -1,0 +1,13 @@
+{
+  "id": "P002",
+  "buys": true,
+  "purchases_first_month": 1,
+  "reason_code": "need",
+  "reason": "My WhatsApp broadcasts only reach people who saved my number, so for 12.12 I'd test 10 SMS to my own phone and then buy one pack. At LKR 560 it costs less than one staff lunch, so I won't think twice about it.",
+  "objection": "A proper Sinhala sale message is longer than 70 characters, so each one uses 2 credits and 1,000 credits barely covers part of my list across all branches. I'm also not sure customers who are used to my WhatsApp messages will even read an SMS from me.",
+  "would_change_my_mind": "If the test SMS arrives with my shop name looking garbled or the business name isn't approved before 12.12, I won't buy.",
+  "price_too_cheap": 150,
+  "price_cheap": 400,
+  "price_expensive": 1500,
+  "price_too_expensive": 3500
+}

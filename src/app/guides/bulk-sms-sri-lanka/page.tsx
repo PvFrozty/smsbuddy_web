@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { createMetadata } from "@/lib/metadata";
-import { registerUrl, siteConfig, smsPackages, lowestExtraSmsPackage } from "@/lib/constants";
+import { registerUrl, siteConfig, smsPackages, transactionalPricing } from "@/lib/constants";
 import { Icon } from "@/components/ui/Icon";
 
 export const metadata = createMetadata("/guides/bulk-sms-sri-lanka");
@@ -12,10 +12,6 @@ const sections = [
   ["sender-name", "Your business sender name"],
   ["portal-or-api", "Portal or API?"],
 ] as const;
-
-const starter = smsPackages.find((pack) => pack.code === "SB1X")!;
-const volume = lowestExtraSmsPackage;
-const number = (value: number) => value.toLocaleString("en-LK");
 
 export default function BulkSmsGuide() {
   const breadcrumbs = {
@@ -37,7 +33,7 @@ export default function BulkSmsGuide() {
             <a href={registerUrl} className="sb-primary" data-cta-location="guide-hero">Get Started <Icon name="arrow" size={18} /></a>
             <Link href="/pricing" className="sb-text-link">Compare SMS packages <Icon name="arrow" size={18} /></Link>
           </div>
-          <p className="mt-6 text-sm text-slate-600">SMS Buddy product guide · Pricing checked <time dateTime="2026-09-09">9 September 2026</time></p>
+          <p className="mt-6 text-sm text-slate-600">SMS Buddy product guide · Prices confirmed <time dateTime="2026-11-09">9 November 2026</time></p>
         </div>
       </header>
 
@@ -58,7 +54,7 @@ export default function BulkSmsGuide() {
 
           <section id="first-campaign" className="scroll-mt-28">
             <h2>How do I send 1,000 SMS?</h2>
-            <p>Create an account, arrange an approved sender name, add enough credits and prepare your recipient list. With SMS Buddy, the {starter.code} package includes {number(starter.smsCount)} SMS for LKR {number(starter.price)}. Check the final message’s credit count: one recipient can use more than one credit.</p>
+            <p>Create an account, arrange an approved sender name, add enough credits and prepare your recipient list. Review the available top-up packages in the SMS Buddy portal and choose enough credits for the complete campaign. Check the final message’s credit count: one recipient can use more than one credit.</p>
             <ol className="mt-7 list-decimal space-y-5 pl-6 marker:font-semibold marker:text-blue-700">
               <li><strong className="text-slate-950">Create your account.</strong> Enter your contact and business details in the SMS Buddy portal, then verify your email.</li>
               <li><strong className="text-slate-950">Arrange your sender name.</strong> Apply for the business name you want recipients to see. Confirm requirements and approval before planning a launch date.</li>
@@ -71,17 +67,10 @@ export default function BulkSmsGuide() {
 
           <section id="cost" className="scroll-mt-28">
             <h2>How much does bulk SMS cost?</h2>
-            <p>SMS Buddy lists package prices, included SMS and extra-SMS rates separately. There is no monthly subscription, and credits are valid for 3 months from purchase. Choose a pack you expect to use within that period.</p>
-            <div className="my-6 rounded-xl bg-blue-50 p-6 sm:p-8">
-              <h3 className="text-xl font-semibold text-slate-950">Two package examples</h3>
-              <dl className="mt-4 space-y-4">
-                <div><dt className="font-semibold text-slate-950">{starter.code} · {number(starter.smsCount)} SMS</dt><dd>LKR {number(starter.price)} for the package. Extra SMS: LKR {starter.extraSmsCost.toFixed(2)} each.</dd></div>
-                <div><dt className="font-semibold text-slate-950">{volume.code} · {number(volume.smsCount)} SMS</dt><dd>LKR {number(volume.price)} for the package. Extra SMS: LKR {volume.extraSmsCost.toFixed(2)} each.</dd></div>
-              </dl>
-              <p className="mt-4 text-sm leading-6">The {volume.code} included average is LKR {(volume.price / volume.smsCount).toFixed(2)} per SMS. Its LKR {volume.extraSmsCost.toFixed(2)} rate applies to extra SMS, not the messages included in the package.</p>
-            </div>
-            <p>Long messages and Unicode text, including Sinhala or Tamil, may use multiple credits. Review the final credit count before sending. Confirm tax treatment, any sender-name charges and how extra SMS are purchased with the team before paying.</p>
-            <p><Link href="/pricing" className="font-medium text-blue-700 underline underline-offset-4">See all SMS packages and use the credit calculator.</Link></p>
+            <p>SMS Buddy sells prepaid SMS packages. They lower the rate step by step, from LKR {smsPackages[0].unitPrice.toFixed(2)} per SMS for 1,000 SMS (LKR {smsPackages[0].price.toLocaleString("en-LK")}) to LKR {transactionalPricing.volumeRate.toFixed(2)} for {transactionalPricing.volumePackage.smsCount.toLocaleString("en-LK")} SMS. The rate depends on the package purchased; a larger recipient list alone does not select a cheaper package.</p>
+            <p>Confirm the applicable rate for promotional campaigns with the team. There is no monthly subscription, and credits don’t expire once purchased.</p>
+            <p>Long messages and Unicode text, including Sinhala or Tamil, may use multiple credits. Review the final credit count before sending. Confirm tax treatment, any sender-name charges and how messages beyond the pack are priced with the team before paying.</p>
+            <p><Link href="/pricing" className="font-medium text-blue-700 underline underline-offset-4">See every SMS package and estimate your budget.</Link></p>
           </section>
 
           <section id="sender-name" className="scroll-mt-28">

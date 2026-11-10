@@ -1,0 +1,222 @@
+[
+ {
+  "id": "P001",
+  "name": "Yara",
+  "age": 31,
+  "segment": "Marketing agency or freelancer running campaigns for clients",
+  "income": 3961000,
+  "behaviour": "Price comparer",
+  "behaviour_how": "Lines up per-SMS rates from three providers before paying anything.",
+  "objection": "WhatsApp is free and my customers already read it there",
+  "habit": "you reply to customer messages late at night on your phone"
+ },
+ {
+  "id": "P002",
+  "name": "Clara",
+  "age": 48,
+  "segment": "Established online store or chain (own website, several branches)",
+  "income": 23087000,
+  "behaviour": "WhatsApp-first",
+  "behaviour_how": "Sends offers through WhatsApp broadcasts and groups, has never paid for SMS.",
+  "objection": "Will Sinhala and Tamil messages cost more credits?",
+  "habit": "you reply to customer messages late at night on your phone"
+ },
+ {
+  "id": "P003",
+  "name": "Arjun",
+  "age": 38,
+  "segment": "Physical shop or restaurant with a customer list (retail, grocery, salon, cafe)",
+  "income": 764000,
+  "behaviour": "Last-minute planner",
+  "behaviour_how": "Decides the sale promotion a day or two before it starts.",
+  "objection": "I don't know how to upload my contact list or set it up",
+  "habit": "you already paid for boosted Facebook posts this month"
+ },
+ {
+  "id": "P004",
+  "name": "Pablo",
+  "age": 37,
+  "segment": "Social-commerce seller (fashion, beauty, gadgets on Facebook/Instagram/WhatsApp)",
+  "income": 605000,
+  "behaviour": "Price comparer",
+  "behaviour_how": "Lines up per-SMS rates from three providers before paying anything.",
+  "objection": "Do people even read SMS offers, or do they treat them as spam?",
+  "habit": "your accountant asks you to cut costs every quarter"
+ },
+ {
+  "id": "P005",
+  "name": "Gabriel",
+  "age": 39,
+  "segment": "Marketing agency or freelancer running campaigns for clients",
+  "income": 2173000,
+  "behaviour": "Already uses another SMS provider",
+  "behaviour_how": "Has an account with Dialog, Notify.lk, Text.lk or similar and only switches for a clear reason.",
+  "objection": "Do people even read SMS offers, or do they treat them as spam?",
+  "habit": "you reply to customer messages late at night on your phone"
+ },
+ {
+  "id": "P006",
+  "name": "Grace",
+  "age": 30,
+  "segment": "Social-commerce seller (fashion, beauty, gadgets on Facebook/Instagram/WhatsApp)",
+  "income": 226000,
+  "behaviour": "Already uses another SMS provider",
+  "behaviour_how": "Has an account with Dialog, Notify.lk, Text.lk or similar and only switches for a clear reason.",
+  "objection": "Will Sinhala and Tamil messages cost more credits?",
+  "habit": "you keep customer numbers in a notebook and an Excel sheet"
+ },
+ {
+  "id": "P007",
+  "name": "Declan",
+  "age": 49,
+  "segment": "Physical shop or restaurant with a customer list (retail, grocery, salon, cafe)",
+  "income": 896000,
+  "behaviour": "Cautious first-timer",
+  "behaviour_how": "Wants to send a small test and see it arrive before committing money.",
+  "objection": "WhatsApp is free and my customers already read it there",
+  "habit": "you already paid for boosted Facebook posts this month"
+ },
+ {
+  "id": "P008",
+  "name": "Nora",
+  "age": 31,
+  "segment": "Physical shop or restaurant with a customer list (retail, grocery, salon, cafe)",
+  "income": 1324000,
+  "behaviour": "Hands it to someone else",
+  "behaviour_how": "A staff member, nephew or agency handles the marketing; the owner approves the spend.",
+  "objection": "WhatsApp is free and my customers already read it there",
+  "habit": "you go live on Facebook to sell new stock on weekends"
+ },
+ {
+  "id": "P009",
+  "name": "Yusuf",
+  "age": 36,
+  "segment": "Established online store or chain (own website, several branches)",
+  "income": 13008000,
+  "behaviour": "Already uses another SMS provider",
+  "behaviour_how": "Has an account with Dialog, Notify.lk, Text.lk or similar and only switches for a clear reason.",
+  "objection": "I don't know how to upload my contact list or set it up",
+  "habit": "you already paid for boosted Facebook posts this month"
+ },
+ {
+  "id": "P010",
+  "name": "Sam",
+  "age": 32,
+  "segment": "Established online store or chain (own website, several branches)",
+  "income": 16792000,
+  "behaviour": "Wants it plugged into the shop system",
+  "behaviour_how": "Expects order confirmations to send automatically from the website, POS or WooCommerce.",
+  "objection": "I don't know how to upload my contact list or set it up",
+  "habit": "you keep customer numbers in a notebook and an Excel sheet"
+ },
+ {
+  "id": "P011",
+  "name": "Zoe",
+  "age": 52,
+  "segment": "Social-commerce seller (fashion, beauty, gadgets on Facebook/Instagram/WhatsApp)",
+  "income": 347000,
+  "behaviour": "WhatsApp-first",
+  "behaviour_how": "Sends offers through WhatsApp broadcasts and groups, has never paid for SMS.",
+  "objection": "I already have an SMS provider; why switch?",
+  "habit": "you go live on Facebook to sell new stock on weekends"
+ },
+ {
+  "id": "P012",
+  "name": "Alma",
+  "age": 48,
+  "segment": "Social-commerce seller (fashion, beauty, gadgets on Facebook/Instagram/WhatsApp)",
+  "income": 172000,
+  "behaviour": "Price comparer",
+  "behaviour_how": "Lines up per-SMS rates from three providers before paying anything.",
+  "objection": "Will Sinhala and Tamil messages cost more credits?",
+  "habit": "you already paid for boosted Facebook posts this month"
+ },
+ {
+  "id": "P013",
+  "name": "Maeve",
+  "age": 37,
+  "segment": "Physical shop or restaurant with a customer list (retail, grocery, salon, cafe)",
+  "income": 1308000,
+  "behaviour": "Hands it to someone else",
+  "behaviour_how": "A staff member, nephew or agency handles the marketing; the owner approves the spend.",
+  "objection": "Is it legal to send promotions to people who bought from me?",
+  "habit": "your accountant asks you to cut costs every quarter"
+ },
+ {
+  "id": "P014",
+  "name": "Victor",
+  "age": 26,
+  "segment": "Physical shop or restaurant with a customer list (retail, grocery, salon, cafe)",
+  "income": 1305000,
+  "behaviour": "Last-minute planner",
+  "behaviour_how": "Decides the sale promotion a day or two before it starts.",
+  "objection": "Credits that expire in 3 months: I don't send that often",
+  "habit": "you go live on Facebook to sell new stock on weekends"
+ },
+ {
+  "id": "P015",
+  "name": "Wes",
+  "age": 43,
+  "segment": "Social-commerce seller (fashion, beauty, gadgets on Facebook/Instagram/WhatsApp)",
+  "income": 804000,
+  "behaviour": "WhatsApp-first",
+  "behaviour_how": "Sends offers through WhatsApp broadcasts and groups, has never paid for SMS.",
+  "objection": "I already have an SMS provider; why switch?",
+  "habit": "you already paid for boosted Facebook posts this month"
+ },
+ {
+  "id": "P016",
+  "name": "Min",
+  "age": 31,
+  "segment": "Established online store or chain (own website, several branches)",
+  "income": 4359000,
+  "behaviour": "Wants it plugged into the shop system",
+  "behaviour_how": "Expects order confirmations to send automatically from the website, POS or WooCommerce.",
+  "objection": "WhatsApp is free and my customers already read it there",
+  "habit": "Daraz and the big brands are all shouting about 11.11 this week"
+ },
+ {
+  "id": "P017",
+  "name": "Noor",
+  "age": 43,
+  "segment": "Marketing agency or freelancer running campaigns for clients",
+  "income": 664000,
+  "behaviour": "WhatsApp-first",
+  "behaviour_how": "Sends offers through WhatsApp broadcasts and groups, has never paid for SMS.",
+  "objection": "I don't know how to upload my contact list or set it up",
+  "habit": "you go live on Facebook to sell new stock on weekends"
+ },
+ {
+  "id": "P018",
+  "name": "Elle",
+  "age": 35,
+  "segment": "Physical shop or restaurant with a customer list (retail, grocery, salon, cafe)",
+  "income": 2343000,
+  "behaviour": "Cautious first-timer",
+  "behaviour_how": "Wants to send a small test and see it arrive before committing money.",
+  "objection": "Do people even read SMS offers, or do they treat them as spam?",
+  "habit": "you already paid for boosted Facebook posts this month"
+ },
+ {
+  "id": "P019",
+  "name": "Leila",
+  "age": 47,
+  "segment": "Social-commerce seller (fashion, beauty, gadgets on Facebook/Instagram/WhatsApp)",
+  "income": 227000,
+  "behaviour": "Already uses another SMS provider",
+  "behaviour_how": "Has an account with Dialog, Notify.lk, Text.lk or similar and only switches for a clear reason.",
+  "objection": "Will Sinhala and Tamil messages cost more credits?",
+  "habit": "your accountant asks you to cut costs every quarter"
+ },
+ {
+  "id": "P020",
+  "name": "Jasper",
+  "age": 33,
+  "segment": "Social-commerce seller (fashion, beauty, gadgets on Facebook/Instagram/WhatsApp)",
+  "income": 383000,
+  "behaviour": "Last-minute planner",
+  "behaviour_how": "Decides the sale promotion a day or two before it starts.",
+  "objection": "Do people even read SMS offers, or do they treat them as spam?",
+  "habit": "Daraz and the big brands are all shouting about 11.11 this week"
+ }
+]

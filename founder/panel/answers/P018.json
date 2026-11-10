@@ -1,0 +1,13 @@
+{
+  "id": "P018",
+  "buys": true,
+  "purchases_first_month": 1,
+  "reason_code": "need",
+  "reason": "I'd send the 10 free test SMS to my own phone first, and if it arrives with my shop's name and the Sinhala looks right, LKR 560 is less than one boosted post, so I'd try it for the 12.12 sale.",
+  "objection": "I'm not sure my customers will actually read an SMS offer. They might see it as spam and ignore it, and then I've wasted my list on it.",
+  "would_change_my_mind": "If the test SMS doesn't arrive or shows a random number instead of my shop name, I won't pay.",
+  "price_too_cheap": 200,
+  "price_cheap": 450,
+  "price_expensive": 1200,
+  "price_too_expensive": 2500
+}

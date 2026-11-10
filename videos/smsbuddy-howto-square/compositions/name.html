@@ -1,0 +1,86 @@
+<template>
+  <style>
+@font-face{font-family:Manrope;src:url('assets/fonts/manrope.woff2') format('woff2');font-weight:200 800;font-display:block}
+@font-face{font-family:'SB Ubuntu';src:url('assets/fonts/ubuntu-bold.woff2') format('woff2');font-weight:700;font-display:block}
+@font-face{font-family:'Noto Sans Sinhala';src:url('assets/fonts/noto-sans-sinhala.ttf') format('truetype');font-weight:100 900;font-display:block}
+@font-face{font-family:'Noto Sans Tamil';src:url('assets/fonts/noto-sans-tamil.woff2') format('woff2');font-weight:600;font-display:block}
+
+@font-face{font-family:Manrope;src:url('assets/fonts/manrope.woff2') format('woff2');font-weight:200 800;font-display:block}
+@font-face{font-family:'SB Ubuntu';src:url('assets/fonts/ubuntu-bold.woff2') format('woff2');font-weight:700;font-display:block}
+@font-face{font-family:'Noto Sans Sinhala';src:url('assets/fonts/noto-sans-sinhala.ttf') format('truetype');font-weight:100 900;font-display:block}
+@font-face{font-family:'Noto Sans Tamil';src:url('assets/fonts/noto-sans-tamil.woff2') format('woff2');font-weight:600;font-display:block}
+
+#root{position:absolute;inset:0;overflow:hidden;font-family:Manrope,sans-serif;
+  --cobalt:#244ceb;--cobalt-deep:#1a37b8;--ink:#12234b;--muted:#526589;--sky:#edf3ff;--line:#dce5f3;--amber:#ffb547;--amber-ink:#5a3300}
+#root .bg{position:absolute;inset:0}
+#root .bg.cobalt{background:radial-gradient(120% 80% at 50% 20%,#2f58f5 0%,#244ceb 45%,#1a37b8 100%)}
+#root .bg.sky{background:linear-gradient(180deg,#f6f9ff 0%,#edf3ff 100%)}
+#root .stage{position:absolute;inset:0;padding:80px 72px;display:flex;
+  flex-direction:row;align-items:center;justify-content:space-between;gap:40px}
+#root .copy{width:46%;text-align:left}
+#root h2{font-size:76px;line-height:1.06;letter-spacing:-.04em;font-weight:800;margin:0;text-wrap:balance}
+#root .on-cobalt h2{color:#fff}
+#root .on-sky h2{color:var(--ink)}
+#root h2 em{font-style:normal;color:var(--amber)}
+#root .on-sky h2 em{color:var(--cobalt)}
+#root .vis-wrap{flex:1;height:100%;display:flex;align-items:center;justify-content:center;min-height:0}
+#root .vis{zoom:0.8}
+/* phone */
+#root .phone-col{display:flex;flex-direction:column;align-items:center;gap:22px}
+#root .example{font-size:30px;font-weight:700;letter-spacing:.01em;padding:8px 22px;border-radius:999px}
+#root .on-cobalt .example{background:#ffffff26;color:#fff}
+#root .on-sky .example{background:#dfe8fb;color:var(--muted)}
+#root .phone{width:520px;height:1000px;border-radius:72px;background:#0e1730;padding:16px;box-shadow:0 40px 80px #0b1a5a40,inset 0 0 0 2px #2b3a63}
+#root .screen{position:relative;width:100%;height:100%;border-radius:58px;background:#f4f6fb;overflow:hidden;display:flex;flex-direction:column}
+#root .notch{position:absolute;top:18px;left:50%;width:150px;height:40px;margin-left:-75px;border-radius:24px;background:#0e1730;z-index:3}
+#root .appbar{padding:86px 30px 22px;display:flex;flex-direction:column;align-items:center;gap:10px;background:#fff;border-bottom:2px solid var(--line)}
+#root .avatar{width:92px;height:92px;border-radius:50%;background:var(--cobalt);color:#fff;font-size:34px;font-weight:800;display:flex;align-items:center;justify-content:center}
+#root .sender{position:relative;font-size:34px;font-weight:800;color:var(--ink);letter-spacing:.02em;padding:4px 16px;border-radius:12px}
+#root .thread{flex:1;padding:30px 26px;display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+#root .bubble{max-width:410px;background:#e6ebf5;color:var(--ink);font-size:36px;line-height:1.3;font-weight:600;padding:22px 28px;border-radius:34px 34px 34px 10px}
+#root .stamp{font-size:36px;color:var(--muted);font-weight:600;align-self:center}
+
+#root{position:absolute;inset:0;overflow:hidden;font-family:Manrope,sans-serif;--cobalt:#244ceb;--ink:#12234b;--muted:#526589;--sky:#edf3ff;--amber:#ffb547}
+#root .bg{position:absolute;inset:0}
+#root .bg.cobalt{background:radial-gradient(120% 80% at 50% 20%,#2f58f5 0%,#244ceb 45%,#1a37b8 100%)}
+#root .bg.sky{background:linear-gradient(180deg,#f6f9ff 0%,#edf3ff 100%)}
+#root .col{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center}
+#root .eyebrow{display:inline-block;font-size:30px;font-weight:800;padding:8px 22px;border-radius:999px;margin-bottom:18px}
+#root .on-cobalt .eyebrow{background:#ffffff26;color:#fff}
+#root .on-sky .eyebrow{background:#dfe8fb;color:var(--cobalt)}
+#root h2{margin:0;font-weight:800;letter-spacing:-.04em;line-height:1.06;text-wrap:balance}
+#root .on-cobalt h2{color:#fff}
+#root .on-sky h2{color:var(--ink)}
+#root h2 em{font-style:normal;color:var(--amber)}
+#root .on-sky h2 em{color:var(--cobalt)}
+#root .shot{position:relative;border-radius:22px;background:#fff;box-shadow:0 30px 70px #0b1a5a33;overflow:hidden}
+#root .shot img{position:absolute;left:0;top:0;width:100%;height:auto;display:block}
+#root .shotwrap{position:relative}
+#root .ex-pill{position:absolute;right:6px;top:-54px;font-size:28px;font-weight:700;padding:4px 16px;border-radius:999px;z-index:5}
+#root .on-sky .ex-pill{color:#526589;background:#dfe8fb}
+#root .on-cobalt .ex-pill{color:#fff;background:#ffffff2e}
+#root .cursor{position:absolute;width:54px;height:54px;margin:-6px 0 0 -10px;z-index:8;filter:drop-shadow(0 4px 6px #0006)}
+#root .ring{position:absolute;width:90px;height:90px;margin:-45px 0 0 -45px;border-radius:50%;border:5px solid #244ceb;z-index:7;opacity:0}
+#root .hl{position:absolute;border:5px solid var(--amber);border-radius:16px;z-index:6;opacity:0}
+</style>
+  <div id="root" data-composition-id="name" data-width="1080" data-height="1080">
+  <div class="bg sky"></div><div class="col on-sky"><div id="name-head" style="margin-top:70px;padding:0 70px;margin-bottom:76px"><div id="name-eyebrow" class="eyebrow">Step 1 of 5</div><h2 style="font-size:70px">Name your <em>campaign.</em></h2></div><div class="shotwrap"><div class="ex-pill">Example</div><div id="name-shot" class="shot" style="width:910px;height:640px"><img src="assets/ui/name_empty.png" alt="">
+      <img id="name-fill" src="assets/ui/name_filled.png" alt="" style="clip-path:inset(17.86% 100% 75.36% 15.08%)">
+      <div id="name-ring" class="ring" style="left:27.64%;top:21.19%"></div>
+      <svg viewBox="0 0 24 24" class="cursor" style="left:27.64%;top:21.19%" id="name-cursor"><path d="M3 2l17 10-7.5 1.6L17 21l-3 1.4-3.6-7.6L4 20z" fill="#12234b" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg></div></div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+tl.fromTo("#name-head",{opacity:0,y:30},{opacity:1,y:0,duration:.35,ease:"power3.out"},0);
+tl.fromTo("#name-shot",{opacity:0,y:60},{opacity:1,y:0,duration:.45,ease:"power3.out"},0.1);
+tl.fromTo("#name-cursor",{x:260,y:220,opacity:0},{x:0,y:0,opacity:1,duration:.5,ease:"power2.out"},0.35);
+tl.fromTo("#name-cursor",{scale:1},{scale:.82,duration:.08,yoyo:true,repeat:1},0.85);
+tl.fromTo("#name-ring",{scale:.4,opacity:.9},{scale:1.5,opacity:0,duration:.45},0.86);
+tl.fromTo("#name-fill",{clipPath:"inset(17.86% 100% 75.36% 15.08%)"},{clipPath:"inset(17.86% 0% 75.36% 15.08%)",duration:1.0,ease:"steps(15)"},1.05);
+tl.to("#name-cursor",{x:120,y:160,opacity:0,duration:.4},1.3);
+
+    tl.set({}, {}, 3.6);
+    window.__timelines["name"] = tl;
+  </script>
+</template>

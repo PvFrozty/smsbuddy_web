@@ -1,0 +1,13 @@
+{
+  "id": "P002",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "My WhatsApp broadcasts and groups already reach my customers for free, and I've never needed to pay for SMS. With 11.11 two days away and my business name only approved after signup, I'm not switching channels in the middle of a sale.",
+  "objection": "A Sinhala offer message could eat two or three credits each, so the real price is not 0.58, and nobody tells me how long the sender name approval takes, so it might go out as some random number and look like spam.",
+  "would_change_my_mind": "A clear per-message cost for a typical Sinhala offer plus a guarantee my business name is approved within a day, so I could test it on one branch's list before the sale.",
+  "price_too_cheap": 0.2,
+  "price_cheap": 0.4,
+  "price_expensive": 0.75,
+  "price_too_expensive": 1.2
+}

@@ -1,0 +1,13 @@
+{
+  "id": "P015",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "My customers talk to me on WhatsApp, and broadcasts there cost me nothing. I already spent on Facebook boosts this month, so I won't pay per message for an 11.11 blast when WhatsApp does the job.",
+  "objection": "Why pay 58 cents a message, and more for Sinhala, to reach people who already see my WhatsApp status and broadcasts for free? And an SMS can't show the product photos that actually sell fashion and beauty.",
+  "would_change_my_mind": "Proof that SMS gets orders from the customers who ignore my WhatsApp, like a free trial batch for one sale where I can count the extra orders.",
+  "price_too_cheap": 0.15,
+  "price_cheap": 0.3,
+  "price_expensive": 0.5,
+  "price_too_expensive": 0.8
+}

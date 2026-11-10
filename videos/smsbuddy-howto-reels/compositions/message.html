@@ -1,0 +1,83 @@
+<template>
+  <style>
+@font-face{font-family:Manrope;src:url('assets/fonts/manrope.woff2') format('woff2');font-weight:200 800;font-display:block}
+@font-face{font-family:'SB Ubuntu';src:url('assets/fonts/ubuntu-bold.woff2') format('woff2');font-weight:700;font-display:block}
+@font-face{font-family:'Noto Sans Sinhala';src:url('assets/fonts/noto-sans-sinhala.ttf') format('truetype');font-weight:100 900;font-display:block}
+@font-face{font-family:'Noto Sans Tamil';src:url('assets/fonts/noto-sans-tamil.woff2') format('woff2');font-weight:600;font-display:block}
+
+@font-face{font-family:Manrope;src:url('assets/fonts/manrope.woff2') format('woff2');font-weight:200 800;font-display:block}
+@font-face{font-family:'SB Ubuntu';src:url('assets/fonts/ubuntu-bold.woff2') format('woff2');font-weight:700;font-display:block}
+@font-face{font-family:'Noto Sans Sinhala';src:url('assets/fonts/noto-sans-sinhala.ttf') format('truetype');font-weight:100 900;font-display:block}
+@font-face{font-family:'Noto Sans Tamil';src:url('assets/fonts/noto-sans-tamil.woff2') format('woff2');font-weight:600;font-display:block}
+
+#root{position:absolute;inset:0;overflow:hidden;font-family:Manrope,sans-serif;
+  --cobalt:#244ceb;--cobalt-deep:#1a37b8;--ink:#12234b;--muted:#526589;--sky:#edf3ff;--line:#dce5f3;--amber:#ffb547;--amber-ink:#5a3300}
+#root .bg{position:absolute;inset:0}
+#root .bg.cobalt{background:radial-gradient(120% 80% at 50% 20%,#2f58f5 0%,#244ceb 45%,#1a37b8 100%)}
+#root .bg.sky{background:linear-gradient(180deg,#f6f9ff 0%,#edf3ff 100%)}
+#root .stage{position:absolute;inset:0;padding:200px 80px 600px;display:flex;
+  flex-direction:column;align-items:center;justify-content:flex-start;gap:56px}
+#root .copy{width:100%;text-align:center}
+#root h2{font-size:96px;line-height:1.06;letter-spacing:-.04em;font-weight:800;margin:0;text-wrap:balance}
+#root .on-cobalt h2{color:#fff}
+#root .on-sky h2{color:var(--ink)}
+#root h2 em{font-style:normal;color:var(--amber)}
+#root .on-sky h2 em{color:var(--cobalt)}
+#root .vis-wrap{flex:1;width:100%;display:flex;align-items:flex-start;justify-content:center;min-height:0}
+#root .vis{zoom:0.8}
+/* phone */
+#root .phone-col{display:flex;flex-direction:column;align-items:center;gap:22px}
+#root .example{font-size:30px;font-weight:700;letter-spacing:.01em;padding:8px 22px;border-radius:999px}
+#root .on-cobalt .example{background:#ffffff26;color:#fff}
+#root .on-sky .example{background:#dfe8fb;color:var(--muted)}
+#root .phone{width:520px;height:1000px;border-radius:72px;background:#0e1730;padding:16px;box-shadow:0 40px 80px #0b1a5a40,inset 0 0 0 2px #2b3a63}
+#root .screen{position:relative;width:100%;height:100%;border-radius:58px;background:#f4f6fb;overflow:hidden;display:flex;flex-direction:column}
+#root .notch{position:absolute;top:18px;left:50%;width:150px;height:40px;margin-left:-75px;border-radius:24px;background:#0e1730;z-index:3}
+#root .appbar{padding:86px 30px 22px;display:flex;flex-direction:column;align-items:center;gap:10px;background:#fff;border-bottom:2px solid var(--line)}
+#root .avatar{width:92px;height:92px;border-radius:50%;background:var(--cobalt);color:#fff;font-size:34px;font-weight:800;display:flex;align-items:center;justify-content:center}
+#root .sender{position:relative;font-size:34px;font-weight:800;color:var(--ink);letter-spacing:.02em;padding:4px 16px;border-radius:12px}
+#root .thread{flex:1;padding:30px 26px;display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+#root .bubble{max-width:410px;background:#e6ebf5;color:var(--ink);font-size:36px;line-height:1.3;font-weight:600;padding:22px 28px;border-radius:34px 34px 34px 10px}
+#root .stamp{font-size:36px;color:var(--muted);font-weight:600;align-self:center}
+
+#root{position:absolute;inset:0;overflow:hidden;font-family:Manrope,sans-serif;--cobalt:#244ceb;--ink:#12234b;--muted:#526589;--sky:#edf3ff;--amber:#ffb547}
+#root .bg{position:absolute;inset:0}
+#root .bg.cobalt{background:radial-gradient(120% 80% at 50% 20%,#2f58f5 0%,#244ceb 45%,#1a37b8 100%)}
+#root .bg.sky{background:linear-gradient(180deg,#f6f9ff 0%,#edf3ff 100%)}
+#root .col{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center}
+#root .eyebrow{display:inline-block;font-size:30px;font-weight:800;padding:8px 22px;border-radius:999px;margin-bottom:18px}
+#root .on-cobalt .eyebrow{background:#ffffff26;color:#fff}
+#root .on-sky .eyebrow{background:#dfe8fb;color:var(--cobalt)}
+#root h2{margin:0;font-weight:800;letter-spacing:-.04em;line-height:1.06;text-wrap:balance}
+#root .on-cobalt h2{color:#fff}
+#root .on-sky h2{color:var(--ink)}
+#root h2 em{font-style:normal;color:var(--amber)}
+#root .on-sky h2 em{color:var(--cobalt)}
+#root .shot{position:relative;border-radius:22px;background:#fff;box-shadow:0 30px 70px #0b1a5a33;overflow:hidden}
+#root .shot img{position:absolute;left:0;top:0;width:100%;height:auto;display:block}
+#root .shotwrap{position:relative}
+#root .ex-pill{position:absolute;right:6px;top:-54px;font-size:28px;font-weight:700;padding:4px 16px;border-radius:999px;z-index:5}
+#root .on-sky .ex-pill{color:#526589;background:#dfe8fb}
+#root .on-cobalt .ex-pill{color:#fff;background:#ffffff2e}
+#root .cursor{position:absolute;width:54px;height:54px;margin:-6px 0 0 -10px;z-index:8;filter:drop-shadow(0 4px 6px #0006)}
+#root .ring{position:absolute;width:90px;height:90px;margin:-45px 0 0 -45px;border-radius:50%;border:5px solid #244ceb;z-index:7;opacity:0}
+#root .hl{position:absolute;border:5px solid var(--amber);border-radius:16px;z-index:6;opacity:0}
+</style>
+  <div id="root" data-composition-id="message" data-width="1080" data-height="1920">
+  <div class="bg sky"></div><div class="col on-sky"><div id="msg-head" style="margin-top:200px;padding:0 70px;margin-bottom:76px"><div id="msg-eyebrow" class="eyebrow">Step 3 of 5</div><h2 style="font-size:92px">Write your <em>message.</em></h2></div><div class="shotwrap"><div class="ex-pill">Example</div><div id="msg-shot" class="shot" style="width:940px;height:567px"><img src="assets/ui/message_empty.png" alt=""><img id="msg-l0" src="assets/ui/message_filled.png" alt="" style="clip-path:inset(21.53% 100% 70.14% 0%)"><img id="msg-l1" src="assets/ui/message_filled.png" alt="" style="clip-path:inset(31.25% 100% 60.14% 0%)"><img id="msg-l2" src="assets/ui/message_filled.png" alt="" style="clip-path:inset(41.67% 100% 51.11% 0%)">
+      <img id="msg-count" src="assets/ui/message_filled.png" alt="" style="clip-path:inset(75.00% 0% 2.78% 53.60%);opacity:0"></div></div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+tl.fromTo("#msg-head",{opacity:0,y:30},{opacity:1,y:0,duration:.35,ease:"power3.out"},0);
+tl.fromTo("#msg-shot",{opacity:0,y:60},{opacity:1,y:0,duration:.45,ease:"power3.out"},0.1);
+tl.fromTo("#msg-l0",{clipPath:"inset(21.53% 100% 70.14% 0%)"},{clipPath:"inset(21.53% 0% 70.14% 0%)",duration:0.55,ease:"steps(18)"},0.70);
+tl.fromTo("#msg-l1",{clipPath:"inset(31.25% 100% 60.14% 0%)"},{clipPath:"inset(31.25% 0% 60.14% 0%)",duration:0.55,ease:"steps(18)"},1.30);
+tl.fromTo("#msg-l2",{clipPath:"inset(41.67% 100% 51.11% 0%)"},{clipPath:"inset(41.67% 0% 51.11% 0%)",duration:0.25,ease:"steps(5)"},1.90);
+tl.fromTo("#msg-count",{opacity:0},{opacity:1,duration:.2},2.0);
+
+    tl.set({}, {}, 3.2);
+    window.__timelines["message"] = tl;
+  </script>
+</template>

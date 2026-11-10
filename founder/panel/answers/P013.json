@@ -1,0 +1,13 @@
+{
+  "id": "P013",
+  "buys": true,
+  "purchases_first_month": 1,
+  "reason_code": "price",
+  "reason": "LKR 560 is nothing next to what one good 12.12 sale day brings in, and my staff can send the free test SMS first, so I'd approve it without my accountant even noticing. The opt-out line on promotions makes me a bit less nervous about messaging people who bought from us.",
+  "objection": "Nobody tells me plainly whether it is actually legal to send promotions to my past customers' numbers, and I don't want complaints or trouble with a regulator because my staff blasted the whole list.",
+  "would_change_my_mind": "If the free test showed the messages arriving under some random number instead of my shop's name, or if I heard customers complain about spam, I'd drop it.",
+  "price_too_cheap": 150,
+  "price_cheap": 400,
+  "price_expensive": 1500,
+  "price_too_expensive": 3000
+}

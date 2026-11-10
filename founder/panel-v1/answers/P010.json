@@ -1,0 +1,13 @@
+{
+  "id": "P010",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "convenience",
+  "reason": "The price is fine for a business my size, but the ad only talks about blasting a list. What I actually need is order and delivery confirmations firing automatically from my website and POS, and nothing here says it plugs into WooCommerce or my POS, so it looks like more manual work, not less.",
+  "objection": "I don't know how I'd get my contacts out of the notebook and Excel into this, or whether it connects to my shop system at all. If my staff have to copy-paste orders into a portal every day, it won't happen.",
+  "would_change_my_mind": "A clear WooCommerce/POS plugin or API with someone who sets it up for me and imports my Excel list, so confirmations go out automatically from day one.",
+  "price_too_cheap": 0.2,
+  "price_cheap": 0.4,
+  "price_expensive": 0.9,
+  "price_too_expensive": 1.5
+}

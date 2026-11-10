@@ -1,0 +1,188 @@
+{
+ "business": "SMS Buddy (smsbuddy.lk): prepaid business SMS for Sri Lanka, sent under your own business name",
+ "seed": 330632,
+ "dealt": 20,
+ "answered": 20,
+ "skipped": [],
+ "buys": 6,
+ "passes": 14,
+ "buy_rate": 0.3,
+ "by_segment": [
+  [
+   "Physical shop or restaurant with a customer list (retail, grocery, salon, cafe)",
+   6,
+   0.6666666666666666
+  ],
+  [
+   "Established online store or chain (own website, several branches)",
+   4,
+   0.25
+  ],
+  [
+   "Social-commerce seller (fashion, beauty, gadgets on Facebook/Instagram/WhatsApp)",
+   7,
+   0.14285714285714285
+  ],
+  [
+   "Marketing agency or freelancer running campaigns for clients",
+   3,
+   0.0
+  ]
+ ],
+ "by_behaviour": [
+  [
+   "Last-minute planner",
+   3,
+   0.6666666666666666
+  ],
+  [
+   "Cautious first-timer",
+   2,
+   0.5
+  ],
+  [
+   "Hands it to someone else",
+   2,
+   0.5
+  ],
+  [
+   "WhatsApp-first",
+   4,
+   0.25
+  ],
+  [
+   "Already uses another SMS provider",
+   4,
+   0.25
+  ],
+  [
+   "Price comparer",
+   3,
+   0.0
+  ],
+  [
+   "Wants it plugged into the shop system",
+   2,
+   0.0
+  ]
+ ],
+ "by_income": [
+  [
+   "$664,000 to $2,173,000",
+   7,
+   0.42857142857142855
+  ],
+  [
+   "$2,173,000 and up",
+   7,
+   0.2857142857142857
+  ],
+  [
+   "under $664,000",
+   6,
+   0.16666666666666666
+  ]
+ ],
+ "why_not": [
+  [
+   "habit",
+   9,
+   [
+    "I already run my clients' campaigns on another provider with their sender IDs approved and lists loaded, and a few cents less per SMS is not worth re-registering every client's name and moving their lists in the middle of the 12.12 rush. I might do the 10 free test SMS out of curiosity, but I wouldn't pay this month.",
+    "I already have a provider with my shop name approved and credits left over, and 70 characters for one Sinhala credit is the same everywhere, so nothing here is a clear reason to switch right before 12.12. I might make the free account and send the 10 test SMS, but I won't move my list in my busiest month."
+   ],
+   [
+    "P005",
+    "P006"
+   ]
+  ],
+  [
+   "price",
+   2,
+   [
+    "LKR 0.56 a message isn't obviously cheaper than what I'd get elsewhere, and I never pay before lining up rates from three providers. I might make the free account and send the 10 test messages, but I wouldn't pay until I've compared, and most of my clients would ask why we don't just use WhatsApp.",
+    "I'll make the free account and send the 10 test SMS, but I'm not paying until I've lined this rate up against two other providers. My Sinhala sale message won't fit in 70 characters, so each one really costs 2 credits. That makes it about LKR 1.12 a customer, and I've already paid for Facebook boosts this month."
+   ],
+   [
+    "P001",
+    "P012"
+   ]
+  ],
+  [
+   "convenience",
+   2,
+   [
+    "The price is nothing for us, but this is a manual blast pack: send an Excel file over WhatsApp and someone loads it. I want order confirmations firing automatically from the website, POS and WooCommerce, and nothing here says it connects to any of that.",
+    "The price is nothing for a business my size, but this is built for someone WhatsApping an Excel file. I need order confirmations firing automatically from my website, POS and WooCommerce, and nothing here says it connects to any of that."
+   ],
+   [
+    "P010",
+    "P016"
+   ]
+  ],
+  [
+   "need",
+   1,
+   [
+    "I already announce my sales free on WhatsApp broadcast and Instagram stories, and I'm not convinced my customers read SMS offers instead of swiping them away as spam. LKR 560 is small, but my accountant asks me to justify every new cost, and 0.56 per SMS is not obviously cheaper than what other providers quote, so I'd rather line up three rates first than pay for this."
+   ],
+   [
+    "P004"
+   ]
+  ]
+ ],
+ "why_yes": [
+  [
+   "price",
+   3,
+   [
+    "LKR 560 is nothing next to what one good 12.12 sale day brings in, and my staff can send the free test SMS first, so I'd approve it without my accountant even noticing. The opt-out line on promotions makes me a bit less nervous about messaging people who bought from us.",
+    "560 rupees is less than one boost on a Facebook post, and 6 months fixes my worry that unused credits would expire. I'd try the 10 free test SMS, then buy one pack to push my 12.12 sale to people who miss my weekend lives."
+   ],
+   [
+    "P013",
+    "P014"
+   ]
+  ],
+  [
+   "need",
+   2,
+   [
+    "My WhatsApp broadcasts only reach people who saved my number, so for 12.12 I'd test 10 SMS to my own phone and then buy one pack. At LKR 560 it costs less than one staff lunch, so I won't think twice about it.",
+    "I'd send the 10 free test SMS to my own phone first, and if it arrives with my shop's name and the Sinhala looks right, LKR 560 is less than one boosted post, so I'd try it for the 12.12 sale."
+   ],
+   [
+    "P002",
+    "P018"
+   ]
+  ],
+  [
+   "convenience",
+   1,
+   [
+    "LKR 560 is less than one boosted Facebook post, and if I can just WhatsApp my list and they load it the same day, my biggest worry about setting it up is gone. I'd try the 10 free test SMS first, then buy one pack a couple of days before my sale."
+   ],
+   [
+    "P003"
+   ]
+  ]
+ ],
+ "flip": [
+  "A clear agency rate card showing the per-SMS price at 10k and 50k volumes, lower than the other two quotes I have, plus separate approved sender names for each client on one account.",
+  "Proof from a similar Sri Lankan online seller that an SMS blast brought real orders, or a clear rate at or below LKR 0.45 per SMS on the 1,000 pack so it wins my three-way comparison.",
+  "An agency account where I can manage several clients' sender names and credits under one login, with a proven delivery report showing better delivery than my current provider, so the switch is clearly worth it.",
+  "A per-SMS price clearly below what I pay now at my usual top-up size, shown side by side, plus the free test messages actually arriving under my shop name the same day.",
+  "If the free test arrived properly in Sinhala and a shop like mine nearby showed me it brought in real customers during a sale, I'd try the LKR 560 pack for 12.12.",
+  "If the person who handles my marketing showed me that SMS brought more people to the shop or the live than our WhatsApp broadcast did, for example a small test before 12.12 with a code to track it.",
+  "A clearly lower bulk rate than what I pay now on 50,000+ SMS a month, shown side by side, with proof of delivery rates from other chain stores.",
+  "A WooCommerce plugin or API that connects to my POS so order confirmations and sale messages send automatically under my shop's name.",
+  "Seeing another Instagram or Facebook seller like me get real extra orders from an SMS blast during a sale, for example when WhatsApp broadcasts stop reaching people.",
+  "A side-by-side showing the real cost for a typical 2-part Sinhala message beats the other providers, or the 0.45 rate on a small first pack before 12.12.",
+  "Proof that SMS gets people to open and buy who ignore my WhatsApp broadcasts, like a seller like me getting more 12.12 orders from SMS than from WhatsApp.",
+  "A working WooCommerce plugin or API that sends order confirmations from my site and POS automatically, which I can test with the 10 free SMS.",
+  "A client specifically asking for SMS, or real numbers from a similar Sri Lankan shop showing an SMS blast brought more sales than a WhatsApp broadcast.",
+  "Real numbers from another Instagram or WhatsApp seller like me showing SMS brought actual orders during a sale, not just 'delivered' reports."
+ ],
+ "purchases_first_month_per_buyer": 1.0,
+ "price_answers": 20
+}

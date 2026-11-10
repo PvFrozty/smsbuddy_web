@@ -1,0 +1,13 @@
+{
+  "id": "P008",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "My sales already happen on Facebook live and my regulars see my WhatsApp status and broadcasts for free. LKR 560 is nothing, but nobody on my team is asking for SMS, so it would just sit there.",
+  "objection": "WhatsApp is free and my customers already read it there, so why pay to send the same message by SMS that they might ignore as spam?",
+  "would_change_my_mind": "If the person who handles my marketing showed me that SMS brought more people to the shop or the live than our WhatsApp broadcast did, for example a small test before 12.12 with a code to track it.",
+  "price_too_cheap": 150,
+  "price_cheap": 400,
+  "price_expensive": 1500,
+  "price_too_expensive": 3000
+}

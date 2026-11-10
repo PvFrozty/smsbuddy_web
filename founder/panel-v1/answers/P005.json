@@ -1,0 +1,13 @@
+{
+  "id": "P005",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "My clients' sender IDs are already approved with my current provider and it works, so a few cents cheaper per SMS isn't worth moving everything. And with 11.11 this close, I won't risk waiting on a new sender name approval mid-campaign.",
+  "objection": "I don't know how fast the sender name gets approved or how reliable delivery is across networks. If messages land late or show up as a random number, the client blames me, not SMS Buddy.",
+  "would_change_my_mind": "Agency features: one account managing several client sender IDs with separate credit, plus proof of delivery reports and a guaranteed sender ID approval time. Then I'd test it on one smaller client.",
+  "price_too_cheap": 0.25,
+  "price_cheap": 0.45,
+  "price_expensive": 0.75,
+  "price_too_expensive": 1.0
+}

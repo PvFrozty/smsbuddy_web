@@ -1,0 +1,13 @@
+{
+  "id": "P012",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "price",
+  "reason": "I'll make the free account and send the 10 test SMS, but I'm not paying until I've lined this rate up against two other providers. My Sinhala sale message won't fit in 70 characters, so each one really costs 2 credits. That makes it about LKR 1.12 a customer, and I've already paid for Facebook boosts this month.",
+  "objection": "70 characters in Sinhala is barely one line. A real sale message with prices and my WhatsApp number will cost double, so the 1,000 credits are really about 500 Sinhala messages, and the cheaper 0.45 rate is only for bigger packages I don't need yet.",
+  "would_change_my_mind": "A side-by-side showing the real cost for a typical 2-part Sinhala message beats the other providers, or the 0.45 rate on a small first pack before 12.12.",
+  "price_too_cheap": 250,
+  "price_cheap": 400,
+  "price_expensive": 650,
+  "price_too_expensive": 900
+}

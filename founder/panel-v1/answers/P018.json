@@ -1,0 +1,13 @@
+{
+  "id": "P018",
+  "buys": true,
+  "purchases_first_month": 1,
+  "reason_code": "timing",
+  "reason": "With 11.11 coming, LKR 560 for 1,000 SMS is small enough to try once as a test, and it costs less than one boosted post. I would only buy the smallest pack, send to a slice of my list and see whether anyone actually walks in.",
+  "objection": "I am not sure my customers read SMS offers at all, or if they just delete them like the other promo messages they get. Also I have no idea how long the business name approval takes, and an offer from an unknown number looks like spam.",
+  "would_change_my_mind": "If I can't get my shop name approved before 11.11, I would not bother and would just put the money into Facebook again.",
+  "price_too_cheap": 0.2,
+  "price_cheap": 0.4,
+  "price_expensive": 0.8,
+  "price_too_expensive": 1.2
+}

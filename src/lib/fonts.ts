@@ -1,7 +1,10 @@
 import localFont from "next/font/local";
+import { Ubuntu } from "next/font/google";
 
-export const ubuntu = localFont({
-  src: "./font-files/ubuntu-bold.ttf",
+// Fetched from Google Fonts at build time and self-hosted by Next.js, so
+// visitors never request fonts.googleapis.com.
+export const ubuntu = Ubuntu({
+  subsets: ["latin"],
   display: "swap",
   variable: "--font-brand",
   weight: "700",

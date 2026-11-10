@@ -105,7 +105,7 @@ export function SegmentPage({
           <div>
             <h2 id={`${page}-setup`} className="font-semibold tracking-tight text-slate-950">Know what comes next.</h2>
             <p className="sb-lead mt-5">{setupDescription}</p>
-            <p className="mt-5 max-w-lg text-sm leading-7 text-slate-600">Credits are valid for 3 months. Confirm current rates, taxes, and sender-name setup costs before purchasing.</p>
+            <p className="mt-5 max-w-lg text-sm leading-7 text-slate-600">Credits don’t expire once you buy them. Confirm current rates, taxes, and sender-name setup costs before purchasing.</p>
           </div>
           <ol className="sb-steps">
             {steps.map((step, index) => (

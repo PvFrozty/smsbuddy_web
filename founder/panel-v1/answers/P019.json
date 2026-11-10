@@ -1,0 +1,13 @@
+{
+  "id": "P019",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "I already have an SMS account that works, and at my volume of a few thousand messages 0.56 or 0.58 a message is not a saving my accountant would notice. Sinhala messages still eat extra credits here too, so nothing actually changes for me.",
+  "objection": "My customers mostly get Sinhala messages, and if each one costs two or three credits the real price is more than 1.20 a message, so the cheap headline rate means nothing until I see what my actual messages cost.",
+  "would_change_my_mind": "A clear rate showing a normal Sinhala message counts as one credit, or a real per-message price clearly lower than what I pay now, with a few hundred free test SMS so I can check delivery before my 11.11 sale.",
+  "price_too_cheap": 0.25,
+  "price_cheap": 0.4,
+  "price_expensive": 0.6,
+  "price_too_expensive": 0.75
+}

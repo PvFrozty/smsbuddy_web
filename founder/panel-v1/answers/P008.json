@@ -1,0 +1,13 @@
+{
+  "id": "P008",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "My customers already find me on my weekend Facebook lives and message me on WhatsApp, which costs nothing. I'm not going to pay per message and set up a sender name for something my nephew already does for free.",
+  "objection": "WhatsApp and Facebook are free and my customers actually reply there. An SMS just sits next to bank OTPs, and I can't see it bringing anyone into the shop.",
+  "would_change_my_mind": "If whoever runs my marketing showed me that one SMS blast for a sale brought in clearly more customers or orders than our WhatsApp posts did, with the cost worked out for my list size.",
+  "price_too_cheap": 0.15,
+  "price_cheap": 0.35,
+  "price_expensive": 0.6,
+  "price_too_expensive": 0.9
+}

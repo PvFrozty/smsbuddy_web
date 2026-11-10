@@ -43,7 +43,7 @@ const MESSAGE_PAUSE = 600;
 
 const trustIndicators = [
   { label: "95% delivery rate", icon: "signal" },
-  { label: "3-month credit validity", icon: "clock" },
+  { label: "Credits never expire", icon: "clock" },
   { label: "No monthly fees", icon: "check" },
 ];
 
@@ -112,8 +112,8 @@ export function SmsConversationHero() {
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-text-light lg:text-xl">
               Reach customers with 90%+ open rates using branded sender masks.
-              No subscriptions, no long-term contracts — just smart credits that
-              work for 3 months.
+              No subscriptions, no long-term contracts — just credits that
+              never expire.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">

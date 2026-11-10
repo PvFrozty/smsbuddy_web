@@ -1,0 +1,13 @@
+{
+  "id": "P011",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "My buyers already find me on WhatsApp and my Facebook lives, and broadcasts cost me nothing. I've never needed SMS, so even at 560 rupees I don't see why I'd pay for something my customers would probably ignore.",
+  "objection": "My customers reply and order on WhatsApp, not by SMS. An SMS from a shop name feels like a bank or spam message, and I don't know if it would bring even one extra order.",
+  "would_change_my_mind": "Seeing another Instagram or Facebook seller like me get real extra orders from an SMS blast during a sale, for example when WhatsApp broadcasts stop reaching people.",
+  "price_too_cheap": 150,
+  "price_cheap": 300,
+  "price_expensive": 800,
+  "price_too_expensive": 1500
+}

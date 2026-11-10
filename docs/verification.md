@@ -30,3 +30,7 @@ Development and production scripts use webpack following a Turbopack module-reso
 ## SB150X positioning update — 9 September 2026
 
 Homepage credit section and pricing hero now feature the lowest extra-SMS rate from the shared package data, alongside the package price, included SMS count and validity. Pricing rows and calculator identify SB150X; agencies get matching volume-pricing context. No country-wide price-superiority claim is used. The pricing CTA targets the registration portal and has its own click-location tag. High-volume ad-copy variants are recorded in `video-campaign-brief.md`.
+
+## Volume pricing correction — 26 September 2026
+
+The owner corrected the commercial rule: the listed descending per-SMS rates apply to every included SMS in each pack. Package totals are now derived from integer-cent rates and pack counts. Earlier documentation above describes the superseded extra-SMS interpretation. Pricing beyond each pack remains unconfirmed.

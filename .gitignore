@@ -43,3 +43,18 @@ nul
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# founder research tooling (third-party clone, fetched on demand)
+/founder/.tools/
+
+# design audit scratch output
+/.hallmark/
+
+# HyperFrames caches and per-project copies of the jingle
+# (master copy: SMS_BUDDY/marketing/assets/audio/sms-buddy-jingle.wav; build_1111.py / build_howto.py copy it back in)
+/videos/*/.hyperframes/
+/videos/*/.thumbnails/
+/videos/*/.waveform-cache/
+/videos/*/snapshots*/
+/videos/*/renders/
+/videos/*/assets/audio/*.wav

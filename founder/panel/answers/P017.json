@@ -1,0 +1,13 @@
+{
+  "id": "P017",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "My clients' customers already sit in WhatsApp broadcast lists and groups, and that costs me nothing. LKR 560 is small money, but I'd still have to convince a client that SMS gets more replies than what we're already doing for free.",
+  "objection": "I've never sent SMS, so I don't know if anyone actually reads a promo text anymore, and handing a client's customer list over on WhatsApp to a company I don't know makes me uneasy.",
+  "would_change_my_mind": "A client specifically asking for SMS, or real numbers from a similar Sri Lankan shop showing an SMS blast brought more sales than a WhatsApp broadcast.",
+  "price_too_cheap": 200,
+  "price_cheap": 450,
+  "price_expensive": 1000,
+  "price_too_expensive": 1800
+}

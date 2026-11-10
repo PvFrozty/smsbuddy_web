@@ -1,0 +1,13 @@
+{
+  "id": "P007",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "habit",
+  "reason": "My customers already read my WhatsApp messages and that costs me nothing, and I've already put money into Facebook boosts this month. I don't see why I'd pay per message on top of that for an 11.11 sale.",
+  "objection": "I have to sign up and top up before I can even see one message land on my own phone with my shop's name on it, and the name only comes after approval. If Sinhala messages eat two credits, I don't really know what a blast will cost me.",
+  "would_change_my_mind": "A few free test SMS on signup so I can send one to my own phone under my shop name and see it arrive before I put any money in.",
+  "price_too_cheap": 0.2,
+  "price_cheap": 0.4,
+  "price_expensive": 0.75,
+  "price_too_expensive": 1.2
+}
